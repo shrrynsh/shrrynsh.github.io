@@ -2,6 +2,20 @@
 layout: default
 ---
 
+<meta charset="UTF-8">
+<meta property="og:title" content="{{ site.title }}" />
+<meta property="og:description" content="{{ site.description }}" />
+<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/preview.jpg" />
+<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="{{ site.title }}" />
+<meta property="og:locale" content="es_ES" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ site.title }}" />
+<meta name="twitter:description" content="{{ site.description }}" />
+<meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/images/og-home.jpg" />
+
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 <div id="main-container">
 	{% include leftpane.html %}
