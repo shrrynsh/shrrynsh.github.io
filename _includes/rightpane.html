@@ -21,7 +21,7 @@
 		{% for post in site.posts limit:5 %} 
 			<li>
 				<!-- Each post is linked to its full page. -->
-				<a class="rp-post-link" href="{{ post.url }}">
+				<a class="rp-post-link" href="{{ post.url | relative_url }}">
 					<!-- Post title is shown here with a small heading. -->
 					<h6 class="rp-post-title">{{ post.title }}</h6>
 				</a>

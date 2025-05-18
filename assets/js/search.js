@@ -1,6 +1,7 @@
 let searchData = [];
 
-fetch('/search.json')
+const baseurl = document.getElementById('search-container').getAttribute('data-baseurl');
+fetch(`${baseurl}/search.json`)
 	.then(res => res.json())
 	.then(data =>
 	{

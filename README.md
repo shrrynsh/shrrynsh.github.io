@@ -29,6 +29,14 @@ Or install it manually with:
 ```
 $ gem install tessera-jekyll-theme
 ```
+### GitHub Pages
+Instead of doing the above steps, define this in your `_config.yml`, removing also `theme`:
+
+```
+theme: something # remove this
+remote_theme: itszariep/Tessera
+```
+
 
 ## Dependencies
 Tessera needs the following Jekyll plugins to function properly:
