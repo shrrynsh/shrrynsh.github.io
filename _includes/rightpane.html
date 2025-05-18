@@ -16,19 +16,20 @@
 	<!-- Entries Section -->
 	<!-- Displays a list of recent blog posts. -->
 	<h2>Entries</h2>
-	<ul>
-		<!-- Loop through the latest 5 posts in the site. -->
-		{% for post in site.posts limit:5 %} 
-			<li>
-				<!-- Each post is linked to its full page. -->
-				<a class="rp-post-link" href="{{ post.url | relative_url }}">
-					<!-- Post title is shown here with a small heading. -->
-					<h6 class="rp-post-title">{{ post.title }}</h6>
-				</a>
-			</li>
-		{% endfor %}
-	</ul>
-
+	<div class="rightpaneposts">
+		<ul>
+			<!-- Loop through the latest 5 posts in the site. -->
+			{% for post in site.posts limit:5 %} 
+				<li>
+					<!-- Each post is linked to its full page. -->
+					<a class="rp-post-link" href="{{ post.url | relative_url }}">
+						<!-- Post title is shown here with a small heading. -->
+						<h6 class="rp-post-title">{{ post.title }}</h6>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
 	<!-- Categories Section -->
 	<!-- Lists all categories used across posts, sorted alphabetically. -->
 	<h2>Categories</h2>
