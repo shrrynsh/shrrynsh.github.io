@@ -33,8 +33,8 @@ $ gem install tessera-jekyll-theme
 Instead of doing the above steps, define this in your `_config.yml`, removing also `theme`:
 
 ```
-theme: something # remove this
-remote_theme: itszariep/Tessera
+# theme: something # remove this
+remote_theme: itszariep/Tessera # add this
 ```
 
 

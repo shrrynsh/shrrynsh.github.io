@@ -227,6 +227,20 @@ input[type="text"] {
 
 /*CENTER SIDE (POST CONTENT)*/
 
+.post {
+	text-align: justify;
+	display: flex;
+	flex-wrap: wrap;
+	overflow: auto;
+	word-wrap: break-word;
+	word-break: break-word;
+	flex-direction: column;
+	align-items: start;
+	align-self: stretch;
+	width:100%;
+	box-sizing: border-box;
+}
+
 .post-postdate h3 {
 	position: relative;
 	top: -1rem;
