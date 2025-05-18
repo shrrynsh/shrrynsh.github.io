@@ -1,0 +1,10 @@
+plugins:
+  - jekyll-paginate
+  - jekyll-archives
+
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/categories/:name/'
