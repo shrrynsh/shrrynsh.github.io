@@ -708,6 +708,7 @@ body {
 }
 
 .post {
+	margin: 0 auto;
 	text-align: justify;
 	display: flex;
 	flex-wrap: wrap;
@@ -723,7 +724,10 @@ body {
 */
 	box-sizing: border-box;
 }
-
+.post-postcontent {
+	max-width: 100%;
+	text-align: justify;
+}
 
 #left-container {
 	width: 90%;
