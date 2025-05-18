@@ -73,6 +73,27 @@ Pagination needs setup on `_config.yml`:
 paginate: 9
 paginate_path: "/page:num/"
 ```
+### Archives (Categories)
+Archives needs setup on `_config.yml`:
+
+```
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/categories/:name/'
+```
+
+> [!NOTE]  
+> Github Pages does not support Jekyll Archives, if you want this feature please use Github Actions instead
+
+### Date format
+Date format is configurable on `_config.yml`:
+
+```
+date_format: "%d/%m/%Y" # dd/mm/yy
+```
 
 ### Social links
 Like any other Jekyll theme, you need to setup your social links on `_config.yml`:

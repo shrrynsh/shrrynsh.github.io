@@ -8,3 +8,5 @@ jekyll-archives:
   layout: archive
   permalinks:
     category: '/categories/:name/'
+
+date_format: "%d/%m/%Y"
