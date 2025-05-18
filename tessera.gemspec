@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "tessera"
+  spec.name          = "tessera-jekyll-theme"
   spec.version       = "0.1.0"
   spec.authors       = ["ItsZariep"]
   spec.email         = ["itszariep@disroot.org"]

@@ -9,13 +9,13 @@ Tessera features three main components: two side panels and a central content ar
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "tessera"
+gem "tessera-jekyll-theme"
 ```
 
 Then add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: tessera
+theme: tessera-jekyll-theme
 ```
 
 And then execute:
@@ -27,7 +27,7 @@ $ bundle
 Or install it manually with:
 
 ```
-$ gem install tessera
+$ gem install tessera-jekyll-theme
 ```
 
 ## Dependencies
