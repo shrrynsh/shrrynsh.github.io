@@ -311,7 +311,7 @@ input[type="text"] {
 
 hr.endseparator {
 	background-color: white; /* sets the color of the line */
-	width: 100%;
+	width: 95%;
 	height: 2.6px;
 	margin-left: 0;
 	border: none; /* remove default border */
@@ -480,6 +480,12 @@ hr.endseparator {
 	width: 20%;
 	padding: 0 0vw 0;
 	margin-left: 0vw;
+/* Uncomment this if you want sticky behavior
+	position: sticky;
+	top: 0;
+	align-self: flex-start;
+*/
+
 }
 
 

@@ -46,6 +46,7 @@ Tessera needs the following Jekyll plugins to function properly:
   
   
 ## Post-install setup
+
 ### Search
 Search needs /`search.json`:
 
@@ -66,13 +67,44 @@ layout: null
 
 ```
 
+### Social Media Preview on non-post pages
+set this on your `_config.yml`:
+```
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      image: /preview.jpg
+```
+
+> Image need to be always /preview.jpg
+
+
 ### Pagination
-Pagination needs setup on `_config.yml`:
+Pagination needs setup on two files:
+
+on `_config.yml`:
 
 ```
 paginate: 9
 paginate_path: "/page:num/"
 ```
+
+on `index.html`
+
+```
+---
+layout: home
+title: [Your index title]
+paginate: 9
+---
+```
+
+> 9 is the number of post per section, you can change it to have more o less post on grid per section
+
+
 ### Archives (Categories)
 Archives needs setup on `_config.yml`:
 
@@ -112,9 +144,10 @@ social_links:
 ```
 
 
-## Usage
+## Customizing
 
-To start customizing Tessera, copy any of the `_includes` components you'd like to modify. You’ll probably want to copy most or all of them:
+### Layouts
+To start customizing Tessera, copy any of the `_includes` components you'd like to modify:
 
 * `toppane.html`: Header
 * `leftpane.html`: Left side of the page
@@ -127,28 +160,12 @@ To start customizing Tessera, copy any of the `_includes` components you'd like 
 * `searchbar.html`: Search bar (requires JavaScript)
 * `bottompane.html`: Footer for all pages
 
+### Styles
+Create `assets/css/custom.css`, this file will serve as override without having to modify entire CSS, so you can edit specific elements you want
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at [https://github.com/itszariep/tessera](https://github.com/itszariep/tessera). This project aims to be a safe and welcoming space for collaboration. All contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
-
-## Development
-
-To set up your environment for theme development, run:
-
-```
-$ bundle install
-```
-
-Your theme is set up just like a regular Jekyll site! To test it, run:
-
-```
-$ bundle exec jekyll serve
-```
-
-Then open your browser at [http://localhost:4000](http://localhost:4000). This starts a Jekyll server using your theme. Add pages, documents, data, etc., as usual to test your theme's content. As you modify the theme or its content, your site will automatically regenerate. Refresh the browser to see the changes.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass`, and `assets` that are tracked by Git will be bundled.
-To add a custom directory to your theme gem, update the regular expression in `tessera.gemspec` accordingly.
 
 ## License
 
