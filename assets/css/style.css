@@ -252,6 +252,14 @@ input[type="text"] {
 	text-align: justify;
 }
 
+.post-postcontent img {
+	object-fit: contain;
+	width: 75%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .post-posttitle {
 	max-width: 95%;
 	text-align: justify;
@@ -320,7 +328,7 @@ hr.endseparator {
 }
 
 .userbox-content h3 {
-	margin: 4px 0 12px 0;
+	margin: 4px 5px 12px 0;
 	font-weight: normal;
 	color: #666;
 }

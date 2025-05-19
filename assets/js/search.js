@@ -2,11 +2,22 @@ let searchData = [];
 
 const baseurl = document.getElementById('search-container').getAttribute('data-baseurl');
 fetch(`${baseurl}/search.json`)
-	.then(res => res.json())
-	.then(data =>
+	.then(res => res.text())
+	.then(text =>
 	{
-		searchData = data;
-		initSearchBars();
+		try
+		{
+			let cleanedText = text
+				.replace(/\\(?!["\\/bfnrtu])/g, '\\\\')
+				.replace(/[\u0000-\u001F]/g, '');
+
+			searchData = JSON.parse(cleanedText);
+			initSearchBars();
+		}
+		catch (e)
+		{
+			console.error("Failed to parse cleaned JSON:", e);
+		}
 	});
 
 function initSearchBars()
