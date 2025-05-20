@@ -4,6 +4,10 @@ Tessera is a Jekyll theme designed with content creators in mind, but like any o
 
 Tessera features three main components: two side panels and a central content area. The theme is highly modular, allowing you to easily customize any component by overriding the `_includes`.
 
+## Example:
+
+See [Tessera example page](https://itszariep.github.io/Tessera) for a vanilla example, or [My blog](https://itszariep.github.io/) (in Spanish) for a version with modification and real use case
+
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
@@ -29,6 +33,7 @@ Or install it manually with:
 ```
 $ gem install tessera-jekyll-theme
 ```
+
 ### GitHub Pages
 Instead of doing the above steps, define this in your `_config.yml`, removing also `theme`:
 
@@ -161,7 +166,9 @@ To start customizing Tessera, copy any of the `_includes` components you'd like 
 * `bottompane.html`: Footer for all pages
 
 ### Styles
-Create `assets/css/custom.css`, this file will serve as override without having to modify entire CSS, so you can edit specific elements you want
+Create `assets/css/custom.css`, this file will serve as override without having to modify entire CSS, so you can edit specific elements you want.
+
+You can see common modifications on [Wiki](https://github.com/ItsZariep/Tessera/wiki/Common-modifications-and-additions:)
 
 ## Contributing
 

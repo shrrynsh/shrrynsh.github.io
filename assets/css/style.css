@@ -54,6 +54,7 @@ a:hover {
 }
 
 table {
+	margin: 0 auto;
 	width: 95%;
 	border-collapse: collapse;
 	box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -259,6 +260,21 @@ input[type="text"] {
 	align-self: stretch;
 	width:100%;
 	box-sizing: border-box;
+}
+
+.post figcaption {
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-evenly;
+	color: var(--grey1);
+}
+
+blockquote {
+	color: var(--accenthv);
+	border-left: 4px solid var(--accenthv);
+	background-color: var(--black);
+	border-radius: 6px;
+	padding: 0 1rem 0 1rem;
 }
 
 .post-postdate h3 {
