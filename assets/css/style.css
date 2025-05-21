@@ -336,6 +336,7 @@ hr.endseparator {
 .btnshare {
 	display: inline-block;
 	position: relative;
+	width: 100%;
 }
 #toggleshare {
 	display: none;
@@ -361,7 +362,8 @@ label[for="toggleshare"] {
 	display: none;
 }
 #toggleshare:checked ~ .urlshare {
-	display: inline-block;
+    display: inline-block;
+    width: 100%;
 }
 
 .userbox {
