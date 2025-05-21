@@ -333,6 +333,37 @@ hr.endseparator {
 	border: none; /* remove default border */
 }
 
+.btnshare {
+	display: inline-block;
+	position: relative;
+}
+#toggleshare {
+	display: none;
+}
+label[for="toggleshare"] {
+	display: inline-block;
+	padding: 7px 16px;
+	margin: 0vw 0vh 0vh 1vw;
+	max-width: 95%;
+	background: var(--accent);
+	color: var(--accentfg);
+	cursor: pointer;
+	border-radius: 5px;
+	user-select: none;
+}
+.urlshare {
+	display: none;
+	padding: 8px;
+	margin: 0vw 0vh 0vh 1vw;
+	max-width: 95%;
+}
+#toggleshare:checked + label {
+	display: none;
+}
+#toggleshare:checked ~ .urlshare {
+	display: inline-block;
+}
+
 .userbox {
 	display: flex;
 	align-items: flex-start;

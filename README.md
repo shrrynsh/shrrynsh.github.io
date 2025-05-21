@@ -6,7 +6,7 @@ Tessera features three main components: two side panels and a central content ar
 
 ## Example:
 
-See [Tessera example page](https://itszariep.github.io/Tessera) for a vanilla example, or [My blog](https://itszariep.github.io/) (in Spanish) for a version with modification and real use case
+See [Tessera example page](https://itszariep.github.io/Tessera) for a vanilla example, or [My blog](https://itszariep.github.io/) (in Spanish) for a version with modifications and a real use case
 
 ## Installation
 
@@ -60,16 +60,16 @@ Search needs /`search.json`:
 layout: null
 ---
 [
-  {% for post in site.posts %}
-    {
-      "title": "{{ post.title | escape }}",
-      "url": "{{ site.baseurl }}{{ post.url }}",
-      "date": "{{ post.date | date: "%B %-d, %Y" }}",
-      "content": "{{ post.content | strip_html | strip_newlines | escape }}"
-    }{% unless forloop.last %},{% endunless %}
-  {% endfor %}
+	{% for post in site.posts %}
+		{
+			"title": "{{ post.title | escape }}",
+			"url": "{{ site.baseurl }}{{ post.url }}",
+			"date": "{{ post.date | date: "%B %-d, %Y" }}",
+			"content": "{{ post.content | strip_html | strip_newlines | escape }}",
+			"tags": "{{ post.tags }}"
+		}{% unless forloop.last %},{% endunless %}
+	{% endfor %}
 ]
-
 ```
 
 ### Social Media Preview on non-post pages

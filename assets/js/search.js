@@ -33,13 +33,32 @@ function initSearchBars()
 		{
 			const query = this.value.toLowerCase();
 			resultsContainer.innerHTML = '';
-
 			if (query.length < 2) return;
 
-			const results = searchData.filter(item =>
-				item.title.toLowerCase().includes(query) ||
-				item.content.toLowerCase().includes(query)
-			);
+			let results = [];
+			if (Array.isArray(searchData) && searchData.length > 0)
+			{
+				results = searchData.filter(item =>
+					(item.title?.toLowerCase() || '').includes(query) ||
+					(item.tags?.toLowerCase() || '').includes(query) ||
+					(item.content?.toLowerCase() || '').includes(query)
+				);
+			}
+
+
+			if (results.length > 0)
+			{
+				results.sort((a, b) =>
+				{
+					const aTitle = (a.title || '').toLowerCase();
+					const bTitle = (b.title || '').toLowerCase();
+
+					const aScore = aTitle === query ? 0 : aTitle.startsWith(query) ? 1 : 2;
+					const bScore = bTitle === query ? 0 : bTitle.startsWith(query) ? 1 : 2;
+
+					return aScore - bScore;
+				});
+			}
 
 			results.slice(0, 10).forEach(result =>
 			{
@@ -48,5 +67,6 @@ function initSearchBars()
 				resultsContainer.appendChild(li);
 			});
 		});
+
 	});
 }
