@@ -362,8 +362,8 @@ label[for="toggleshare"] {
 	display: none;
 }
 #toggleshare:checked ~ .urlshare {
-    display: inline-block;
-    width: 100%;
+	display: inline-block;
+	width: 100%;
 }
 
 .userbox {
@@ -451,7 +451,9 @@ label[for="toggleshare"] {
 .post-image-wrapper {
 	position: relative;
 	width: 100%;
-	padding-top: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100%) */
+	/* padding-top: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100%) */
+	/* padding-top: 75%; /* 4:3 aspect ratio (9 / 16 * 100%) */
+	padding-top: 52.36%; /* 1.91:1 aspect ratio (OG:Image standard) */
 	overflow: hidden;
 	border-radius: 8px 8px 0 0;
 }
