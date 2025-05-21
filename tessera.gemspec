@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "tessera-jekyll-theme"
-  spec.version       = "0.1.0"
+  spec.version       = "0.2.0"
   spec.authors       = ["ItsZariep"]
   spec.email         = ["itszariep@disroot.org"]
 
