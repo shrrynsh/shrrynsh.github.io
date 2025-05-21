@@ -87,6 +87,45 @@ defaults:
 > Image need to be always /preview.jpg
 
 
+## Authors
+
+1.  Optionally set default author in `_.config.yml`:
+
+```
+defaults:
+  - 
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      image: /preview.jpg
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "Tessera"
+      image: /preview.jpg
+
+```
+
+2. Create `assets/img/authors/[Author Name].webp`
+3. Create `about/[Author Name].md`
+4. Create `_includes/authors.html and set your data`:
+
+```
+{% case include.author %}
+	{% when "[YOUR NAME]" %}
+		Cool Description
+	{% when "Tessera" %}
+		Cool Description
+	{% else %}
+		Unknown Author
+{% endcase %}
+```
+
+> You can add multiple authors, for example with "Tessera", files would be `assets/img/authors/Tessera.webp` and `about/Tessera.md`
+
 ### Pagination
 Pagination needs setup on two files:
 
@@ -147,7 +186,6 @@ social_links:
     url: https://linkedin.com/in/yourprofile
     icon: linkedin
 ```
-
 
 ## Customizing
 

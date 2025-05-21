@@ -2,11 +2,28 @@ plugins:
   - jekyll-paginate
   - jekyll-archives
 
+author: Tesser
+
 jekyll-archives:
   enabled:
     - categories
   layout: archive
   permalinks:
     category: '/categories/:name/'
+
+defaults:
+  - 
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      image: /preview.jpg
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "Tessera"
+      image: /preview.jpg
 
 date_format: "%d/%m/%Y"
