@@ -1,9 +1,9 @@
 <head>
+	{% include customheaders.html %}
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
 
-	<meta charset="UTF-8">
 	<meta property="og:site_name" content="{{ site.title }}" />
 	<meta property="og:title" content="{{ page.title }}" />
 	<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{{ page.image }}" />
@@ -16,7 +16,7 @@
 	<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.content and page.content != '' %}{{ page.content | strip_html | truncate: 150 }}{% else %}{{ site.description }}{% endif %}" />
 	<meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}{{ page.image }}" />
 
-	<title>{{ page.title | default: site.title }}</title>
+	<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
 	<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 	<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
