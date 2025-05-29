@@ -1,7 +1,7 @@
 <div class="pagination-controls">
 	{% if paginator.page > 1 %}
 		<a href="{{ '/' | relative_url }}">1</a>
-		<a href="{{ paginator.previous_page_path | relative_url }}">&laquo;</a>
+		<a href="{{ paginator.previous_page_path | relative_url }}"> &lsaquo;</a>
 	{% else %}
 		<span class="current-page">1</span>
 	{% endif %}
@@ -21,7 +21,7 @@
 	{% endfor %}
 
 	{% if paginator.page < paginator.total_pages %}
-		<a href="{{ paginator.next_page_path | relative_url }}">&raquo;</a>
+		<a href="{{ paginator.next_page_path | relative_url }}">&rsaquo;</a>
 		<a href="{{ site.paginate_path | replace: ':num', paginator.total_pages | relative_url }}">{{ paginator.total_pages }}</a>
 	{% endif %}
 </div>
