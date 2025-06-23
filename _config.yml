@@ -2,7 +2,10 @@ plugins:
   - jekyll-paginate
   - jekyll-archives
 
-author: Tesser
+title: "Shreyansh’s ML/DL Blog"
+description: "Reviews & thoughts on papers and deep learning"
+author: "Shreyansh Modi"
+
 
 jekyll-archives:
   enabled:
