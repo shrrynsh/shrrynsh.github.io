@@ -20,4 +20,4 @@ They work by finding the optimal hyperplane that best separates data points of d
 The decision function is:
 
 ```math
-h(x) = \text{sign}(w \cdot x + b)
+$$h(x) = \text{sign}(w \cdot x + b)$$
