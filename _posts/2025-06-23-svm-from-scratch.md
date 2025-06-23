@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Support Vector Machines – From Scratch"
+title: "Support Vector Machines"
 date: 2025-06-23
-author: "Shreyansh Modi"
-tags: [svm, optimization, paper-explained]
+categories: ml blog
 ---
+
 
 
 # Support Vector Machines
