@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="alternate" type="application/rss+xml" title="Shreyansh's ML/DL Blog" href="/feed.xml">
+
+	<meta property="og:site_name" content="Shreyansh's ML/DL Blog" />
+	<meta property="og:title" content="Support Vector Machines – An Intuitive Introduction" />
+	<meta property="og:image" content="https://your-username.github.io" />
+	<meta property="og:description" content="Support Vector Machines (SVMs) are powerful supervised learning models used for classification and regression tasks.
+
+They work by finding the opti..." />
+	<meta property="og:url" content="https://your-username.github.io/ml/2025/06/23/svm-from-scratch/" />
+	<meta property="og:type" content="website" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Support Vector Machines – An Intuitive Introduction" />
+	<meta name="twitter:description" content="Support Vector Machines (SVMs) are powerful supervised learning models used for classification and regression tasks.
+
+They work by finding the opti..." />
+	<meta name="twitter:image" content="https://your-username.github.io" />
+
+	<title>Support Vector Machines – An Intuitive Introduction | Shreyansh's ML/DL Blog</title>
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" href="/assets/css/custom.css">
+
+	<link rel="icon" href="/favicon.ico">
+</head>
+
+<body>
+		<!-- Top Pane (Navbar?) -->
+
+<div class="toppanel">
+		<!-- Left side of the pane, usually only has a title or logo -->
+	<div class="tp-left">
+	<a href="/"><img class="tp-banner" src="/assets/img/banner.svg" width="100%" /></a>
+		<!--<h1>Shreyansh's ML/DL Blog</h1> -->
+	</div>
+
+	<!-- Burger menu using checkbox hack (for mobile, without using JS) -->
+	<input type="checkbox" id="burger-toggle" class="burger-checkbox">
+	<label for="burger-toggle" class="burger-menu">
+		<span></span>
+		<span></span>
+		<span></span>
+	</label>
+
+	<!-- Right side of the pane, usually has the navigation buttons, this example also has sub-elements -->
+	<div class="tp-right" id="mobile-menu">
+		<ul class="tp-nav">
+			<li><a href="/">Home</a></li>
+			<li><a href="/about/about">About</a></li>
+			<li class="tp-dropdown">
+				<input type="checkbox" id="social-toggle" class="dropdown-checkbox">
+				<label for="social-toggle">Social Media</label>
+				<!-- Lists all site social links, declare it on your _config.yml
+						example:
+							social_links:
+							- name: Youtube
+							url: https://youtube.com/@zariep
+							icon: youtube
+							- name: GitHub
+							url: https://github.com/ItsZariep
+							icon: github
+							- name: LinkedIn
+							url: https://linkedin.com/in/zariep
+							icon: linkedin
+				-->
+				<ul class="tp-dropdown-elements">
+					
+				</ul>
+			</li>
+			<li><a href="https://github.com/itszariep/tessera">Download</a></li>
+		</ul>
+	</div>
+</div>
+
+	<main>
+		<div id="main-container">
+	<!-- Left Pane, this is a copy of rightpane because is not used on example
+		remove comment if you need it-->
+
+<div id="left-container">
+
+<div class="leftpane-landscapescreen">
+	<h3>Optional leftpane</h3>
+	<img class="userpic" src="/assets/img/avatar.webp" alt="Avatar">
+</div>
+
+<div class="leftpane-portraitscreen">
+	<div id="search-container" data-baseurl=""  class="search-box">
+	<input type="text" class="search-input" placeholder="Search...">
+	<ul class="search-results"></ul>
+</div>
+<script src="/assets/js/search.js"></script>
+</div>
+
+
+</div>
+	<!-- Tags -->
+<div class="post">
+	<div class="post-postcategories">
+		<h3>
+		
+			<a href="/categories/ml/">ml</a>
+		
+		</h3>
+	</div>
+
+	<div class="post-posttitle">
+		<h1>Support Vector Machines – An Intuitive Introduction</h1>
+	</div>
+
+	<div class="post-postdate">
+		<h3>2025-06-23 00:00:00 +0530</h3>
+	</div>
+
+	<div class="post-postcontent">
+	<div class="post-img">
+		
+	</div>
+
+	<p>Support Vector Machines (SVMs) are powerful supervised learning models used for classification and regression tasks.</p>
+
+<p>They work by finding the optimal hyperplane that best separates data points of different classes. The core idea is to maximize the <strong>margin</strong> — the distance between the hyperplane and the nearest data points (called support vectors).</p>
+
+<h2 id="-key-concepts">🧠 Key Concepts</h2>
+
+<ul>
+  <li><strong>Hyperplane:</strong> A decision boundary that separates classes.</li>
+  <li><strong>Support Vectors:</strong> Data points that lie closest to the hyperplane.</li>
+  <li><strong>Margin:</strong> Distance between hyperplane and support vectors.</li>
+</ul>
+
+<h3 id="-mathematically">🧮 Mathematically</h3>
+
+<p>The decision function is:</p>
+
+<p>```math
+h(x) = \text{sign}(w \cdot x + b)</p>
+
+	</div>
+
+	<div class="post-postcategoriesbottom">
+		<h3>
+		
+		</h3>
+	<a href="#scrolltotop" class="scrolltotop"></a>
+	</div>
+
+	<hr class="endseparator">
+		<!--Your personal box at the end of each post-->
+
+<div class="userbox">
+	<img class="userpic" src="/assets/img/authors/.webp" alt="Avatar">
+	<div class="userbox-content">
+		<h1></h1>
+		<h3>
+		Unknown Author
+
+</h3>
+		<a href="/about/">About me</a>
+	</div>
+</div>
+<br>
+		<div class="btnshare">
+	<input type="checkbox" id="toggleshare" />
+	<label for="toggleshare">Share this page</label>
+	<input class="urlshare" type="text" readonly value="https://your-username.github.io/ml/2025/06/23/svm-from-scratch/" />
+</div>
+
+		<!-- Example comment system with utterances
+ remove comment to enable it
+ See https://utteranc.es for more information about this example
+-->
+
+
+
+<!--Remove this after enabling comments-->
+<div class="userbox">
+	<div class="userbox-content">
+		<h1>Comment section will be here</h1>
+		<h3>See _includes/comments.html</h3>
+	</div>
+</div>
+<br>
+
+</div>
+		<!-- User box and comments are included on postcontent.html-->
+	<!-- Right Pane -->
+
+<!-- You can remove or replace any section if required, copying _includes/rightpane.html on your page -->
+
+<div id="right-container">
+
+<!-- Banner Image or title-->
+<!-- This image is displayed at the top of the right pane. -->
+<!--<img class="rp-banner" src="/assets/img/banner.svg" width="100%" />-->
+	<h1 class="rp-banner">Shreyansh's ML/DL Blog</h1>
+
+	<!-- Search Form -->
+	<!-- A simple GET form that allows users to perform a search query. -->
+	<!-- The search input is sent to the '/search' route. -->
+		<div id="search-container" data-baseurl=""  class="search-box">
+	<input type="text" class="search-input" placeholder="Search...">
+	<ul class="search-results"></ul>
+</div>
+<script src="/assets/js/search.js"></script>
+	<!-- Entries Section -->
+	<!-- Displays a list of recent blog posts. -->
+	<h2>Entries</h2>
+	<div class="rightpaneposts">
+		<ul>
+			<!-- Loop through the latest 5 posts in the site. -->
+			 
+				<li>
+					<!-- Each post is linked to its full page. -->
+					<a class="rp-post-link" href="/ml/2025/06/23/svm-from-scratch/">
+						<!-- Post title is shown here with a small heading. -->
+						<h6 class="rp-post-title">Support Vector Machines – An Intuitive Introduction</h6>
+					</a>
+				</li>
+			
+		</ul>
+	</div>
+	<!-- Categories Section -->
+	<!-- Lists all categories used across posts, sorted alphabetically. -->
+	<h2>Categories</h2>
+	<ul>
+		<!-- Get and sort all categories from the site. -->
+		
+		
+			<li>
+				<!-- Link to the category page, with a slugified version of the category name. -->
+				<a class="rp-post-link" href="/categories/ml/">
+					<!-- Display the name of the category with a medium heading. -->
+					<h4 class="rp-post-title">ml</h4>
+				</a>
+			</li>
+		
+	</ul>
+</div>
+</div>
+
+	</main>
+		<!-- Bottom Pane (Footer?) -->
+
+<!-- You can remove or replace any section if required, copying _includes/bottompane.html on your page -->
+
+<div class="bottompane">
+	<div class="bp-left">
+		<p>&copy; 2025 Shreyansh's ML/DL Blog</p>
+	</div>
+	<div class="bp-right">
+		<p>Powered by <a href="https://github.com/itszariep/tessera">Tessera</a> for Jekyll</p>
+	</div>
+</div>
+</body>
+</html>
