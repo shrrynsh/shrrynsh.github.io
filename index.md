@@ -1,4 +1,10 @@
 ---
-layout: home
-title: "Home"
+layout: default
 ---
+
+<h1>Debug: Posts Below</h1>
+<ul>
+  {% for post in site.posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
