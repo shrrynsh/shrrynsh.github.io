@@ -11,7 +11,7 @@ tags: [svm, optimization, paper-explained]
 
 - [ ] **SVMs ,What are they and why they are used?**
 
-hi,SVM is one of the most powerful supervised learning algorithm primarily used for classification tasks. The main goal of SVM is to classify instances based on there relative position with a decision boundary which is a HYPERPLANE. Since a hyperplane is a linear decision boundary one might think SVM would only work for linearly separable cases, but no that's the beauty of SVMs they work pretty well for non-linearly separable cases as well .Let's explore more about SVMs in this blog.
+SVM is one of the most powerful supervised learning algorithm primarily used for classification tasks. The main goal of SVM is to classify instances based on there relative position with a decision boundary which is a HYPERPLANE. Since a hyperplane is a linear decision boundary one might think SVM would only work for linearly separable cases, but no that's the beauty of SVMs they work pretty well for non-linearly separable cases as well .Let's explore more about SVMs in this blog.
 
 - [ ] **The Main Goal finding the optimal hyperplane.**
 
