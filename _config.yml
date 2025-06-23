@@ -1,32 +1,30 @@
-plugins:
-  - jekyll-paginate
-  - jekyll-archives
-
-title: "Shreyansh’s ML/DL Blog"
-description: "Reviews & thoughts on papers and deep learning"
+title: "Shreyansh's ML/DL Blog"
+description: "Explaining ML/DL papers and algorithms from scratch"
 author: "Shreyansh Modi"
+email: your@email.com
+baseurl: "" # Leave this empty if using username.github.io
+url: "https://shrrynsh.github.io"
 
+theme: tessera-jekyll  # If this is in use, otherwise leave it out for custom theme
 
-jekyll-archives:
-  enabled:
-    - categories
-  layout: archive
-  permalinks:
-    category: '/categories/:name/'
+# Enable plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-sitemap
 
-defaults:
-  - 
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      image: /preview.jpg
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      author: "Tessera"
-      image: /preview.jpg
+paginate: 5
+paginate_path: "/page:num"
 
-date_format: "%d/%m/%Y"
+# Enable Math rendering (using MathJax)
+mathjax: true
+
+# Markdown options
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+
+# Social links (optional)
+
