@@ -4,7 +4,7 @@
 			"title": "Support Vector Machines – An Intuitive Introduction",
 			"url": "/ml/2025/06/23/svm-from-scratch/",
 			"date": "June 23, 2025",
-			"content": "Support Vector Machines (SVMs) are powerful supervised learning models used for classification and regression tasks.They work by finding the optimal hyperplane that best separates data points of different classes. The core idea is to maximize the margin — the distance between the hyperplane and the nearest data points (called support vectors).🧠 Key Concepts  Hyperplane: A decision boundary that separates classes.  Support Vectors: Data points that lie closest to the hyperplane.  Margin: Distance between hyperplane and support vectors.🧮 MathematicallyThe decision function is:```mathh(x) = \text{sign}(w \cdot x + b)",
+			"content": "Support Vector Machines (SVMs) are powerful supervised learning models used for classification and regression tasks.They work by finding the optimal hyperplane that best separates data points of different classes. The core idea is to maximize the margin — the distance between the hyperplane and the nearest data points (called support vectors)..🧠 Key Concepts  Hyperplane: A decision boundary that separates classes.  Support Vectors: Data points that lie closest to the hyperplane.  Margin: Distance between hyperplane and support vectors.🧮 MathematicallyThe decision function is:```mathh(x) = \text{sign}(w \cdot x + b)",
 			"tags": ""
 		}
 	
