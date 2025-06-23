@@ -7,7 +7,7 @@ categories: ml
 
 Support Vector Machines (SVMs) are powerful supervised learning models used for classification and regression tasks.
 
-They work by finding the optimal hyperplane that best separates data points of different classes. The core idea is to maximize the **margin** — the distance between the hyperplane and the nearest data points (called support vectors).
+They work by finding the optimal hyperplane that best separates data points of different classes. The core idea is to maximize the **margin** — the distance between the hyperplane and the nearest data points (called support vectors)..
 
 ## 🧠 Key Concepts
 
