@@ -5,6 +5,10 @@ url: "https://your-username.github.io" # change to your actual GitHub Pages URL
 theme: null # critical: disables Jekyll theme gem lookup
 markdown: kramdown
 permalink: pretty
+timezone: Asia/Kolkata
+future: true
+
+
 
 # Optional:
 paginate: 5
