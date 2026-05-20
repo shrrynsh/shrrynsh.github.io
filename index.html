@@ -1,459 +1,528 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shreyansh Modi</title>
-  <meta name="description" content="Shreyansh Modi — AI Researcher and Undergrad at IIT Roorkee." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Shreyansh Modi</title>
+	<meta name="description" content="Shreyansh Modi — AI Researcher and Undergrad at IIT Roorkee." />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400;500&display=swap"
+		rel="stylesheet" />
+	<style>
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
 
-    :root {
-      --ink:     #18181b;
-      --body:    #2e2e33;
-      --muted:   #6b7280;
-      --faint:   #9ca3af;
-      --border:  #e4e4e7;
-      --bg:      #fafaf9;
-      --surface: #f4f4f5;
-      --accent:  #2563eb;
-      --mono: 'DM Mono', monospace;
-      --serif: 'EB Garamond', Georgia, serif;
-    }
+		:root {
+			--ink: #18181b;
+			--body: #2e2e33;
+			--muted: #6b7280;
+			--faint: #9ca3af;
+			--border: #e4e4e7;
+			--bg: #fafaf9;
+			--surface: #f4f4f5;
+			--accent: #2563eb;
+			--mono: 'DM Mono', monospace;
+			--serif: 'EB Garamond', Georgia, serif;
+		}
 
-    html { font-size: 18px; }
+		html {
+			font-size: 21px;
+		}
 
-    body {
-      background: var(--bg);
-      color: var(--body);
-      font-family: var(--serif);
-      font-size: 1rem;
-      line-height: 1.8;
-      margin: 0;
-      padding: 0;
-    }
+		body {
+			background: var(--bg);
+			color: var(--body);
+			font-family: var(--serif);
+			font-size: 1rem;
+			line-height: 1.8;
+			margin: 0;
+			padding: 0;
+		}
 
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    strong { color: var(--ink); font-weight: 500; }
+		a {
+			color: var(--accent);
+			text-decoration: none;
+		}
 
-    /* ── NAV ── */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(250,250,249,0.92);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 5vw;
-    }
+		a:hover {
+			text-decoration: underline;
+		}
 
-    .nav-name {
-      font-family: var(--mono);
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: var(--ink);
-      letter-spacing: 0.01em;
-    }
+		strong {
+			color: var(--ink);
+			font-weight: 500;
+		}
 
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-      list-style: none;
-    }
+		/* ── NAV ── */
+		nav {
+			position: sticky;
+			top: 0;
+			z-index: 100;
+			background: rgba(250, 250, 249, 0.92);
+			backdrop-filter: blur(8px);
+			border-bottom: 1px solid var(--border);
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 1rem 5vw;
+		}
 
-    .nav-links a {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      color: var(--muted);
-      letter-spacing: 0.05em;
-    }
-    .nav-links a:hover { color: var(--ink); text-decoration: none; }
+		.nav-name {
+			font-family: var(--mono);
+			font-size: 1rem;
+			font-weight: 500;
+			color: var(--ink);
+			letter-spacing: 0.01em;
+		}
 
-    /* ── HERO ── */
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 92vh;
-      align-items: stretch;
-    }
+		.nav-links {
+			display: flex;
+			gap: 2.5rem;
+			list-style: none;
+		}
 
-    .hero-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 6rem 5vw 6rem 8vw;
-    }
+		.nav-links a {
+			font-family: var(--mono);
+			font-size: 0.85rem;
+		}
 
-    h1 {
-      font-family: var(--serif);
-      font-size: clamp(2.8rem, 5vw, 4.5rem);
-      font-weight: 400;
-      font-style: normal;
-      letter-spacing: -0.02em;
-      line-height: 1.05;
-      color: var(--ink);
-      margin-bottom: 0.5rem;
-    }
+		.nav-links a:hover {
+			color: var(--ink);
+			text-decoration: none;
+		}
 
-    .subtitle {
-      font-family: var(--mono);
-      font-size: 0.68rem;
-      color: var(--faint);
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      margin-bottom: 2rem;
-    }
+		/* ── HERO ── */
+		.hero {
+			display: grid;
+			grid-template-columns: 1.6fr 1fr;
+			min-height: 85vh;
 
-    .bio {
-      font-size: 1.05rem;
+			.hero-text {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				padding: 6rem 5vw 6rem 8vw;
+			}
+
+			h1 {
+				font-family: var(--serif);
+				font-size: clamp(2.8rem, 5vw, 4.5rem);
+				font-weight: 400;
+				font-style: normal;
+				letter-spacing: -0.02em;
+				line-height: 1.05;
+				color: var(--ink);
+				margin-bottom: 0.5rem;
+			}
+
+			.subtitle {
+				font-family: var(--mono);
+				font-size: 0.68rem;
+				color: var(--faint);
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+				margin-bottom: 2rem;
+			}
+
+			.bio {
+      font-size: 1.15rem;
       color: var(--body);
       line-height: 1.9;
-      max-width: 520px;
-    }
-    .bio p + p { margin-top: 1rem; }
+      max-width: 650px;
 
-    .hero-cta {
-      margin-top: 2.5rem;
-      display: flex;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
+			.bio p+p {
+				margin-top: 1rem;
+			}
 
-    .btn {
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.06em;
-      padding: 0.6rem 1.2rem;
-      border-radius: 4px;
-      border: 1px solid var(--border);
-      background: white;
-      color: var(--muted);
-      cursor: pointer;
-      transition: color 0.15s, border-color 0.15s;
-      text-decoration: none;
-    }
-    .btn:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
-    .btn-primary {
-      background: var(--ink);
-      color: white;
-      border-color: var(--ink);
-    }
-    .btn-primary:hover { background: #333; border-color: #333; color: white; }
+			.hero-cta {
+				margin-top: 2.5rem;
+				display: flex;
+				gap: 0.75rem;
+				flex-wrap: wrap;
+			}
 
-    .hero-image {
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-    }
-    /* subtle gradient fade on left edge to blend into page */
-    .hero-image::before {
-      content: '';
-      position: absolute;
-      inset: 0 auto 0 0;
-      width: 80px;
-      background: linear-gradient(to right, var(--bg), transparent);
-      z-index: 1;
-    }
+			.btn {
+				font-family: var(--mono);
+				font-size: 0.7rem;
+				letter-spacing: 0.06em;
+				padding: 0.6rem 1.2rem;
+				border-radius: 4px;
+				border: 1px solid var(--border);
+				background: white;
+				color: var(--muted);
+				cursor: pointer;
+				transition: color 0.15s, border-color 0.15s;
+				text-decoration: none;
+			}
 
-    /* ── PAGE CONTENT ── */
-    .page-content {
-      padding: 5rem 8vw;
-    }
+			.btn:hover {
+				color: var(--accent);
+				border-color: var(--accent);
+				text-decoration: none;
+			}
 
-    /* ── SECTIONS ── */
-    section { margin-bottom: 5rem; }
+			.btn-primary {
+				background: var(--ink);
+				color: white;
+				border-color: var(--ink);
+			}
 
-    .section-head {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
+			.btn-primary:hover {
+				background: #333;
+				border-color: #333;
+				color: white;
+			}
 
-    h2 {
-      font-family: var(--mono);
-      font-size: 0.62rem;
-      font-weight: 500;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--faint);
-      white-space: nowrap;
-    }
+			.hero-image {
+				position: relative;
+				overflow: hidden;
+			}
 
-    .section-rule {
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
+			.hero-image img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center top;
+				display: block;
+			}
 
-    /* ── PROJECTS GRID ── */
-    .proj-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.25rem;
-    }
+			/* subtle gradient fade on left edge to blend into page */
+			.hero-image::before {
+				content: '';
+				position: absolute;
+				inset: 0 auto 0 0;
+				width: 80px;
+				background: linear-gradient(to right, var(--bg), transparent);
+				z-index: 1;
+			}
 
-    .proj-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-      transition: border-color 0.15s, box-shadow 0.15s;
-    }
-    .proj-card:hover {
-      border-color: var(--accent);
-      box-shadow: 0 4px 16px rgba(37,99,235,0.07);
-    }
+			/* ── PAGE CONTENT ── */
+			.page-content {
+				padding: 5rem 8vw;
+			}
 
-    .proj-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
+			/* ── SECTIONS ── */
+			section {
+				margin-bottom: 5rem;
+			}
 
-    .proj-name {
-      font-family: var(--mono);
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--accent);
-    }
+			.section-head {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				margin-bottom: 2rem;
+			}
 
-    .proj-tag {
-      font-family: var(--mono);
-      font-size: 0.58rem;
-      color: var(--faint);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 0.15rem 0.45rem;
-      border-radius: 3px;
-      white-space: nowrap;
-    }
+			h2 {
+				font-family: var(--mono);
+				font-size: 0.62rem;
+				font-weight: 500;
+				letter-spacing: 0.22em;
+				text-transform: uppercase;
+				color: var(--faint);
+				white-space: nowrap;
+			}
 
-    .proj-desc {
-      font-size: 0.92rem;
-      color: var(--muted);
-      line-height: 1.65;
-      flex: 1;
-    }
+			.section-rule {
+				flex: 1;
+				height: 1px;
+				background: var(--border);
+			}
 
-    .proj-stack {
-      font-family: var(--mono);
-      font-size: 0.62rem;
-      color: var(--faint);
-      letter-spacing: 0.03em;
-    }
+			/* ── PROJECTS GRID ── */
+			.proj-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+				gap: 1.25rem;
+			}
 
-    /* ── CONTACT GRID ── */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 1rem;
-    }
+			.proj-card {
+				background: white;
+				border: 1px solid var(--border);
+				border-radius: 6px;
+				padding: 1.5rem;
+				display: flex;
+				flex-direction: column;
+				gap: 0.6rem;
+				transition: border-color 0.15s, box-shadow 0.15s;
+			}
 
-    .contact-card {
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-      padding: 1.25rem 1.5rem;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      background: white;
-      transition: border-color 0.15s, box-shadow 0.15s;
-      text-decoration: none;
-    }
-    .contact-card:hover {
-      border-color: var(--accent);
-      box-shadow: 0 4px 16px rgba(37,99,235,0.07);
-      text-decoration: none;
-    }
+			.proj-card:hover {
+				border-color: var(--accent);
+				box-shadow: 0 4px 16px rgba(37, 99, 235, 0.07);
+			}
 
-    .contact-card-label {
-      font-family: var(--mono);
-      font-size: 0.58rem;
-      color: var(--faint);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
+			.proj-card-header {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+			}
 
-    .contact-card-value {
-      font-size: 0.95rem;
-      color: var(--ink);
-      word-break: break-word;
-    }
+			.proj-name {
+				font-family: var(--mono);
+				font-size: 0.82rem;
+				font-weight: 500;
+				color: var(--accent);
+			}
 
-    /* ── FOOTER ── */
-    footer {
-      padding: 2rem 8vw;
-      border-top: 1px solid var(--border);
-      font-family: var(--mono);
-      font-size: 0.6rem;
-      color: var(--faint);
-      letter-spacing: 0.04em;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+			.proj-tag {
+				font-family: var(--mono);
+				font-size: 0.58rem;
+				color: var(--faint);
+				background: var(--surface);
+				border: 1px solid var(--border);
+				padding: 0.15rem 0.45rem;
+				border-radius: 3px;
+				white-space: nowrap;
+			}
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      html { font-size: 16px; }
+			.proj-desc {
+				font-size: 0.92rem;
+				color: var(--muted);
+				line-height: 1.65;
+				flex: 1;
+			}
 
-      .hero {
-        grid-template-columns: 1fr;
-        min-height: auto;
-      }
+			.proj-stack {
+				font-family: var(--mono);
+				font-size: 0.62rem;
+				color: var(--faint);
+				letter-spacing: 0.03em;
+			}
 
-      .hero-image {
-        height: 55vw;
-        order: -1;
-      }
-      .hero-image::before { display: none; }
+			/* ── CONTACT GRID ── */
+			.contact-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+				gap: 1rem;
+			}
 
-      .hero-text {
-        padding: 3rem 6vw;
-      }
+			.contact-card {
+				display: flex;
+				flex-direction: column;
+				gap: 0.25rem;
+				padding: 1.25rem 1.5rem;
+				border: 1px solid var(--border);
+				border-radius: 6px;
+				background: white;
+				transition: border-color 0.15s, box-shadow 0.15s;
+				text-decoration: none;
+			}
 
-      .page-content { padding: 3rem 6vw; }
-      footer { padding: 1.5rem 6vw; flex-wrap: wrap; gap: 0.5rem; }
+			.contact-card:hover {
+				border-color: var(--accent);
+				box-shadow: 0 4px 16px rgba(37, 99, 235, 0.07);
+				text-decoration: none;
+			}
 
-      nav { padding: 0.85rem 5vw; }
-      .nav-links { gap: 1.25rem; }
-    }
-  </style>
+			.contact-card-label {
+				font-family: var(--mono);
+				font-size: 0.58rem;
+				color: var(--faint);
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+			}
+
+			.contact-card-value {
+				font-size: 0.95rem;
+				color: var(--ink);
+				word-break: break-word;
+			}
+
+			/* ── FOOTER ── */
+			footer {
+				padding: 2rem 8vw;
+				border-top: 1px solid var(--border);
+				font-family: var(--mono);
+				font-size: 0.6rem;
+				color: var(--faint);
+				letter-spacing: 0.04em;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			/* ── RESPONSIVE ── */
+			@media (max-width: 768px) {
+				html {
+					font-size: 18px;
+				}
+
+				.hero {
+					grid-template-columns: 1fr;
+					min-height: auto;
+				}
+
+				.hero-image {
+					height: 40vw;
+					max-height: 400px;
+					order: -1;
+				}
+
+				.hero-image::before {
+					display: none;
+				}
+
+				.hero-text {
+					padding: 3rem 6vw;
+				}
+
+				.page-content {
+					padding: 3rem 6vw;
+				}
+
+				footer {
+					padding: 1.5rem 6vw;
+					flex-wrap: wrap;
+					gap: 0.5rem;
+				}
+
+				nav {
+					padding: 0.85rem 5vw;
+				}
+
+				.nav-links {
+					gap: 1.25rem;
+				}
+			}
+	</style>
 </head>
 
 <body>
 
-  <nav>
-    <span class="nav-name">Shreyansh Modi</span>
-    <ul class="nav-links">
-      <li><a href="#about">about</a></li>
-      <li><a href="#projects">projects</a></li>
-      <li><a href="#contact">contact</a></li>
-    </ul>
-  </nav>
+	<nav>
+		<span class="nav-name">Shreyansh Modi</span>
+		<ul class="nav-links">
+			<li><a href="#about">about</a></li>
+			<li><a href="#projects">projects</a></li>
+			<li><a href="#contact">contact</a></li>
+		</ul>
+	</nav>
 
-  <!-- ── HERO ── -->
-  <div class="hero" id="about">
-    <div class="hero-text">
-      <h1>Shreyansh<br>Modi</h1>
-      <div class="subtitle">AI Researcher &nbsp;·&nbsp; IIT Roorkee &nbsp;·&nbsp; India</div>
-      <div class="bio">
-        <p>Undergrad in Electrical Engineering at IIT Roorkee, focused on machine learning, computer vision, and NLP. I build things that actually matter — from diagnosing diseases in medical scans to automating complex data analysis.</p>
-        <p>Previously a <strong>ML Engineer Intern at Infigro.ai</strong> and <strong>Research Intern at IIT Roorkee's EE Dept</strong>. 4th place at InterIIT Tech Meet 14.0. Core Member, Data Science Group.</p>
-      </div>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#projects">View Projects</a>
-        <a class="btn" href="#contact">Contact Me</a>
-        <a class="btn" href="https://shrrynsh.github.io/shreyansh_modi_resume.pdf" download>Resume ↓</a>
-      </div>
-    </div>
-    <div class="hero-image">
-      <img src="https://shrrynsh.github.io/img/me.jpeg" alt="Shreyansh Modi" />
-    </div>
-  </div>
+	<!-- ── HERO ── -->
+	<div class="hero" id="about">
+		<div class="hero-text">
+			<h1>Shreyansh<br>Modi</h1>
+			<div class="subtitle">AI Researcher &nbsp;·&nbsp; IIT Roorkee &nbsp;·&nbsp; India</div>
+			<div class="bio">
+				<p>Undergrad in Electrical Engineering at IIT Roorkee, focused on machine learning, computer vision, and
+					NLP. I build things that actually matter — from diagnosing diseases in medical scans to automating
+					complex data analysis.</p>
+				<p>Previously a <strong>ML Engineer Intern at Infigro.ai</strong> and <strong>Research Intern at IIT
+						Roorkee's EE Dept</strong>. 4th place at InterIIT Tech Meet 14.0. Core Member, Data Science
+					Group.</p>
+			</div>
+			<div class="hero-cta">
+				<a class="btn btn-primary" href="#projects">View Projects</a>
+				<a class="btn" href="#contact">Contact Me</a>
+				<a class="btn" href="https://shrrynsh.github.io/shreyansh_modi_resume.pdf" download>Resume ↓</a>
+			</div>
+		</div>
+		<div class="hero-image">
+			<img src="https://shrrynsh.github.io/img/me.jpeg" alt="Shreyansh Modi" />
+		</div>
+	</div>
 
-  <div class="page-content">
+	<div class="page-content">
 
-    <!-- ── PROJECTS ── -->
-    <section id="projects">
-      <div class="section-head">
-        <h2>Projects</h2>
-        <div class="section-rule"></div>
-      </div>
-      <div class="proj-grid">
+		<!-- ── PROJECTS ── -->
+		<section id="projects">
+			<div class="section-head">
+				<h2>Projects</h2>
+				<div class="section-rule"></div>
+			</div>
+			<div class="proj-grid">
 
-        <div class="proj-card">
-          <div class="proj-card-header">
-            <span class="proj-name"><a href="https://github.com/shrrynsh/HireSense">HireSense</a></span>
-          </div>
-          <p class="proj-desc">NLP tool using fine-tuned Named Entity Recognition to parse resumes and match candidates to job descriptions with similarity scores.</p>
-          <span class="proj-stack">Python · NER · NLP · Git</span>
-        </div>
+				<div class="proj-card">
+					<div class="proj-card-header">
+						<span class="proj-name"><a href="https://github.com/shrrynsh/HireSense">HireSense</a></span>
+					</div>
+					<p class="proj-desc">NLP tool using fine-tuned Named Entity Recognition to parse resumes and match
+						candidates to job descriptions with similarity scores.</p>
+					<span class="proj-stack">Python · NER · NLP · Git</span>
+				</div>
 
-        <div class="proj-card">
-          <div class="proj-card-header">
-            <span class="proj-name"><a href="https://github.com/shrrynsh/InVisionDX">InVisionDX</a></span>
-          </div>
-          <p class="proj-desc">CNN-based disease prediction from medical images — COVID-19, Pneumonia, Tuberculosis, Lung Cancer, Alzheimer's — with 95%+ accuracy.</p>
-          <span class="proj-stack">PyTorch · Computer Vision · Flask</span>
-        </div>
+				<div class="proj-card">
+					<div class="proj-card-header">
+						<span class="proj-name"><a href="https://github.com/shrrynsh/InVisionDX">InVisionDX</a></span>
+					</div>
+					<p class="proj-desc">CNN-based disease prediction from medical images — COVID-19, Pneumonia,
+						Tuberculosis, Lung Cancer, Alzheimer's — with 95%+ accuracy.</p>
+					<span class="proj-stack">PyTorch · Computer Vision · Flask</span>
+				</div>
 
-        <div class="proj-card">
-          <div class="proj-card-header">
-            <span class="proj-name"><a href="https://github.com/shrrynsh/ERP-API-Framework">ERP API Framework</a></span>
-          </div>
-          <p class="proj-desc">High-performance ERP management system with data analysis modules for extracting and visualizing insights from ERP-style datasets.</p>
-          <span class="proj-stack">Python · Flask · JavaScript · HTML/CSS</span>
-        </div>
+				<div class="proj-card">
+					<div class="proj-card-header">
+						<span class="proj-name"><a href="https://github.com/shrrynsh/ERP-API-Framework">ERP API
+								Framework</a></span>
+					</div>
+					<p class="proj-desc">High-performance ERP management system with data analysis modules for
+						extracting and visualizing insights from ERP-style datasets.</p>
+					<span class="proj-stack">Python · Flask · JavaScript · HTML/CSS</span>
+				</div>
 
-        <div class="proj-card">
-          <div class="proj-card-header">
-            <span class="proj-name"><a href="https://github.com/shrrynsh/Adobe-Photo-Editor">Adobe Photo Editor</a></span>
-            <span class="proj-tag">4th / all IITs</span>
-          </div>
-          <p class="proj-desc">Smart photo editing app with CV-powered pipelines enabling context-aware automated enhancements. Built for InterIIT Tech Meet 14.0.</p>
-          <span class="proj-stack">Python · PyTorch · Computer Vision</span>
-        </div>
+				<div class="proj-card">
+					<div class="proj-card-header">
+						<span class="proj-name"><a href="https://github.com/shrrynsh/Adobe-Photo-Editor">Adobe Photo
+								Editor</a></span>
+						<span class="proj-tag">4th / all IITs</span>
+					</div>
+					<p class="proj-desc">Smart photo editing app with CV-powered pipelines enabling context-aware
+						automated enhancements. Built for InterIIT Tech Meet 14.0.</p>
+					<span class="proj-stack">Python · PyTorch · Computer Vision</span>
+				</div>
 
-      </div>
-    </section>
+			</div>
+		</section>
 
-    <!-- ── CONTACT ── -->
-    <section id="contact">
-      <div class="section-head">
-        <h2>Contact</h2>
-        <div class="section-rule"></div>
-      </div>
-      <div class="contact-grid">
-        <a class="contact-card" href="mailto:shreyansh_m@ee.iitr.ac.in">
-          <span class="contact-card-label">Email</span>
-          <span class="contact-card-value">shreyansh_m@ee.iitr.ac.in</span>
-        </a>
-        <a class="contact-card" href="https://github.com/shrrynsh">
-          <span class="contact-card-label">GitHub</span>
-          <span class="contact-card-value">@shrrynsh</span>
-        </a>
-        <a class="contact-card" href="https://twitter.com/shrrynsh">
-          <span class="contact-card-label">X / Twitter</span>
-          <span class="contact-card-value">@shrrynsh</span>
-        </a>
-        <a class="contact-card" href="https://www.linkedin.com/in/shreyanshmodi">
-          <span class="contact-card-label">LinkedIn</span>
-          <span class="contact-card-value">Shreyansh Modi</span>
-        </a>
-        <a class="contact-card" href="tel:+918287512050">
-          <span class="contact-card-label">Phone</span>
-          <span class="contact-card-value">+91 82875 12050</span>
-        </a>
-        <a class="contact-card" href="https://shrrynsh.github.io/shreyansh_modi_resume.pdf" download>
-          <span class="contact-card-label">Resume</span>
-          <span class="contact-card-value">Download Resume</span>
-        </a>
-      </div>
-    </section>
+		<!-- ── CONTACT ── -->
+		<section id="contact">
+			<div class="section-head">
+				<h2>Contact</h2>
+				<div class="section-rule"></div>
+			</div>
+			<div class="contact-grid">
+				<a class="contact-card" href="mailto:shreyansh_m@ee.iitr.ac.in">
+					<span class="contact-card-label">Email</span>
+					<span class="contact-card-value">shreyansh_m@ee.iitr.ac.in</span>
+				</a>
+				<a class="contact-card" href="https://github.com/shrrynsh">
+					<span class="contact-card-label">GitHub</span>
+					<span class="contact-card-value">@shrrynsh</span>
+				</a>
+				<a class="contact-card" href="https://twitter.com/shrrynsh">
+					<span class="contact-card-label">X / Twitter</span>
+					<span class="contact-card-value">@shrrynsh</span>
+				</a>
+				<a class="contact-card" href="https://www.linkedin.com/in/shreyanshmodi">
+					<span class="contact-card-label">LinkedIn</span>
+					<span class="contact-card-value">Shreyansh Modi</span>
+				</a>
+				<a class="contact-card" href="tel:+918287512050">
+					<span class="contact-card-label">Phone</span>
+					<span class="contact-card-value">+91 82875 12050</span>
+				</a>
+				<a class="contact-card" href="https://shrrynsh.github.io/shreyansh_modi_resume.pdf" download>
+					<span class="contact-card-label">Resume</span>
+					<span class="contact-card-value">Download Resume</span>
+				</a>
+			</div>
+		</section>
 
-  </div>
+	</div>
 
-  <footer>
-    <span>© 2024 – Shreyansh Modi</span>
-    <span>last updated May 2026</span>
-  </footer>
+	<footer>
+		<span>© 2024 – Shreyansh Modi</span>
+		<span>last updated May 2026</span>
+	</footer>
 
 </body>
+
 </html>
