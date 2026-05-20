@@ -287,6 +287,40 @@
     .post-title a:hover { color: var(--accent); }
 
     /* ── FOOTER ── */
+    /* ── CONTACT ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .contact-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      padding: 1rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      background: white;
+      transition: border-color 0.15s;
+      text-decoration: none;
+    }
+    .contact-card:hover {
+      border-color: var(--accent);
+      text-decoration: none;
+    }
+    .contact-card-label {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      color: var(--faint);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .contact-card-value {
+      font-size: 0.92rem;
+      color: var(--ink);
+    }
+
     footer {
       margin-top: 4rem;
       padding-top: 1.25rem;
@@ -326,6 +360,7 @@
       <li><a href="#projects">projects</a></li>
       <li><a href="#writing">writing</a></li>
       <li><a href="#about">about</a></li>
+      <li><a href="#contact">contact</a></li>
     </ul>
   </nav>
 
@@ -338,14 +373,7 @@
         <p>B.Tech student in Electrical Engineering at IIT Roorkee (2024–2028), working on machine learning systems, computer vision, and NLP. Interested in building intelligent systems that solve real problems — from disease prediction to automated data analysis.</p>
         <p>Previously interned as an ML Engineer at Infigro.ai, built open-source NLP and CV tools, and placed 4th among all IITs at InterIIT Tech Meet 14.0. Core Member of the Data Science Group at IIT Roorkee.</p>
       </div>
-      <div class="contact-row">
-        <a href="https://github.com/shrrynsh">github</a>
-        <a href="https://www.linkedin.com/in/shreyansh-modi">linkedin</a>
-        <a href="mailto:shreyansh_m@ee.iitr.ac.in">email</a>
-        <a href="tel:+918287512050">+91 82875 12050</a>
-        <a href="/cv.pdf">cv.pdf</a>
       </div>
-    </div>
     <div class="headshot">
       <img src="https://shrrynsh.github.io/homepage/img/me.jpeg" alt="Shreyansh Modi" />
     </div>
@@ -440,6 +468,36 @@
         <span class="post-date">Nov 2024</span>
         <span class="post-title"><a href="#">Third post title</a></span>
       </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div class="section-head">
+      <h2>Contact</h2>
+      <div class="section-rule"></div>
+    </div>
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:shreyansh_m@ee.iitr.ac.in">
+        <span class="contact-card-label">Email</span>
+        <span class="contact-card-value">shreyansh_m@ee.iitr.ac.in</span>
+      </a>
+      <a class="contact-card" href="https://github.com/shrrynsh">
+        <span class="contact-card-label">GitHub</span>
+        <span class="contact-card-value">github.com/shrrynsh</span>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/shreyansh-modi">
+        <span class="contact-card-label">LinkedIn</span>
+        <span class="contact-card-value">linkedin.com/in/shreyansh-modi</span>
+      </a>
+      <a class="contact-card" href="tel:+918287512050">
+        <span class="contact-card-label">Phone</span>
+        <span class="contact-card-value">+91 82875 12050</span>
+      </a>
+      <a class="contact-card" href="/cv.pdf">
+        <span class="contact-card-label">CV / Resume</span>
+        <span class="contact-card-value">Download cv.pdf</span>
+      </a>
     </div>
   </section>
 
