@@ -77,6 +77,37 @@
 		/* ── INTRO ── */
 		.intro {
 			margin-bottom: 3rem;
+			display: flex;
+			gap: 2rem;
+			align-items: flex-start;
+		}
+
+		.headshot {
+			width: 120px;
+			height: 120px;
+			border-radius: 4px;
+			background-color: #f5f5f5;
+			border: 1px solid #e5e5e5;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #aaa;
+			font-family: 'Source Code Pro', monospace;
+			font-size: 0.65rem;
+			text-align: center;
+			padding: 10px;
+			flex-shrink: 0;
+			overflow: hidden;
+		}
+		
+		.headshot img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.intro-text {
+			flex-grow: 1;
 		}
 
 		h1 {
@@ -272,7 +303,12 @@
 		/* ── RESPONSIVE ── */
 		@media (max-width: 540px) {
 			body {
-				padding: 2rem 1rem 4rem;
+				padding: 2rem 1.5rem 4rem;
+			}
+
+			.intro {
+				flex-direction: column;
+				gap: 1.5rem;
 			}
 
 			nav {
@@ -305,26 +341,32 @@
 
 	<!-- ── INTRO ── -->
 	<div class="intro" id="about">
-		<h1>Shreyansh</h1>
-		<div class="subtitle">AI Researcher &nbsp;·&nbsp; Independent &nbsp;·&nbsp; India</div>
-		<div class="bio">
-			<!--
-        EDIT THIS: Replace with your actual bio. Keep it 2–3 short paragraphs.
-        Focus on what you research, not who you are.
-      -->
-			<p>I work on machine learning systems, language model training, and mechanistic interpretability. Interested
-				in understanding what neural networks are actually doing — not just whether they work.</p>
-			<p>Previously built open-source tools used by researchers at top labs. Currently exploring LLM training
-				dynamics and efficient architectures. Open to research collaborations and internships.</p>
+		<div class="headshot">
+			<!-- Replace this absolute path placeholder with your actual photo path, e.g., <img src="/img/headshot.jpg" alt="Shreyansh" /> -->
+			photo<br>120x120
 		</div>
-		<div class="contact-row">
-			<!-- EDIT: Replace # with your actual URLs -->
-			<a href="https://arxiv.org/search/?searchtype=author&query=Shreyansh">arxiv</a>
-			<a href="https://scholar.google.com">google scholar</a>
-			<a href="https://github.com/shrrynsh">github</a>
-			<a href="https://twitter.com/">twitter</a>
-			<a href="mailto:your@email.com">email</a>
-			<a href="/cv.pdf">cv.pdf</a>
+		<div class="intro-text">
+			<h1>Shreyansh</h1>
+			<div class="subtitle">AI Researcher &nbsp;·&nbsp; Independent &nbsp;·&nbsp; India</div>
+			<div class="bio">
+				<!--
+			EDIT THIS: Replace with your actual bio. Keep it 2–3 short paragraphs.
+			Focus on what you research, not who you are.
+		  -->
+				<p>I work on machine learning systems, language model training, and mechanistic interpretability. Interested
+					in understanding what neural networks are actually doing — not just whether they work.</p>
+				<p>Previously built open-source tools used by researchers at top labs. Currently exploring LLM training
+					dynamics and efficient architectures. Open to research collaborations and internships.</p>
+			</div>
+			<div class="contact-row">
+				<!-- EDIT: Replace # with your actual URLs -->
+				<a href="https://arxiv.org/search/?searchtype=author&query=Shreyansh">arxiv</a>
+				<a href="https://scholar.google.com">google scholar</a>
+				<a href="https://github.com/shrrynsh">github</a>
+				<a href="https://twitter.com/">twitter</a>
+				<a href="mailto:your@email.com">email</a>
+				<a href="/cv.pdf">cv.pdf</a>
+			</div>
 		</div>
 	</div>
 
