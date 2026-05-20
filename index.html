@@ -7,9 +7,17 @@
 	<title>Shreyansh Modi</title>
 	<meta name="description" content="Shreyansh Modi — AI Researcher and Undergrad at IIT Roorkee." />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400;500&display=swap"
+		rel="stylesheet" />
 	<style>
-		*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
 
 		:root {
 			--ink: #18181b;
@@ -25,7 +33,9 @@
 			--serif: 'EB Garamond', Georgia, serif;
 		}
 
-		html { font-size: 22px; }
+		html {
+			font-size: 22px;
+		}
 
 		body {
 			background: var(--bg);
@@ -33,14 +43,24 @@
 			font-family: var(--serif);
 			font-size: 1rem;
 			line-height: 1.8;
-			max-width: 860px;
+			max-width: 1000px;
 			margin: 0 auto;
-			padding: 3rem 1.5rem 6rem;
+			padding: 3rem 1rem 6rem;
 		}
 
-		a { color: var(--accent); text-decoration: none; }
-		a:hover { text-decoration: underline; }
-		strong { color: var(--ink); font-weight: 500; }
+		a {
+			color: var(--accent);
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		strong {
+			color: var(--ink);
+			font-weight: 500;
+		}
 
 		/* ── NAV ── */
 		nav {
@@ -71,7 +91,10 @@
 			letter-spacing: 0.05em;
 		}
 
-		.nav-links a:hover { color: var(--ink); text-decoration: none; }
+		.nav-links a:hover {
+			color: var(--ink);
+			text-decoration: none;
+		}
 
 		/* ── INTRO ── */
 		.intro {
@@ -110,7 +133,9 @@
 			line-height: 1.85;
 		}
 
-		.bio p+p { margin-top: 0.9rem; }
+		.bio p+p {
+			margin-top: 0.9rem;
+		}
 
 		.headshot {
 			width: 200px;
@@ -130,7 +155,9 @@
 		}
 
 		/* ── SECTIONS ── */
-		section { margin-bottom: 3.5rem; }
+		section {
+			margin-bottom: 3.5rem;
+		}
 
 		.section-head {
 			display: flex;
@@ -156,7 +183,11 @@
 		}
 
 		/* ── EXPERIENCE ── */
-		.exp-list { display: flex; flex-direction: column; gap: 1.75rem; }
+		.exp-list {
+			display: flex;
+			flex-direction: column;
+			gap: 1.75rem;
+		}
 
 		.exp-header {
 			display: flex;
@@ -211,7 +242,10 @@
 		}
 
 		/* ── PROJECTS ── */
-		.proj-list { display: flex; flex-direction: column; }
+		.proj-list {
+			display: flex;
+			flex-direction: column;
+		}
 
 		.proj-item {
 			display: grid;
@@ -222,7 +256,9 @@
 			border-bottom: 1px solid var(--border);
 		}
 
-		.proj-item:first-child { border-top: 1px solid var(--border); }
+		.proj-item:first-child {
+			border-top: 1px solid var(--border);
+		}
 
 		.proj-name {
 			font-family: var(--mono);
@@ -230,7 +266,9 @@
 			font-weight: 500;
 		}
 
-		.proj-name a { color: var(--accent); }
+		.proj-name a {
+			color: var(--accent);
+		}
 
 		.proj-desc {
 			font-size: 0.92rem;
@@ -246,7 +284,11 @@
 		}
 
 		/* ── WRITING ── */
-		.post-list { display: flex; flex-direction: column; gap: 0.9rem; }
+		.post-list {
+			display: flex;
+			flex-direction: column;
+			gap: 0.9rem;
+		}
 
 		.post-item {
 			display: grid;
@@ -262,9 +304,18 @@
 			white-space: nowrap;
 		}
 
-		.post-title { font-size: 0.97rem; color: var(--body); }
-		.post-title a { color: var(--body); }
-		.post-title a:hover { color: var(--accent); }
+		.post-title {
+			font-size: 0.97rem;
+			color: var(--body);
+		}
+
+		.post-title a {
+			color: var(--body);
+		}
+
+		.post-title a:hover {
+			color: var(--accent);
+		}
 
 		/* ── CONTACT ── */
 		.contact-grid {
@@ -319,14 +370,43 @@
 
 		/* ── RESPONSIVE ── */
 		@media (max-width: 620px) {
-			html { font-size: 18px; }
-			body { padding: 2rem 1.25rem 4rem; }
-			.intro { grid-template-columns: 1fr; gap: 1.75rem; }
-			.headshot { width: 100px; height: 120px; align-self: auto; }
-			nav { flex-wrap: wrap; gap: 1rem; }
-			.proj-item { grid-template-columns: 1fr; gap: 0.2rem; }
-			.proj-tag { display: none; }
-			.post-item { grid-template-columns: 70px 1fr; gap: 1rem; }
+			html {
+				font-size: 18px;
+			}
+
+			body {
+				padding: 2rem 1.25rem 4rem;
+			}
+
+			.intro {
+				grid-template-columns: 1fr;
+				gap: 1.75rem;
+			}
+
+			.headshot {
+				width: 100px;
+				height: 120px;
+				align-self: auto;
+			}
+
+			nav {
+				flex-wrap: wrap;
+				gap: 1rem;
+			}
+
+			.proj-item {
+				grid-template-columns: 1fr;
+				gap: 0.2rem;
+			}
+
+			.proj-tag {
+				display: none;
+			}
+
+			.post-item {
+				grid-template-columns: 70px 1fr;
+				gap: 1rem;
+			}
 		}
 	</style>
 </head>
@@ -354,7 +434,8 @@
 					systems, computer vision, and NLP. Interested in building intelligent systems that solve real
 					problems — from disease prediction to automated data analysis.</p>
 				<p>Previously interned as an ML Engineer at Infigro.ai, built open-source NLP and CV tools, and placed
-					4th among all IITs at InterIIT Tech Meet 14.0. Core Member of the Data Science Group at IIT Roorkee.</p>
+					4th among all IITs at InterIIT Tech Meet 14.0. Core Member of the Data Science Group at IIT Roorkee.
+				</p>
 			</div>
 		</div>
 		<div class="headshot">
@@ -377,8 +458,10 @@
 				</div>
 				<div class="exp-org">Infigro.ai</div>
 				<ul class="exp-bullets">
-					<li>Built a Data Analysis Agent capable of interpreting bar charts and trendline data for automated insights generation.</li>
-					<li>Worked on data interpretation and analysis pipelines to extract meaningful patterns from visual data representations.</li>
+					<li>Built a Data Analysis Agent capable of interpreting bar charts and trendline data for automated
+						insights generation.</li>
+					<li>Worked on data interpretation and analysis pipelines to extract meaningful patterns from visual
+						data representations.</li>
 				</ul>
 			</div>
 
@@ -389,8 +472,10 @@
 				</div>
 				<div class="exp-org">Electrical Engineering Department, IIT Roorkee</div>
 				<ul class="exp-bullets">
-					<li>Research at the intersection of Control Systems and Cybersecurity — advanced control strategies to enhance resilience of cyber-physical systems.</li>
-					<li>Used Arduino and MATLAB to simulate various attacks on cyber-physical systems and devised mitigation strategies.</li>
+					<li>Research at the intersection of Control Systems and Cybersecurity — advanced control strategies
+						to enhance resilience of cyber-physical systems.</li>
+					<li>Used Arduino and MATLAB to simulate various attacks on cyber-physical systems and devised
+						mitigation strategies.</li>
 				</ul>
 			</div>
 
@@ -407,25 +492,30 @@
 
 			<div class="proj-item">
 				<span class="proj-name"><a href="https://github.com/shrrynsh">HireSense</a></span>
-				<span class="proj-desc">NLP-based candidate selection model using fine-tuned NER to parse resumes and job descriptions, computing similarity scores from extracted feature vectors.</span>
+				<span class="proj-desc">NLP-based candidate selection model using fine-tuned NER to parse resumes and
+					job descriptions, computing similarity scores from extracted feature vectors.</span>
 				<span class="proj-tag">Python · NER · NLP</span>
 			</div>
 
 			<div class="proj-item">
 				<span class="proj-name"><a href="https://github.com/shrrynsh">InVisionDX</a></span>
-				<span class="proj-desc">CNN-based disease prediction (COVID-19, Pneumonia, Tuberculosis, Lung Cancer, Alzheimer's) from medical images, achieving over 95% accuracy. Web2-integrated via Flask.</span>
+				<span class="proj-desc">CNN-based disease prediction (COVID-19, Pneumonia, Tuberculosis, Lung Cancer,
+					Alzheimer's) from medical images, achieving over 95% accuracy. Web2-integrated via Flask.</span>
 				<span class="proj-tag">PyTorch · CV · Flask</span>
 			</div>
 
 			<div class="proj-item">
 				<span class="proj-name"><a href="https://github.com/shrrynsh">ERP API Framework</a></span>
-				<span class="proj-desc">High-performance ERP management system with data analysis modules for extracting and visualizing insights from ERP-style datasets.</span>
+				<span class="proj-desc">High-performance ERP management system with data analysis modules for extracting
+					and visualizing insights from ERP-style datasets.</span>
 				<span class="proj-tag">Python · Flask · JS</span>
 			</div>
 
 			<div class="proj-item">
 				<span class="proj-name"><a href="#">Adobe Photo Editor</a></span>
-				<span class="proj-desc">Photo editing app with automated CV-powered editing pipelines enabling context-aware, intelligent enhancements without manual intervention. 4th place at InterIIT Tech Meet 14.0.</span>
+				<span class="proj-desc">Photo editing app with automated CV-powered editing pipelines enabling
+					context-aware, intelligent enhancements without manual intervention. 4th place at InterIIT Tech Meet
+					14.0.</span>
 				<span class="proj-tag">4th / all IITs</span>
 			</div>
 
