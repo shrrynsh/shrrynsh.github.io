@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shreyansh</title>
-  <meta name="description" content="Shreyansh — AI Researcher and Engineer." />
+  <title>Shreyansh Modi</title>
+  <meta name="description" content="Shreyansh Modi — ML Engineer and CS Student at IIT Roorkee." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
@@ -75,14 +75,12 @@
     .intro {
       display: grid;
       grid-template-columns: 1fr 148px;
-      gap: 3rem;
-      align-items: start;
+      gap: 2.5rem;
+      align-items: stretch;
       margin-bottom: 5rem;
       padding-bottom: 3rem;
       border-bottom: 1px solid var(--border);
     }
-
-    .intro-text { }
 
     h1 {
       font-family: var(--serif);
@@ -108,7 +106,6 @@
       font-size: 1.05rem;
       color: var(--body);
       line-height: 1.85;
-      max-width: 520px;
     }
     .bio p + p { margin-top: 0.9rem; }
 
@@ -137,22 +134,21 @@
 
     .headshot {
       width: 148px;
-      height: 185px;
       border-radius: 5px;
       overflow: hidden;
       background: var(--surface);
       border: 1px solid var(--border);
-      flex-shrink: 0;
-      margin-top: 0.5rem;
+      align-self: stretch;
     }
     .headshot img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center top;
       display: block;
     }
 
-    /* ── SECTION WRAPPER ── */
+    /* ── SECTIONS ── */
     section { margin-bottom: 3.5rem; }
 
     .section-head {
@@ -178,55 +174,60 @@
       background: var(--border);
     }
 
-    /* ── PUBLICATIONS ── */
-    .pub-list { display: flex; flex-direction: column; gap: 1.75rem; }
+    /* ── EXPERIENCE ── */
+    .exp-list { display: flex; flex-direction: column; gap: 1.75rem; }
 
-    .pub-item { }
+    .exp-item { }
 
-    .pub-title {
-      font-size: 1.05rem;
-      font-weight: 500;
-      color: var(--ink);
-      line-height: 1.45;
-      font-family: var(--serif);
+    .exp-header {
       display: flex;
+      justify-content: space-between;
       align-items: baseline;
-      gap: 0.5rem;
+      gap: 1rem;
       flex-wrap: wrap;
     }
-    .pub-title a { color: var(--ink); }
-    .pub-title a:hover { color: var(--accent); text-decoration: none; }
 
-    .pub-meta {
-      font-size: 0.88rem;
-      color: var(--muted);
-      line-height: 1.5;
-      margin-top: 0.2rem;
+    .exp-role {
+      font-size: 1.02rem;
+      font-weight: 500;
+      color: var(--ink);
+      font-family: var(--serif);
     }
-    .pub-meta em { font-style: normal; color: var(--body); font-weight: 500; }
 
-    .pub-links {
+    .exp-date {
       font-family: var(--mono);
       font-size: 0.68rem;
-      margin-top: 0.4rem;
-      display: flex;
-      gap: 1rem;
+      color: var(--faint);
+      white-space: nowrap;
     }
-    .pub-links a { color: var(--muted); }
-    .pub-links a:hover { color: var(--accent); text-decoration: none; }
 
-    .badge {
+    .exp-org {
       font-family: var(--mono);
-      font-size: 0.55rem;
-      letter-spacing: 0.08em;
-      background: var(--accent-l);
-      color: var(--accent);
-      padding: 0.12rem 0.5rem;
-      border-radius: 2px;
-      text-transform: uppercase;
-      font-weight: 500;
-      vertical-align: middle;
-      flex-shrink: 0;
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .exp-bullets li {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.6;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .exp-bullets li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--border);
+      font-size: 0.8rem;
     }
 
     /* ── PROJECTS ── */
@@ -234,10 +235,10 @@
 
     .proj-item {
       display: grid;
-      grid-template-columns: 150px 1fr auto;
+      grid-template-columns: 160px 1fr auto;
       gap: 1.25rem;
       align-items: baseline;
-      padding: 0.8rem 0;
+      padding: 0.85rem 0;
       border-bottom: 1px solid var(--border);
     }
     .proj-item:first-child { border-top: 1px solid var(--border); }
@@ -252,12 +253,12 @@
     .proj-desc {
       font-size: 0.92rem;
       color: var(--muted);
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
-    .proj-star {
+    .proj-tag {
       font-family: var(--mono);
-      font-size: 0.68rem;
+      font-size: 0.65rem;
       color: var(--faint);
       white-space: nowrap;
     }
@@ -279,10 +280,7 @@
       white-space: nowrap;
     }
 
-    .post-title {
-      font-size: 0.97rem;
-      color: var(--body);
-    }
+    .post-title { font-size: 0.97rem; color: var(--body); }
     .post-title a { color: var(--body); }
     .post-title a:hover { color: var(--accent); }
 
@@ -305,21 +303,13 @@
       html { font-size: 16px; }
       body { padding: 2rem 1.25rem 4rem; }
 
-      .intro {
-        grid-template-columns: 1fr;
-        gap: 1.75rem;
-      }
-      .headshot {
-        width: 100px;
-        height: 125px;
-        order: -1;
-      }
+      .intro { grid-template-columns: 1fr; gap: 1.75rem; }
+      .headshot { width: 100px; height: 120px; align-self: auto; }
 
       nav { flex-wrap: wrap; gap: 1rem; }
 
       .proj-item { grid-template-columns: 1fr; gap: 0.2rem; }
-      .proj-star { display: none; }
-
+      .proj-tag { display: none; }
       .post-item { grid-template-columns: 70px 1fr; gap: 1rem; }
     }
   </style>
@@ -328,9 +318,9 @@
 <body>
 
   <nav>
-    <span class="nav-name">Shreyansh</span>
+    <span class="nav-name">Shreyansh Modi</span>
     <ul class="nav-links">
-      <li><a href="#publications">publications</a></li>
+      <li><a href="#experience">experience</a></li>
       <li><a href="#projects">projects</a></li>
       <li><a href="#writing">writing</a></li>
       <li><a href="#about">about</a></li>
@@ -340,64 +330,55 @@
   <!-- ── INTRO ── -->
   <div class="intro" id="about">
     <div class="intro-text">
-      <h1>Shreyansh</h1>
-      <div class="subtitle">AI Researcher &nbsp;·&nbsp; Independent &nbsp;·&nbsp; India</div>
+      <h1>Shreyansh Modi</h1>
+      <div class="subtitle">ML Engineer &nbsp;·&nbsp; IIT Roorkee &nbsp;·&nbsp; India</div>
       <div class="bio">
-        <p>I work on machine learning systems, language model training, and mechanistic interpretability.
-          Interested in understanding what neural networks are actually doing — not just whether they work.</p>
-        <p>Previously built open-source tools used by researchers at top labs. Currently exploring LLM
-          training dynamics and efficient architectures. Open to research collaborations and internships.</p>
+        <p>B.Tech student in Electrical Engineering at IIT Roorkee (2024–2028), working on machine learning systems, computer vision, and NLP. Interested in building intelligent systems that solve real problems — from disease prediction to automated data analysis.</p>
+        <p>Previously interned as an ML Engineer at Infigro.ai, built open-source NLP and CV tools, and placed 4th among all IITs at InterIIT Tech Meet 14.0. Core Member of the Data Science Group at IIT Roorkee.</p>
       </div>
       <div class="contact-row">
-        <a href="https://arxiv.org/search/?searchtype=author&query=Shreyansh">arxiv</a>
-        <a href="https://scholar.google.com">scholar</a>
         <a href="https://github.com/shrrynsh">github</a>
-        <a href="https://twitter.com/">twitter</a>
-        <a href="mailto:your@email.com">email</a>
+        <a href="https://www.linkedin.com/in/shreyansh-modi">linkedin</a>
+        <a href="mailto:shreyansh_m@ee.iitr.ac.in">email</a>
+        <a href="tel:+918287512050">+91 82875 12050</a>
         <a href="/cv.pdf">cv.pdf</a>
       </div>
     </div>
     <div class="headshot">
-      <img src="https://shrrynsh.github.io/homepage/img/me.jpeg" alt="Shreyansh" />
+      <img src="https://shrrynsh.github.io/homepage/img/me.jpeg" alt="Shreyansh Modi" />
     </div>
   </div>
 
-  <!-- ── PUBLICATIONS ── -->
-  <section id="publications">
+  <!-- ── EXPERIENCE ── -->
+  <section id="experience">
     <div class="section-head">
-      <h2>Publications</h2>
+      <h2>Experience</h2>
       <div class="section-rule"></div>
     </div>
-    <div class="pub-list">
+    <div class="exp-list">
 
-      <div class="pub-item">
-        <div class="pub-title">
-          <a href="#">Your Paper Title Goes Here</a>
-          <span class="badge">Oral</span>
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Machine Learning Engineer Intern</span>
+          <span class="exp-date">Jul 2025 – Nov 2025</span>
         </div>
-        <div class="pub-meta"><strong>Shreyansh</strong>, Co-Author Name, Another Author &nbsp;·&nbsp; <em>NeurIPS 2025</em></div>
-        <div class="pub-links">
-          <a href="#">[paper]</a><a href="#">[code]</a><a href="#">[slides]</a><a href="#">[talk]</a>
-        </div>
+        <div class="exp-org">Infigro.ai</div>
+        <ul class="exp-bullets">
+          <li>Built a Data Analysis Agent capable of interpreting bar charts and trendline data for automated insights generation.</li>
+          <li>Worked on data interpretation and analysis pipelines to extract meaningful patterns from visual data representations.</li>
+        </ul>
       </div>
 
-      <div class="pub-item">
-        <div class="pub-title">
-          <a href="#">Second Paper Title</a>
-          <span class="badge">Best Paper</span>
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-role">Research Intern</span>
+          <span class="exp-date">Dec 2024 – Jan 2025</span>
         </div>
-        <div class="pub-meta"><strong>Shreyansh</strong>, Co-Author &nbsp;·&nbsp; <em>ICML 2024</em></div>
-        <div class="pub-links">
-          <a href="#">[paper]</a><a href="#">[code]</a><a href="#">[poster]</a>
-        </div>
-      </div>
-
-      <div class="pub-item">
-        <div class="pub-title"><a href="#">Third Paper Title</a></div>
-        <div class="pub-meta">Co-Author, <strong>Shreyansh</strong>, Another &nbsp;·&nbsp; <em>ICLR 2024</em></div>
-        <div class="pub-links">
-          <a href="#">[paper]</a><a href="#">[code]</a>
-        </div>
+        <div class="exp-org">Electrical Engineering Department, IIT Roorkee</div>
+        <ul class="exp-bullets">
+          <li>Research at the intersection of Control Systems and Cybersecurity — advanced control strategies to enhance resilience of cyber-physical systems.</li>
+          <li>Used Arduino and MATLAB to simulate various attacks on cyber-physical systems and devised mitigation strategies.</li>
+        </ul>
       </div>
 
     </div>
@@ -406,25 +387,33 @@
   <!-- ── PROJECTS ── -->
   <section id="projects">
     <div class="section-head">
-      <h2>Software</h2>
+      <h2>Projects</h2>
       <div class="section-rule"></div>
     </div>
     <div class="proj-list">
 
       <div class="proj-item">
-        <span class="proj-name"><a href="https://github.com/shrrynsh">Monochrome</a></span>
-        <span class="proj-desc">Your project description in one clear sentence.</span>
-        <span class="proj-star">★ 0</span>
+        <span class="proj-name"><a href="https://github.com/shrrynsh">HireSense</a></span>
+        <span class="proj-desc">NLP-based candidate selection model using fine-tuned NER to parse resumes and job descriptions, computing similarity scores from extracted feature vectors.</span>
+        <span class="proj-tag">Python · NER · NLP</span>
       </div>
+
       <div class="proj-item">
-        <span class="proj-name"><a href="#">project-two</a></span>
-        <span class="proj-desc">Another project description. What does it do and why does it matter?</span>
-        <span class="proj-star">★ 0</span>
+        <span class="proj-name"><a href="https://github.com/shrrynsh">InVisionDX</a></span>
+        <span class="proj-desc">CNN-based disease prediction (COVID-19, Pneumonia, Tuberculosis, Lung Cancer, Alzheimer's) from medical images, achieving over 95% accuracy. Web2-integrated via Flask.</span>
+        <span class="proj-tag">PyTorch · CV · Flask</span>
       </div>
+
       <div class="proj-item">
-        <span class="proj-name"><a href="#">project-three</a></span>
-        <span class="proj-desc">Third project. Keep descriptions short and concrete.</span>
-        <span class="proj-star">HuggingFace</span>
+        <span class="proj-name"><a href="https://github.com/shrrynsh">ERP API Framework</a></span>
+        <span class="proj-desc">High-performance ERP management system with data analysis modules for extracting and visualizing insights from ERP-style datasets.</span>
+        <span class="proj-tag">Python · Flask · JS</span>
+      </div>
+
+      <div class="proj-item">
+        <span class="proj-name"><a href="#">Adobe Photo Editor</a></span>
+        <span class="proj-desc">Photo editing app with automated CV-powered editing pipelines enabling context-aware, intelligent enhancements without manual intervention. 4th place at InterIIT Tech Meet 14.0.</span>
+        <span class="proj-tag">4th / all IITs</span>
       </div>
 
     </div>
@@ -453,8 +442,8 @@
   </section>
 
   <footer>
-    <span>© 2017 – Shreyansh</span>
-    <span>last updated May 2025</span>
+    <span>© 2024 – Shreyansh Modi</span>
+    <span>last updated May 2026</span>
   </footer>
 
 </body>
