@@ -1,194 +1,537 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Shreyansh | Homepage</title>
+	<style>
+		/* CSS Reset and Base Styles */
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+			background-color: #fff;
+			color: #111;
+			line-height: 1.6;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		a {
+			color: #111;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		/* Layout constraints */
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 100px 20px;
+		}
+
+		/* Header / Nav */
+		header {
+			display: flex;
+			justify-content: space-between;
+			align-items: baseline;
+			margin-bottom: 120px;
+			flex-wrap: wrap;
+		}
+
+		.identity {
+			margin-bottom: 20px;
+		}
+
+		.name {
+			font-size: 1.5rem;
+			font-weight: 600;
+			letter-spacing: -0.5px;
+		}
+
+		.tagline {
+			display: block;
+			font-size: 0.95rem;
+			color: #111;
+			margin-top: 4px;
+			font-weight: normal;
+		}
+
+		nav {
+			display: flex;
+			gap: 24px;
+		}
+
+		nav a {
+			font-size: 0.95rem;
+		}
+
+		/* Sections */
+		section {
+			margin-bottom: 100px;
+		}
+
+		h2 {
+			font-size: 1.1rem;
+			font-weight: 600;
+			margin-bottom: 24px;
+			letter-spacing: -0.3px;
+		}
+
+		/* About Section */
+		.about-text {
+			font-size: 1.05rem;
+			max-width: 650px;
+			color: #111;
+		}
+
+		/* Projects Section */
+		.projects-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 24px;
+		}
+
+		.project-card {
+			border: 1px solid #eee;
+			padding: 32px;
+			background: #fff;
+		}
+
+		.project-title {
+			font-size: 1.05rem;
+			font-weight: 600;
+			margin-bottom: 8px;
+		}
+
+		.project-desc {
+			font-size: 0.95rem;
+			color: #555;
+		}
+
+		/* Footer */
+		footer {
+			margin-top: 120px;
+			border-top: 1px solid #eee;
+			padding-top: 32px;
+			font-size: 0.85rem;
+			color: #999;
+		}
+
+		/* Responsive adjustments */
+		@media (max-width: 600px) {
+			header {
+				flex-direction: column;
+				gap: 20px;
+				margin-bottom: 80px;
+			}
+
+			.container {
+				padding: 60px 20px;
+			}
+
+			section {
+				margin-bottom: 80px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<div class="identity">
+				<a href="#" class="name">Shreyansh</a>
+				<span class="tagline">Developer building minimal, functional software.</span>
+			</div>
+			<nav>
+				<a href="#about">About</a>
+				<a href="#projects">Download</a>
+				<a href="https://github.com/shrrynsh/homepage">Project on Github</a>
+			</nav>
+		</header>
+
+		<section id="about">
+			<h2>About</h2>
+			<p class="about-text">
+				I am a software engineer focused on robust architecture and functional design.
+				I believe in building tools that respect the user's time and attention.
+				Currently exploring machine learning and robust systems engineering.
+			</p>
+		</section>
+
+		<section id="projects">
+			<h2>Selected Work</h2>
+			<div class="projects-grid">
+				<div class="project-card">
+					<div class="project-title">Project Alpha</div>
+					<div class="project-desc">A minimal, straightforward utility for data processing and analysis.</div>
+				</div>
+				<div class="project-card">
+					<div class="project-title">Project Beta</div>
+					<div class="project-desc">Fast, responsive web service built without heavy frameworks.</div>
+				</div>
+				<div class="project-card">
+					<div class="project-title">Project Gamma</div>
+					<div class="project-desc">Open source library aiming to simplify complex deployment pipelines.</div>
+				</div>
+				<div class="project-card">
+					<div class="project-title">Project Delta</div>
+					<div class="project-desc">Experimental machine learning models focusing on interpretability.</div>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			@2017 - Monochrome
+		</footer>
+	</div>
+</body>
+
+</html> -->
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shreyansh | Homepage</title>
-    <style>
-        /* CSS Reset and Base Styles */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shreyansh</title>
+  <meta name="description" content="Shreyansh — AI Researcher and Engineer. Publications, open-source projects, and writing on machine learning." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;1,300;1,400&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background-color: #fff;
-            color: #111;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+    body {
+      background: #fff;
+      color: #111;
+      font-family: Georgia, 'Source Serif 4', serif;
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
 
-        a {
-            color: #111;
-            text-decoration: none;
-        }
+    a { color: #1a56db; text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 3.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    .nav-name { font-size: 1.05rem; font-weight: 400; color: #111; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.72rem;
+      color: #555;
+      letter-spacing: 0.02em;
+    }
+    .nav-links a:hover { color: #111; text-decoration: none; }
 
-        /* Layout constraints */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 100px 20px;
-        }
+    /* ── INTRO ── */
+    .intro { margin-bottom: 3rem; }
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.4rem;
+      color: #111;
+    }
+    .subtitle {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.75rem;
+      color: #888;
+      letter-spacing: 0.04em;
+      margin-bottom: 1.25rem;
+    }
+    .bio { font-size: 0.95rem; color: #333; line-height: 1.8; max-width: 640px; }
+    .bio p + p { margin-top: 0.8rem; }
 
-        /* Header / Nav */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 120px;
-            flex-wrap: wrap;
-        }
+    .contact-row {
+      margin-top: 1rem;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.72rem;
+      color: #888;
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .contact-row a { color: #888; }
+    .contact-row a:hover { color: #111; text-decoration: none; }
 
-        .identity {
-            margin-bottom: 20px;
-        }
+    /* ── SECTIONS ── */
+    section { margin-bottom: 2.75rem; }
+    h2 {
+      font-size: 0.72rem;
+      font-family: 'Source Code Pro', monospace;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #f0f0f0;
+    }
 
-        .name {
-            font-size: 1.5rem;
-            font-weight: 600;
-            letter-spacing: -0.5px;
-        }
+    /* ── PUBLICATIONS ── */
+    .pub-item { margin-bottom: 1.4rem; }
+    .pub-title { font-size: 0.97rem; color: #111; line-height: 1.45; margin-bottom: 0.15rem; }
+    .pub-title a { color: #111; }
+    .pub-title a:hover { color: #1a56db; }
+    .pub-meta { font-size: 0.82rem; color: #777; line-height: 1.5; }
+    .pub-meta em { color: #555; font-style: normal; }
+    .pub-links {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.68rem;
+      margin-top: 0.25rem;
+      display: flex;
+      gap: 0.75rem;
+    }
+    .pub-links a { color: #888; }
+    .pub-links a:hover { color: #1a56db; text-decoration: none; }
+    .badge {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.06em;
+      background: #f4f4f4;
+      color: #555;
+      padding: 0.1rem 0.4rem;
+      border-radius: 2px;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+      border: 1px solid #e8e8e8;
+    }
 
-        .tagline {
-            display: block;
-            font-size: 0.95rem;
-            color: #111;
-            margin-top: 4px;
-            font-weight: normal;
-        }
+    /* ── PROJECTS ── */
+    .proj-item {
+      margin-bottom: 1.1rem;
+      display: flex;
+      gap: 0.75rem;
+      align-items: baseline;
+    }
+    .proj-name {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.8rem;
+      color: #111;
+      min-width: 130px;
+    }
+    .proj-desc { font-size: 0.88rem; color: #555; line-height: 1.55; }
+    .proj-star {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.65rem;
+      color: #bbb;
+      white-space: nowrap;
+      margin-left: auto;
+      padding-left: 0.5rem;
+    }
 
-        nav {
-            display: flex;
-            gap: 24px;
-        }
+    /* ── WRITING ── */
+    .post-item {
+      margin-bottom: 0.85rem;
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+    }
+    .post-date {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.68rem;
+      color: #bbb;
+      white-space: nowrap;
+      min-width: 70px;
+    }
+    .post-title { font-size: 0.9rem; color: #333; }
+    .post-title a { color: #333; }
 
-        nav a {
-            font-size: 0.95rem;
-        }
+    /* ── FOOTER ── */
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e5e5e5;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.65rem;
+      color: #bbb;
+      letter-spacing: 0.04em;
+    }
 
-        /* Sections */
-        section {
-            margin-bottom: 100px;
-        }
-
-        h2 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 24px;
-            letter-spacing: -0.3px;
-        }
-
-        /* About Section */
-        .about-text {
-            font-size: 1.05rem;
-            max-width: 650px;
-            color: #111;
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-        }
-
-        .project-card {
-            border: 1px solid #eee;
-            padding: 32px;
-            background: #fff;
-        }
-
-        .project-title {
-            font-size: 1.05rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .project-desc {
-            font-size: 0.95rem;
-            color: #555;
-        }
-
-        /* Footer */
-        footer {
-            margin-top: 120px;
-            border-top: 1px solid #eee;
-            padding-top: 32px;
-            font-size: 0.85rem;
-            color: #999;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                gap: 20px;
-                margin-bottom: 80px;
-            }
-            .container {
-                padding: 60px 20px;
-            }
-            section {
-                margin-bottom: 80px;
-            }
-        }
-    </style>
+    /* ── RESPONSIVE ── */
+    @media (max-width: 540px) {
+      body { padding: 2rem 1rem 4rem; }
+      nav { flex-direction: column; gap: 0.75rem; }
+      .proj-item { flex-wrap: wrap; }
+      .proj-star { margin-left: 0; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="identity">
-                <a href="#" class="name">Shreyansh</a>
-                <span class="tagline">Developer building minimal, functional software.</span>
-            </div>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#projects">Download</a>
-                <a href="https://github.com/shrrynsh/homepage">Project on Github</a>
-            </nav>
-        </header>
 
-        <section id="about">
-            <h2>About</h2>
-            <p class="about-text">
-                I am a software engineer focused on robust architecture and functional design. 
-                I believe in building tools that respect the user's time and attention. 
-                Currently exploring machine learning and robust systems engineering.
-            </p>
-        </section>
+  <nav>
+    <span class="nav-name">Shreyansh</span>
+    <ul class="nav-links">
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#writing">Writing</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
 
-        <section id="projects">
-            <h2>Selected Work</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-title">Project Alpha</div>
-                    <div class="project-desc">A minimal, straightforward utility for data processing and analysis.</div>
-                </div>
-                <div class="project-card">
-                    <div class="project-title">Project Beta</div>
-                    <div class="project-desc">Fast, responsive web service built without heavy frameworks.</div>
-                </div>
-                <div class="project-card">
-                    <div class="project-title">Project Gamma</div>
-                    <div class="project-desc">Open source library aiming to simplify complex deployment pipelines.</div>
-                </div>
-                <div class="project-card">
-                    <div class="project-title">Project Delta</div>
-                    <div class="project-desc">Experimental machine learning models focusing on interpretability.</div>
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            @2017 - Monochrome
-        </footer>
+  <!-- ── INTRO ── -->
+  <div class="intro" id="about">
+    <h1>Shreyansh</h1>
+    <div class="subtitle">AI Researcher &nbsp;·&nbsp; Independent &nbsp;·&nbsp; India</div>
+    <div class="bio">
+      <!--
+        EDIT THIS: Replace with your actual bio. Keep it 2–3 short paragraphs.
+        Focus on what you research, not who you are.
+      -->
+      <p>I work on machine learning systems, language model training, and mechanistic interpretability. Interested in understanding what neural networks are actually doing — not just whether they work.</p>
+      <p>Previously built open-source tools used by researchers at top labs. Currently exploring LLM training dynamics and efficient architectures. Open to research collaborations and internships.</p>
     </div>
+    <div class="contact-row">
+      <!-- EDIT: Replace # with your actual URLs -->
+      <a href="https://arxiv.org/search/?searchtype=author&query=Shreyansh">arxiv</a>
+      <a href="https://scholar.google.com">google scholar</a>
+      <a href="https://github.com/shrrynsh">github</a>
+      <a href="https://twitter.com/">twitter</a>
+      <a href="mailto:your@email.com">email</a>
+      <a href="/cv.pdf">cv.pdf</a>
+    </div>
+  </div>
+
+  <!-- ── PUBLICATIONS ── -->
+  <section id="publications">
+    <h2>Publications</h2>
+
+    <!--
+      EDIT: Add your real papers here. Format:
+      - Title links to the paper page (arXiv or conference page)
+      - Authors: bold your name with <strong>Your Name</strong>
+      - Venue: conference name in <em> tags
+      - Links: [paper] [code] [slides] [talk] [poster] as available
+      - Badges: "Oral", "Spotlight", "Best Paper" — remove if not applicable
+    -->
+
+    <div class="pub-item">
+      <div class="pub-title">
+        <a href="#">Your Paper Title Goes Here</a>
+        <span class="badge">Oral</span>
+      </div>
+      <div class="pub-meta"><strong>Shreyansh</strong>, Co-Author Name, Another Author &nbsp;·&nbsp; <em>NeurIPS 2025</em></div>
+      <div class="pub-links">
+        <a href="#">[paper]</a>
+        <a href="#">[code]</a>
+        <a href="#">[slides]</a>
+        <a href="#">[talk]</a>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">
+        <a href="#">Second Paper Title</a>
+        <span class="badge">Best Paper</span>
+      </div>
+      <div class="pub-meta"><strong>Shreyansh</strong>, Co-Author &nbsp;·&nbsp; <em>ICML 2024</em></div>
+      <div class="pub-links">
+        <a href="#">[paper]</a>
+        <a href="#">[code]</a>
+        <a href="#">[poster]</a>
+      </div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title"><a href="#">Third Paper Title</a></div>
+      <div class="pub-meta">Co-Author, <strong>Shreyansh</strong>, Another &nbsp;·&nbsp; <em>ICLR 2024</em></div>
+      <div class="pub-links">
+        <a href="#">[paper]</a>
+        <a href="#">[code]</a>
+      </div>
+    </div>
+
+    <!-- Add more <div class="pub-item"> blocks as needed -->
+
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects">
+    <h2>Software</h2>
+
+    <!--
+      EDIT: Replace with your real GitHub projects.
+      Format: name (links to GitHub) · one-line description · star count
+    -->
+
+    <div class="proj-item">
+      <span class="proj-name"><a href="https://github.com/shrrynsh">Monochrome</a></span>
+      <span class="proj-desc">Your project description in one clear sentence.</span>
+      <span class="proj-star">★ 0</span>
+    </div>
+
+    <div class="proj-item">
+      <span class="proj-name"><a href="#">project-two</a></span>
+      <span class="proj-desc">Another project description. What does it do and why does it matter?</span>
+      <span class="proj-star">★ 0</span>
+    </div>
+
+    <div class="proj-item">
+      <span class="proj-name"><a href="#">project-three</a></span>
+      <span class="proj-desc">Third project. Keep descriptions short and concrete.</span>
+      <span class="proj-star">HuggingFace</span>
+    </div>
+
+    <!-- Add more as needed -->
+
+  </section>
+
+  <!-- ── WRITING ── -->
+  <section id="writing">
+    <h2>Writing</h2>
+
+    <!--
+      EDIT: Add your blog posts, notes, or essays.
+      Format: Month Year · Title (links to post)
+    -->
+
+    <div class="post-item">
+      <span class="post-date">May 2025</span>
+      <span class="post-title"><a href="#">Your blog post title here</a></span>
+    </div>
+
+    <div class="post-item">
+      <span class="post-date">Feb 2025</span>
+      <span class="post-title"><a href="#">Another post or technical note</a></span>
+    </div>
+
+    <div class="post-item">
+      <span class="post-date">Nov 2024</span>
+      <span class="post-title"><a href="#">Third post title</a></span>
+    </div>
+
+    <!-- Add more as needed -->
+
+  </section>
+
+  <footer>
+    @2017 – Monochrome &nbsp;·&nbsp; last updated May 2025
+  </footer>
+
 </body>
 </html>
