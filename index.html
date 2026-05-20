@@ -5,11 +5,10 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Shreyansh</title>
-	<meta name="description"
-		content="Shreyansh — AI Researcher and Engineer. Publications, open-source projects, and writing on machine learning." />
+	<meta name="description" content="Shreyansh — AI Researcher and Engineer." />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link
-		href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;1,300;1,400&family=Source+Code+Pro:wght@400;500&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
 		rel="stylesheet" />
 	<style>
 		*,
@@ -20,21 +19,34 @@
 			padding: 0;
 		}
 
-		body {
-			background: #fff;
-			color: #111;
-			font-family: Georgia, 'Source Serif 4', serif;
+		:root {
+			--text: #1a1a1a;
+			--muted: #6b6b6b;
+			--faint: #a8a8a8;
+			--border: #e8e8e8;
+			--bg: #ffffff;
+			--accent: #1a56db;
+			--mono: 'JetBrains Mono', monospace;
+			--serif: 'Lora', Georgia, serif;
+		}
+
+		html {
 			font-size: 18px;
-			/* Increased from 16px */
-			line-height: 1.8;
-			/* Increased line-height for better readability */
-			max-width: 100%;
+		}
+
+		body {
+			background: var(--bg);
+			color: var(--text);
+			font-family: var(--serif);
+			font-size: 1rem;
+			line-height: 1.75;
+			max-width: 780px;
 			margin: 0 auto;
-			padding: 3rem 5% 5rem;
+			padding: 3.5rem 2rem 5rem;
 		}
 
 		a {
-			color: #1a56db;
+			color: var(--accent);
 			text-decoration: none;
 		}
 
@@ -45,261 +57,251 @@
 		/* ── NAV ── */
 		nav {
 			display: flex;
-			align-items: baseline;
+			align-items: center;
 			justify-content: space-between;
-			margin-bottom: 3.5rem;
-			padding-bottom: 1rem;
-			border-bottom: 1px solid #e5e5e5;
+			margin-bottom: 4rem;
+			padding-bottom: 1.25rem;
+			border-bottom: 1px solid var(--border);
 		}
 
 		.nav-name {
-			font-size: 1.25rem;
-			/* Increased from 1.05rem */
-			font-weight: 400;
-			color: #111;
+			font-family: var(--mono);
+			font-size: 0.9rem;
+			font-weight: 500;
+			color: var(--text);
+			letter-spacing: 0.02em;
 		}
 
 		.nav-links {
 			display: flex;
-			gap: 1.5rem;
+			gap: 1.75rem;
 			list-style: none;
 		}
 
 		.nav-links a {
-			font-family: 'Source Code Pro', monospace;
-			font-size: 0.85rem;
-			/* Increased from 0.72rem */
-			color: #555;
-			letter-spacing: 0.02em;
+			font-family: var(--mono);
+			font-size: 0.78rem;
+			color: var(--muted);
+			letter-spacing: 0.05em;
+			text-transform: lowercase;
 		}
 
 		.nav-links a:hover {
-			color: #111;
+			color: var(--text);
 			text-decoration: none;
 		}
 
-		/* ── INTRO ── */
+		/* ── HERO / INTRO ── */
 		.intro {
-			margin-bottom: 3rem;
-			display: flex;
-			gap: 2rem;
-			align-items: flex-start;
+			display: grid;
+			grid-template-columns: 140px 1fr;
+			gap: 2.5rem;
+			align-items: start;
+			margin-bottom: 4rem;
 		}
 
 		.headshot {
-			width: 120px;
-			height: 120px;
-			border-radius: 4px;
-			background-color: #f5f5f5;
-			border: 1px solid #e5e5e5;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			color: #aaa;
-			font-family: 'Source Code Pro', monospace;
-			font-size: 0.65rem;
-			text-align: center;
-			padding: 10px;
-			flex-shrink: 0;
+			width: 140px;
+			height: 160px;
+			border-radius: 6px;
 			overflow: hidden;
+			background: #f0f0f0;
+			border: 1px solid var(--border);
+			flex-shrink: 0;
 		}
 
 		.headshot img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			display: block;
 		}
 
-		.intro-text {
-			flex-grow: 1;
-		}
+		.intro-text {}
 
 		h1 {
-			font-size: 2.2rem;
-			/* Increased from 1.9rem */
-			font-weight: 400;
+			font-size: 2.4rem;
+			font-weight: 500;
+			font-family: var(--serif);
 			letter-spacing: -0.02em;
-			line-height: 1.2;
-			margin-bottom: 0.4rem;
-			color: #111;
+			line-height: 1.15;
+			margin-bottom: 0.35rem;
+			color: var(--text);
 		}
 
 		.subtitle {
-			font-family: 'Source Code Pro', monospace;
-			font-size: 0.85rem;
-			/* Increased from 0.75rem */
-			color: #888;
-			letter-spacing: 0.04em;
-			margin-bottom: 1.25rem;
+			font-family: var(--mono);
+			font-size: 0.78rem;
+			color: var(--faint);
+			letter-spacing: 0.08em;
+			margin-bottom: 1.5rem;
+			text-transform: uppercase;
 		}
 
 		.bio {
-			font-size: 1.1rem;
-			/* Increased from 0.95rem */
+			font-size: 1rem;
 			color: #333;
-			line-height: 1.8;
-			max-width: none;
+			line-height: 1.85;
 		}
 
 		.bio p+p {
-			margin-top: 0.8rem;
+			margin-top: 0.85rem;
 		}
 
 		.contact-row {
-			margin-top: 1rem;
-			font-family: 'Source Code Pro', monospace;
-			font-size: 0.85rem;
-			/* Increased from 0.72rem */
-			color: #888;
+			margin-top: 1.25rem;
+			font-family: var(--mono);
+			font-size: 0.75rem;
+			color: var(--faint);
 			display: flex;
-			gap: 1.25rem;
+			gap: 1.5rem;
 			flex-wrap: wrap;
 		}
 
 		.contact-row a {
-			color: #888;
+			color: var(--faint);
 		}
 
 		.contact-row a:hover {
-			color: #111;
+			color: var(--accent);
 			text-decoration: none;
 		}
 
 		/* ── SECTIONS ── */
 		section {
-			margin-bottom: 2.75rem;
+			margin-bottom: 3.25rem;
 		}
 
 		h2 {
-			font-size: 0.85rem;
-			/* Increased from 0.72rem */
-			font-family: 'Source Code Pro', monospace;
-			letter-spacing: 0.12em;
+			font-size: 0.7rem;
+			font-family: var(--mono);
+			letter-spacing: 0.18em;
 			text-transform: uppercase;
-			color: #aaa;
-			margin-bottom: 1.25rem;
-			padding-bottom: 0.5rem;
-			border-bottom: 1px solid #f0f0f0;
+			color: var(--faint);
+			margin-bottom: 1.5rem;
+			padding-bottom: 0.6rem;
+			border-bottom: 1px solid var(--border);
 		}
 
 		/* ── PUBLICATIONS ── */
 		.pub-item {
-			margin-bottom: 1.4rem;
+			margin-bottom: 1.75rem;
 		}
 
 		.pub-title {
-			font-size: 1.1rem;
-			/* Increased from 0.97rem */
-			color: #111;
+			font-size: 1.05rem;
+			font-weight: 500;
+			color: var(--text);
 			line-height: 1.45;
-			margin-bottom: 0.15rem;
+			margin-bottom: 0.2rem;
 		}
 
 		.pub-title a {
-			color: #111;
+			color: var(--text);
 		}
 
 		.pub-title a:hover {
-			color: #1a56db;
+			color: var(--accent);
+			text-decoration: none;
 		}
 
 		.pub-meta {
-			font-size: 0.95rem;
-			/* Increased from 0.82rem */
-			color: #777;
+			font-size: 0.88rem;
+			color: var(--muted);
 			line-height: 1.5;
 		}
 
 		.pub-meta em {
-			color: #555;
 			font-style: normal;
+			color: #444;
+			font-weight: 500;
 		}
 
 		.pub-links {
-			font-family: 'Source Code Pro', monospace;
-			font-size: 0.8rem;
-			/* Increased from 0.68rem */
-			margin-top: 0.25rem;
+			font-family: var(--mono);
+			font-size: 0.72rem;
+			margin-top: 0.35rem;
 			display: flex;
-			gap: 0.75rem;
+			gap: 0.85rem;
 		}
 
 		.pub-links a {
-			color: #888;
+			color: var(--muted);
 		}
 
 		.pub-links a:hover {
-			color: #1a56db;
+			color: var(--accent);
 			text-decoration: none;
 		}
 
 		.badge {
-			font-family: 'Source Code Pro', monospace;
-			font-size: 0.6rem;
-			letter-spacing: 0.06em;
-			background: #f4f4f4;
-			color: #555;
-			padding: 0.1rem 0.4rem;
-			border-radius: 2px;
-			margin-left: 0.4rem;
+			font-family: var(--mono);
+			font-size: 0.58rem;
+			letter-spacing: 0.07em;
+			background: #f0f4ff;
+			color: var(--accent);
+			padding: 0.12rem 0.45rem;
+			border-radius: 3px;
+			margin-left: 0.5rem;
 			vertical-align: middle;
-			border: 1px solid #e8e8e8;
+			border: 1px solid #d0dcff;
+			text-transform: uppercase;
 		}
 
 		/* ── PROJECTS ── */
 		.proj-item {
-			margin-bottom: 1.1rem;
-			display: flex;
-			gap: 0.75rem;
+			display: grid;
+			grid-template-columns: 160px 1fr auto;
+			gap: 1rem;
 			align-items: baseline;
+			margin-bottom: 1rem;
+			padding: 0.5rem 0;
+			border-bottom: 1px solid #f5f5f5;
 		}
 
 		.proj-name {
-			font-family: 'Source Code Pro', monospace;
-			font-size: 0.95rem;
-			/* Increased from 0.8rem */
-			color: #111;
-			min-width: 130px;
+			font-family: var(--mono);
+			font-size: 0.82rem;
+			font-weight: 500;
+			color: var(--text);
+		}
+
+		.proj-name a {
+			color: var(--accent);
 		}
 
 		.proj-desc {
-			font-size: 1rem;
-			/* Increased from 0.88rem */
-			color: #555;
+			font-size: 0.92rem;
+			color: var(--muted);
 			line-height: 1.55;
 		}
 
 		.proj-star {
-			font-family: 'Source Code Pro', monospace;
-			font-size: 0.75rem;
-			/* Increased from 0.65rem */
-			color: #bbb;
+			font-family: var(--mono);
+			font-size: 0.7rem;
+			color: var(--faint);
 			white-space: nowrap;
-			margin-left: auto;
-			padding-left: 0.5rem;
 		}
 
 		/* ── WRITING ── */
 		.post-item {
-			margin-bottom: 0.85rem;
-			display: flex;
+			display: grid;
+			grid-template-columns: 90px 1fr;
+			gap: 1.5rem;
 			align-items: baseline;
-			gap: 1rem;
+			margin-bottom: 1rem;
 		}
 
 		.post-date {
-			font-family: 'Source Code Pro', monospace;
-			font-size: 0.8rem;
-			/* Increased from 0.68rem */
-			color: #bbb;
+			font-family: var(--mono);
+			font-size: 0.7rem;
+			color: var(--faint);
 			white-space: nowrap;
-			min-width: 80px;
-			/* Adjusted to fit larger date text */
+			padding-top: 0.1rem;
 		}
 
 		.post-title {
-			font-size: 1.05rem;
-			/* Increased from 0.9rem */
+			font-size: 0.97rem;
 			color: #333;
 		}
 
@@ -307,39 +309,54 @@
 			color: #333;
 		}
 
+		.post-title a:hover {
+			color: var(--accent);
+		}
+
 		/* ── FOOTER ── */
 		footer {
-			margin-top: 3rem;
-			padding-top: 1rem;
-			border-top: 1px solid #e5e5e5;
-			font-family: 'Source Code Pro', monospace;
-			font-size: 0.65rem;
-			color: #bbb;
+			margin-top: 3.5rem;
+			padding-top: 1.25rem;
+			border-top: 1px solid var(--border);
+			font-family: var(--mono);
+			font-size: 0.62rem;
+			color: var(--faint);
 			letter-spacing: 0.04em;
 		}
 
 		/* ── RESPONSIVE ── */
-		@media (max-width: 540px) {
+		@media (max-width: 600px) {
+			html {
+				font-size: 16px;
+			}
+
 			body {
-				padding: 2rem 1.5rem 4rem;
+				padding: 2rem 1.25rem 4rem;
 			}
 
 			.intro {
-				flex-direction: column;
+				grid-template-columns: 1fr;
 				gap: 1.5rem;
+			}
+
+			.headshot {
+				width: 100px;
+				height: 115px;
 			}
 
 			nav {
 				flex-direction: column;
-				gap: 0.75rem;
+				gap: 1rem;
+				align-items: flex-start;
 			}
 
 			.proj-item {
-				flex-wrap: wrap;
+				grid-template-columns: 1fr;
+				gap: 0.25rem;
 			}
 
 			.proj-star {
-				margin-left: 0;
+				display: none;
 			}
 		}
 	</style>
@@ -350,10 +367,10 @@
 	<nav>
 		<span class="nav-name">Shreyansh</span>
 		<ul class="nav-links">
-			<li><a href="#publications">Publications</a></li>
-			<li><a href="#projects">Projects</a></li>
-			<li><a href="#writing">Writing</a></li>
-			<li><a href="#about">About</a></li>
+			<li><a href="#publications">publications</a></li>
+			<li><a href="#projects">projects</a></li>
+			<li><a href="#writing">writing</a></li>
+			<li><a href="#about">about</a></li>
 		</ul>
 	</nav>
 
@@ -366,18 +383,13 @@
 			<h1>Shreyansh</h1>
 			<div class="subtitle">AI Researcher &nbsp;·&nbsp; Independent &nbsp;·&nbsp; India</div>
 			<div class="bio">
-				<!--
-			EDIT THIS: Replace with your actual bio. Keep it 2–3 short paragraphs.
-			Focus on what you research, not who you are.
-		  -->
 				<p>I work on machine learning systems, language model training, and mechanistic interpretability.
-					Interested
-					in understanding what neural networks are actually doing — not just whether they work.</p>
+					Interested in understanding what neural networks are actually doing — not just whether they work.
+				</p>
 				<p>Previously built open-source tools used by researchers at top labs. Currently exploring LLM training
 					dynamics and efficient architectures. Open to research collaborations and internships.</p>
 			</div>
 			<div class="contact-row">
-				<!-- EDIT: Replace # with your actual URLs -->
 				<a href="https://arxiv.org/search/?searchtype=author&query=Shreyansh">arxiv</a>
 				<a href="https://scholar.google.com">google scholar</a>
 				<a href="https://github.com/shrrynsh">github</a>
@@ -391,15 +403,6 @@
 	<!-- ── PUBLICATIONS ── -->
 	<section id="publications">
 		<h2>Publications</h2>
-
-		<!--
-      EDIT: Add your real papers here. Format:
-      - Title links to the paper page (arXiv or conference page)
-      - Authors: bold your name with <strong>Your Name</strong>
-      - Venue: conference name in <em> tags
-      - Links: [paper] [code] [slides] [talk] [poster] as available
-      - Badges: "Oral", "Spotlight", "Best Paper" — remove if not applicable
-    -->
 
 		<div class="pub-item">
 			<div class="pub-title">
@@ -438,18 +441,11 @@
 			</div>
 		</div>
 
-		<!-- Add more <div class="pub-item"> blocks as needed -->
-
 	</section>
 
 	<!-- ── PROJECTS ── -->
 	<section id="projects">
 		<h2>Software</h2>
-
-		<!--
-      EDIT: Replace with your real GitHub projects.
-      Format: name (links to GitHub) · one-line description · star count
-    -->
 
 		<div class="proj-item">
 			<span class="proj-name"><a href="https://github.com/shrrynsh">Monochrome</a></span>
@@ -469,18 +465,11 @@
 			<span class="proj-star">HuggingFace</span>
 		</div>
 
-		<!-- Add more as needed -->
-
 	</section>
 
 	<!-- ── WRITING ── -->
 	<section id="writing">
 		<h2>Writing</h2>
-
-		<!--
-      EDIT: Add your blog posts, notes, or essays.
-      Format: Month Year · Title (links to post)
-    -->
 
 		<div class="post-item">
 			<span class="post-date">May 2025</span>
@@ -497,12 +486,10 @@
 			<span class="post-title"><a href="#">Third post title</a></span>
 		</div>
 
-		<!-- Add more as needed -->
-
 	</section>
 
 	<footer>
-		@2017 – Monochrome &nbsp;·&nbsp; last updated May 2025
+		© 2017 – Shreyansh &nbsp;·&nbsp; last updated May 2025
 	</footer>
 
 </body>
