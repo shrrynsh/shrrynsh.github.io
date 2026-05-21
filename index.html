@@ -7,17 +7,9 @@
 	<title>Shreyansh Modi</title>
 	<meta name="description" content="Shreyansh Modi — AI Researcher and Undergrad at IIT Roorkee." />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link
-		href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400;500&display=swap"
-		rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
 	<style>
-		*,
-		*::before,
-		*::after {
-			box-sizing: border-box;
-			margin: 0;
-			padding: 0;
-		}
+		*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 		:root {
 			--ink: #18181b;
@@ -33,14 +25,8 @@
 			--serif: 'EB Garamond', Georgia, serif;
 		}
 
-		html,
-		body {
-			overflow-x: hidden;
-		}
-
-		html {
-			font-size: 22px;
-		}
+		html, body { overflow-x: hidden; }
+		html { font-size: 22px; }
 
 		body {
 			background: var(--bg);
@@ -52,19 +38,9 @@
 			padding: 2rem 5vw;
 		}
 
-		a {
-			color: var(--accent);
-			text-decoration: none;
-		}
-
-		a:hover {
-			text-decoration: underline;
-		}
-
-		strong {
-			color: var(--ink);
-			font-weight: 500;
-		}
+		a { color: var(--accent); text-decoration: none; }
+		a:hover { text-decoration: underline; }
+		strong { color: var(--ink); font-weight: 500; }
 
 		/* ── NAV ── */
 		nav {
@@ -95,11 +71,7 @@
 			color: var(--muted);
 			letter-spacing: 0.05em;
 		}
-
-		.nav-links a:hover {
-			color: var(--ink);
-			text-decoration: none;
-		}
+		.nav-links a:hover { color: var(--ink); text-decoration: none; }
 
 		/* ── INTRO ── */
 		.intro {
@@ -138,10 +110,25 @@
 			color: var(--body);
 			line-height: 1.85;
 		}
+		.bio p + p { margin-top: 0.9rem; }
 
-		.bio p+p {
-			margin-top: 0.9rem;
+		.resume-line {
+			margin-top: 1.25rem;
+			font-family: var(--mono);
+			font-size: 0.72rem;
+			color: var(--muted);
 		}
+
+		.resume-line a {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.4rem;
+			color: var(--accent);
+			border-bottom: 1px solid var(--accent-l);
+			padding-bottom: 0.05rem;
+			transition: border-color 0.15s;
+		}
+		.resume-line a:hover { border-color: var(--accent); text-decoration: none; }
 
 		.headshot {
 			width: 420px;
@@ -150,7 +137,6 @@
 			background: var(--surface);
 			border: 1px solid var(--border);
 		}
-
 		.headshot img {
 			width: 100%;
 			height: 100%;
@@ -160,9 +146,7 @@
 		}
 
 		/* ── SECTIONS ── */
-		section {
-			margin-bottom: 3.5rem;
-		}
+		section { margin-bottom: 3.5rem; }
 
 		.section-head {
 			display: flex;
@@ -181,76 +165,10 @@
 			white-space: nowrap;
 		}
 
-		.section-rule {
-			flex: 1;
-			height: 1px;
-			background: var(--border);
-		}
-
-		/* ── EXPERIENCE ── */
-		.exp-list {
-			display: flex;
-			flex-direction: column;
-			gap: 1.75rem;
-		}
-
-		.exp-header {
-			display: flex;
-			justify-content: space-between;
-			align-items: baseline;
-			gap: 1rem;
-			flex-wrap: wrap;
-		}
-
-		.exp-role {
-			font-size: 1.02rem;
-			font-weight: 500;
-			color: var(--ink);
-			font-family: var(--serif);
-		}
-
-		.exp-date {
-			font-family: var(--mono);
-			font-size: 0.68rem;
-			color: var(--faint);
-			white-space: nowrap;
-		}
-
-		.exp-org {
-			font-family: var(--mono);
-			font-size: 0.75rem;
-			color: var(--muted);
-			margin-bottom: 0.5rem;
-		}
-
-		.exp-bullets {
-			list-style: none;
-			display: flex;
-			flex-direction: column;
-			gap: 0.3rem;
-		}
-
-		.exp-bullets li {
-			font-size: 0.92rem;
-			color: var(--muted);
-			line-height: 1.6;
-			padding-left: 1rem;
-			position: relative;
-		}
-
-		.exp-bullets li::before {
-			content: '—';
-			position: absolute;
-			left: 0;
-			color: var(--border);
-			font-size: 0.8rem;
-		}
+		.section-rule { flex: 1; height: 1px; background: var(--border); }
 
 		/* ── PROJECTS ── */
-		.proj-list {
-			display: flex;
-			flex-direction: column;
-		}
+		.proj-list { display: flex; flex-direction: column; }
 
 		.proj-item {
 			display: grid;
@@ -260,67 +178,14 @@
 			padding: 0.85rem 0;
 			border-bottom: 1px solid var(--border);
 		}
+		.proj-item:first-child { border-top: 1px solid var(--border); }
 
-		.proj-item:first-child {
-			border-top: 1px solid var(--border);
-		}
+		.proj-name { font-family: var(--mono); font-size: 0.78rem; font-weight: 500; }
+		.proj-name a { color: var(--accent); }
 
-		.proj-name {
-			font-family: var(--mono);
-			font-size: 0.78rem;
-			font-weight: 500;
-		}
+		.proj-desc { font-size: 0.92rem; color: var(--muted); line-height: 1.55; }
 
-		.proj-name a {
-			color: var(--accent);
-		}
-
-		.proj-desc {
-			font-size: 0.92rem;
-			color: var(--muted);
-			line-height: 1.55;
-		}
-
-		.proj-tag {
-			font-family: var(--mono);
-			font-size: 0.65rem;
-			color: var(--faint);
-			white-space: nowrap;
-		}
-
-		/* ── WRITING ── */
-		.post-list {
-			display: flex;
-			flex-direction: column;
-			gap: 0.9rem;
-		}
-
-		.post-item {
-			display: grid;
-			grid-template-columns: 82px 1fr;
-			gap: 1.5rem;
-			align-items: baseline;
-		}
-
-		.post-date {
-			font-family: var(--mono);
-			font-size: 0.68rem;
-			color: var(--faint);
-			white-space: nowrap;
-		}
-
-		.post-title {
-			font-size: 0.97rem;
-			color: var(--body);
-		}
-
-		.post-title a {
-			color: var(--body);
-		}
-
-		.post-title a:hover {
-			color: var(--accent);
-		}
+		.proj-tag { font-family: var(--mono); font-size: 0.65rem; color: var(--faint); white-space: nowrap; }
 
 		/* ── CONTACT ── */
 		.contact-icons {
@@ -343,16 +208,11 @@
 			transition: all 0.2s;
 			text-decoration: none;
 		}
-
-		.contact-icon svg {
-			width: 18px;
-			height: 18px;
-		}
-
+		.contact-icon svg { width: 18px; height: 18px; }
 		.contact-icon:hover {
 			border-color: var(--accent);
 			color: var(--accent);
-			box-shadow: 0 4px 16px rgba(37, 99, 235, 0.1);
+			box-shadow: 0 4px 16px rgba(37,99,235,0.1);
 		}
 
 		/* ── FOOTER ── */
@@ -371,56 +231,16 @@
 
 		/* ── RESPONSIVE ── */
 		@media (max-width: 620px) {
-			html {
-				font-size: 18px;
-			}
-
-			body {
-				padding: 2rem 1.25rem 4rem;
-			}
-
-			.intro {
-				grid-template-columns: 1fr;
-				gap: 1.75rem;
-			}
-
-			.headshot {
-				width: 180px;
-				height: 180px;
-				margin: 0 auto;
-			}
-
-			.headshot img {
-				height: 100%;
-			}
-
-			nav {
-				flex-wrap: wrap;
-				gap: 1rem;
-			}
-
-			.nav-links {
-				gap: 0.8rem;
-			}
-
-			.proj-item {
-				grid-template-columns: 1fr;
-				gap: 0.2rem;
-			}
-
-			.proj-tag {
-				display: none;
-			}
-
-			.post-item {
-				grid-template-columns: 70px 1fr;
-				gap: 1rem;
-			}
-
-			footer {
-				flex-wrap: wrap;
-				gap: 0.5rem;
-			}
+			html { font-size: 18px; }
+			body { padding: 2rem 1.25rem 4rem; }
+			.intro { grid-template-columns: 1fr; gap: 1.75rem; }
+			.headshot { width: 180px; height: 180px; margin: 0 auto; }
+			.headshot img { height: 100%; }
+			nav { flex-wrap: wrap; gap: 1rem; }
+			.nav-links { gap: 0.8rem; }
+			.proj-item { grid-template-columns: 1fr; gap: 0.2rem; }
+			.proj-tag { display: none; }
+			footer { flex-wrap: wrap; gap: 0.5rem; }
 		}
 	</style>
 </head>
@@ -453,7 +273,10 @@
 				Control Systems and Cybersecurity by simulating network attacks.
 			</p>
 			<p>Outside of my research and coursework, I competed at the InterIIT Tech Meet, where my team secured
-				4th place. </p>
+				4th place.</p>
+			<div class="resume-line">
+				You can download my resume <a href="https://shrrynsh.github.io/shreyansh_modi_resume.pdf" download>here ↓</a>.
+			</div>
 		</div>
 		<div class="headshot">
 			<img src="https://shrrynsh.github.io/img/me.jpeg" alt="Shreyansh Modi" />
@@ -470,31 +293,25 @@
 
 			<div class="proj-item">
 				<span class="proj-name"><a href="https://github.com/shrrynsh/HireSense">HireSense</a></span>
-				<span class="proj-desc">An open-source NLP tool I built that uses fine-tuned Named Entity Recognition to
-					parse resumes and perfectly match candidates to job descriptions.</span>
+				<span class="proj-desc">An open-source NLP tool I built that uses fine-tuned Named Entity Recognition to parse resumes and perfectly match candidates to job descriptions.</span>
 				<span class="proj-tag">Python · NER · NLP</span>
 			</div>
 
 			<div class="proj-item">
 				<span class="proj-name"><a href="https://github.com/shrrynsh/InVisionDX">InVisionDX</a></span>
-				<span class="proj-desc">A deep learning project I developed for medical imaging, capable of identifying
-					diseases like COVID-19, Pneumonia, and Alzheimer's from scans with over 95% accuracy.</span>
+				<span class="proj-desc">A deep learning project I developed for medical imaging, capable of identifying diseases like COVID-19, Pneumonia, and Alzheimer's from scans with over 95% accuracy.</span>
 				<span class="proj-tag">PyTorch · CV · Flask</span>
 			</div>
 
 			<div class="proj-item">
-				<span class="proj-name"><a href="https://github.com/shrrynsh/ERP-API-Framework">ERP API
-						Framework</a></span>
-				<span class="proj-desc">A high-performance backend architecture I designed for ERP management, complete
-					with data analysis modules that pull actionable insights from raw ERP datasets.</span>
+				<span class="proj-name"><a href="https://github.com/shrrynsh/ERP-API-Framework">ERP API Framework</a></span>
+				<span class="proj-desc">A high-performance backend architecture I designed for ERP management, complete with data analysis modules that pull actionable insights from raw ERP datasets.</span>
 				<span class="proj-tag">Python · Flask · JS</span>
 			</div>
 
 			<div class="proj-item">
-				<span class="proj-name"><a href="https://github.com/shrrynsh/Adobe-Photo-Editor">Adobe Photo
-						Editor</a></span>
-				<span class="proj-desc">A smart photo editing application our team built for the InterIIT Tech Meet. It
-					uses computer vision to enable context-aware enhancements completely automatically.</span>
+				<span class="proj-name"><a href="https://github.com/shrrynsh/Adobe-Photo-Editor">Adobe Photo Editor</a></span>
+				<span class="proj-desc">A smart photo editing application our team built for the InterIIT Tech Meet. It uses computer vision to enable context-aware enhancements completely automatically.</span>
 				<span class="proj-tag">4th / all IITs</span>
 			</div>
 
@@ -509,49 +326,35 @@
 		</div>
 		<div class="contact-icons">
 			<a class="contact-icon" href="mailto:shreyansh_m@ee.iitr.ac.in" aria-label="Email" title="Email">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 					<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
 					<polyline points="22,6 12,13 2,6"></polyline>
 				</svg>
 			</a>
 			<a class="contact-icon" href="https://github.com/shrrynsh" aria-label="GitHub" title="GitHub">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					<path
-						d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-					</path>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
 				</svg>
 			</a>
 			<a class="contact-icon" href="https://twitter.com/shrrynsh" aria-label="X/Twitter" title="X/Twitter">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					<path
-						d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
-					</path>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
 				</svg>
 			</a>
-			<a class="contact-icon" href="https://www.linkedin.com/in/shreyanshmodi" aria-label="LinkedIn"
-				title="LinkedIn">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<a class="contact-icon" href="https://www.linkedin.com/in/shreyanshmodi" aria-label="LinkedIn" title="LinkedIn">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 					<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
 					<rect x="2" y="9" width="4" height="12"></rect>
 					<circle cx="4" cy="4" r="2"></circle>
 				</svg>
 			</a>
 			<a class="contact-icon" href="tel:+918287512050" aria-label="Phone" title="Phone">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					<path
-						d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-					</path>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
 				</svg>
 			</a>
-			<a class="contact-icon" href="https://shrrynsh.github.io/shreyansh_modi_resume.pdf" download
-				aria-label="Resume" title="Download Resume">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<a class="contact-icon" href="https://shrrynsh.github.io/shreyansh_modi_resume.pdf" download aria-label="Resume" title="Download Resume">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 					<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
 					<polyline points="14 2 14 8 20 8"></polyline>
 					<line x1="16" y1="13" x2="8" y2="13"></line>
@@ -568,5 +371,4 @@
 	</footer>
 
 </body>
-
 </html>
