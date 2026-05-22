@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
 	<meta charset="UTF-8" />
@@ -19,10 +19,24 @@
 			--border: #e4e4e7;
 			--bg: #fafaf9;
 			--surface: #f4f4f5;
+			--card: #ffffff;
 			--accent: #2563eb;
 			--accent-l: #dbeafe;
 			--mono: 'DM Mono', monospace;
 			--serif: 'EB Garamond', Georgia, serif;
+		}
+
+		[data-theme="dark"] {
+			--ink: #f4f4f5;
+			--body: #d4d4d8;
+			--muted: #a1a1aa;
+			--faint: #71717a;
+			--border: #3f3f46;
+			--bg: #111110;
+			--surface: #1c1c1b;
+			--card: #1c1c1b;
+			--accent: #60a5fa;
+			--accent-l: #1e3a5f;
 		}
 
 		html, body { overflow-x: hidden; }
@@ -36,6 +50,7 @@
 			line-height: 1.8;
 			margin: 0;
 			padding: 2rem 5vw;
+			transition: background 0.25s, color 0.25s;
 		}
 
 		a { color: var(--accent); text-decoration: none; }
@@ -48,6 +63,12 @@
 			align-items: center;
 			justify-content: space-between;
 			margin-bottom: 4.5rem;
+		}
+
+		.nav-left {
+			display: flex;
+			align-items: center;
+			gap: 2rem;
 		}
 
 		.nav-name {
@@ -72,6 +93,31 @@
 			letter-spacing: 0.05em;
 		}
 		.nav-links a:hover { color: var(--ink); text-decoration: none; }
+
+		/* ── THEME TOGGLE ── */
+		.theme-toggle {
+			background: none;
+			border: 1px solid var(--border);
+			border-radius: 99px;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			gap: 0.35rem;
+			padding: 0.3rem 0.65rem;
+			font-family: var(--mono);
+			font-size: 0.62rem;
+			color: var(--muted);
+			transition: border-color 0.15s, color 0.15s, background 0.25s;
+			background: var(--card);
+			white-space: nowrap;
+		}
+		.theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+		.theme-toggle svg { width: 13px; height: 13px; flex-shrink: 0; }
+
+		.icon-sun  { display: none; }
+		.icon-moon { display: block; }
+		[data-theme="dark"] .icon-sun  { display: block; }
+		[data-theme="dark"] .icon-moon { display: none; }
 
 		/* ── INTRO ── */
 		.intro {
@@ -118,7 +164,6 @@
 			font-size: 0.72rem;
 			color: var(--muted);
 		}
-
 		.resume-line a {
 			display: inline-flex;
 			align-items: center;
@@ -182,9 +227,7 @@
 
 		.proj-name { font-family: var(--mono); font-size: 0.78rem; font-weight: 500; }
 		.proj-name a { color: var(--accent); }
-
 		.proj-desc { font-size: 0.92rem; color: var(--muted); line-height: 1.55; }
-
 		.proj-tag { font-family: var(--mono); font-size: 0.65rem; color: var(--faint); white-space: nowrap; }
 
 		/* ── CONTACT ── */
@@ -203,7 +246,7 @@
 			height: 2.75rem;
 			border-radius: 50%;
 			border: 1px solid var(--border);
-			background: white;
+			background: var(--card);
 			color: var(--faint);
 			transition: all 0.2s;
 			text-decoration: none;
@@ -248,12 +291,23 @@
 <body>
 
 	<nav>
-		<span class="nav-name">Shreyansh Modi</span>
 		<ul class="nav-links">
+			<span class="nav-name">Shreyansh Modi</span>
 			<li><a href="#about">about</a></li>
 			<li><a href="#projects">projects</a></li>
 			<li><a href="#contact">contact</a></li>
 		</ul>
+		<button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+			<!-- sun icon (shown in dark mode) -->
+			<svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+			</svg>
+			<!-- moon icon (shown in light mode) -->
+			<svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+			</svg>
+			<span class="theme-label">dark</span>
+		</button>
 	</nav>
 
 	<!-- ── INTRO ── -->
@@ -369,6 +423,26 @@
 		<span>© 2024 – Shreyansh Modi</span>
 		<span>last updated May 2026</span>
 	</footer>
+
+	<script>
+		const html = document.documentElement;
+		const label = document.querySelector('.theme-label');
+
+		// Restore saved preference
+		const saved = localStorage.getItem('theme');
+		if (saved) {
+			html.setAttribute('data-theme', saved);
+			label.textContent = saved === 'dark' ? 'light' : 'dark';
+		}
+
+		function toggleTheme() {
+			const isDark = html.getAttribute('data-theme') === 'dark';
+			const next = isDark ? 'light' : 'dark';
+			html.setAttribute('data-theme', next);
+			label.textContent = isDark ? 'dark' : 'light';
+			localStorage.setItem('theme', next);
+		}
+	</script>
 
 </body>
 </html>
