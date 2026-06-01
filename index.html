@@ -230,6 +230,10 @@
 		.proj-desc { font-size: 0.92rem; color: var(--muted); line-height: 1.55; }
 		.proj-tag { font-family: var(--mono); font-size: 0.65rem; color: var(--faint); white-space: nowrap; }
 
+		#publications .proj-item {
+			grid-template-columns: 280px 1fr auto;
+		}
+		
 		/* ── CONTACT ── */
 		.contact-icons {
 			display: flex;
@@ -347,8 +351,8 @@
 		<div class="proj-list">
 			<div class="proj-item">
 				<span class="proj-name"><a href="https://arxiv.org/abs/2605.31162">Guidance for Low-Level Perceptual Editing in Unconditional Diffusion Models</a></span>
-				<span class="proj-desc">Shreyansh Modi, et al. <em>arXiv preprint arXiv:2605.31162</em>, 2026. A novel, generalized framework for image-editing in unconditional diffusion models without explicit training.</span>
-				<span class="proj-tag"><a href="https://arxiv.org/pdf/2605.31162">PDF</a></span>
+				<span class="proj-desc">Shreyansh Modi, et al. <em>Generative Models for Computer Vision Workshop, CVPR</em>, 2026.<br><br>A method that enables semantic control over unconditional diffusion models (DDPMs) by extracting concept-specific direction vectors from the model's internal h-space (the bottleneck activation of the U-Net architecture) and applying them as targeted perturbations during the reverse generative process.</span>
+				<span class="proj-tag"><a href="https://arxiv.org/pdf/2605.31162">PDF</a> · <a href="https://github.com/dsgiitr/uncond-diffusion-enhancement">Code</a></span>
 			</div>
 		</div>
 	</section>
