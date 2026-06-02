@@ -121,7 +121,7 @@
 		/* ── INTRO ── */
 		.intro {
 			display: grid;
-			grid-template-columns: 1fr 420px;
+			grid-template-columns: minmax(0, 1fr) minmax(0, 420px);
 			gap: 1.5rem;
 			align-items: stretch;
 			margin-bottom: 5rem;
@@ -175,11 +175,13 @@
 		.resume-line a:hover { border-color: var(--accent); text-decoration: none; }
 
 		.headshot {
-			width: 420px;
+			width: min(420px, 100%);
+			max-width: 100%;
 			border-radius: 5px;
 			overflow: hidden;
 			background: var(--surface);
 			border: 1px solid var(--border);
+			justify-self: end;
 		}
 		.headshot img {
 			width: 100%;
@@ -216,7 +218,7 @@
 
 		.proj-item {
 			display: grid;
-			grid-template-columns: 160px 1fr auto;
+			grid-template-columns: minmax(0, 160px) minmax(0, 1fr) auto;
 			gap: 1.25rem;
 			align-items: baseline;
 			padding: 0.85rem 0;
@@ -224,13 +226,29 @@
 		}
 		.proj-item:first-child { border-top: 1px solid var(--border); }
 
-		.proj-name { font-family: var(--mono); font-size: 0.78rem; font-weight: 500; }
+		.proj-name {
+			font-family: var(--mono);
+			font-size: 0.78rem;
+			font-weight: 500;
+			min-width: 0;
+			overflow-wrap: anywhere;
+		}
 		.proj-name a { color: var(--accent); }
-		.proj-desc { font-size: 0.92rem; color: var(--muted); line-height: 1.55; }
-		.proj-tag { font-family: var(--mono); font-size: 0.65rem; color: var(--faint); white-space: nowrap; }
+		.proj-desc {
+			font-size: 0.92rem;
+			color: var(--muted);
+			line-height: 1.55;
+			min-width: 0;
+		}
+		.proj-tag {
+			font-family: var(--mono);
+			font-size: 0.65rem;
+			color: var(--faint);
+			white-space: nowrap;
+		}
 
 		#publications .proj-item {
-			grid-template-columns: 280px 1fr auto;
+			grid-template-columns: minmax(0, 280px) minmax(0, 1fr) auto;
 		}
 		
 		/* ── CONTACT ── */
@@ -276,17 +294,63 @@
 		}
 
 		/* ── RESPONSIVE ── */
+		@media (max-width: 900px) {
+			.intro {
+				grid-template-columns: 1fr;
+				gap: 1.75rem;
+			}
+			.headshot {
+				width: min(280px, 100%);
+				justify-self: center;
+			}
+			#publications .proj-item,
+			.proj-item {
+				grid-template-columns: 1fr;
+				gap: 0.5rem;
+				align-items: start;
+			}
+			.proj-tag {
+				white-space: normal;
+			}
+		}
+
 		@media (max-width: 620px) {
-			html { font-size: 22px; }
-			body { padding: 2rem 1.25rem 4rem; }
-			.intro { grid-template-columns: 1fr; gap: 1.75rem; }
-			.headshot { width: 180px; height: 180px; margin: 0 auto; }
+			html { font-size: 18px; }
+			body { padding: 1.25rem 1rem 3rem; }
+			nav {
+				flex-wrap: wrap;
+				align-items: center;
+				gap: 0.75rem;
+				margin-bottom: 2.5rem;
+			}
+			.nav-links {
+				gap: 0.5rem 0.85rem;
+				flex: 1 1 auto;
+				min-width: 0;
+			}
+			.nav-name { display: none; }
+			.theme-toggle { flex-shrink: 0; }
+			h1 { font-size: 2rem; }
+			.subtitle {
+				font-size: 0.62rem;
+				line-height: 1.6;
+				letter-spacing: 0.06em;
+			}
+			.headshot {
+				width: min(220px, 80vw);
+				aspect-ratio: 1;
+			}
 			.headshot img { height: 100%; }
-			nav { flex-wrap: wrap; gap: 1rem; }
-			.nav-links { gap: 0.8rem; }
-			.proj-item { grid-template-columns: 1fr; gap: 0.2rem; }
-			.proj-tag { display: none; }
-			footer { flex-wrap: wrap; gap: 0.5rem; }
+			#projects .proj-tag { display: none; }
+			#publications .proj-tag {
+				display: block;
+				margin-top: 0.25rem;
+			}
+			footer {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 0.35rem;
+			}
 		}
 	</style>
 </head>
