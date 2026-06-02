@@ -1,5 +1,6 @@
 img
 *.pdf
+!shreyansh_modi_resume.pdf
 *.png
 *.jpeg
 *.jpg
