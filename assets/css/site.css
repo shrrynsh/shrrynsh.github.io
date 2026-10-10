@@ -10,14 +10,14 @@ html, body { margin: 0; padding: 0; }
 html {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
 		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	font-size: 19px;
+	font-size: 16px;
 	line-height: 1.5;
 	-webkit-text-size-adjust: 100%;
 }
 @media (max-width: 768px) {
 	html { font-size: 14px; }
 }
-:root { --bg: #faf8f3; } /* warm off-white, easier on the eyes than pure white */
+:root { --bg: #f5f1e8; } /* warm paper off-white, easier on the eyes than pure white */
 body {
 	background: var(--bg);
 	color: #414141;
@@ -39,7 +39,7 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 
 /* ── Page grid: a centred text column inside a wider page column ── */
 .page {
-	--track: 4rem;
+	--track: 3.5rem;
 	display: grid;
 	grid-template-columns:
 		[screen-start] 1fr
@@ -203,7 +203,7 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	min-height: 25.3rem;
+	height: 405px;
 	border-radius: 1.5rem;
 	background: rgba(0, 0, 0, 0.025);
 	transition: all 0.2s ease-in-out;
@@ -394,7 +394,7 @@ footer.page {
 	#quick-links { display: flex; flex-wrap: wrap; }
 	#quick-links a { padding: 0.5rem 1.15rem; }
 	.cover-wrapper, .project-grid { grid-template-columns: minmax(0, 1fr); }
-	.cover { min-height: 0; }
+	.cover { height: auto; }
 	.project { min-height: 0; }
 	#footer-left { grid-column: page; }
 }
