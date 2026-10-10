@@ -16,7 +16,7 @@
 	<link rel="icon" href="/favicon.png" type="image/png" sizes="512x512" />
 	<link rel="shortcut icon" href="/favicon.ico" />
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
-	<link rel="stylesheet" href="/assets/css/site.css?v=2026-10-11a" />
+	<link rel="stylesheet" href="/assets/css/site.css?v=2026-10-11b" />
 </head>
 
 <body>
@@ -42,7 +42,11 @@
 		<section id="cinema" class="feature l-text" aria-labelledby="cinema-title">
 			<h2 class="feature-title" id="cinema-title">Cinematic <span class="accent">Interests</span></h2>
 			<p class="feature-text">A breakdown of my <a href="https://letterboxd.com/shreyanshmodi/">Letterboxd</a>, so you get what I like to watch when I’m not diving into papers.</p>
-			<p class="film-stats">Across my last 46 diary entries: 14 five-star films and an average rating of 3.9★.</p>
+			<ul class="film-stats" aria-label="Diary statistics">
+				<li><b>46</b> recent diary entries</li>
+				<li><b>14</b> five-star films</li>
+				<li><b>3.9★</b> average rating</li>
+			</ul>
 		</section>
 
 		<hr class="l-middle home-hr" />
@@ -51,90 +55,121 @@
 		<section id="favourites" class="feature l-page" aria-labelledby="favourites-title">
 			<h2 class="feature-title" id="favourites-title">All-Time <span class="accent">Favourites</span></h2>
 			<p class="feature-text">Films I’ve rated five stars and marked as liked.</p>
-			<ul class="project-grid film-grid">
-				<li class="project">
-					<div>
-						<h3 class="project-title"><a href="https://letterboxd.com/film/the-shawshank-redemption/">The Shawshank Redemption</a></h3>
-						<p class="project-subtitle">1994 · “I hope this movie will be the medicine for me. I hope I will never lose hope again.”</p>
-					</div>
-					<p class="project-venue film-rating" aria-label="Rated 5 out of 5">★★★★★</p>
+			<ul class="film-grid">
+				<li class="film">
+					<a class="film-link" href="https://letterboxd.com/film/the-shawshank-redemption/">
+						<img class="poster" src="/assets/img/films/the-shawshank-redemption.webp" width="300" height="450" alt="Poster for The Shawshank Redemption (1994)" />
+						<span class="film-title">The Shawshank Redemption</span>
+					</a>
+					<p class="film-meta">1994 · <span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span></p>
 				</li>
-				<li class="project">
-					<div>
-						<h3 class="project-title"><a href="https://letterboxd.com/film/good-will-hunting/">Good Will Hunting</a></h3>
-						<p class="project-subtitle">1997</p>
-					</div>
-					<p class="project-venue film-rating" aria-label="Rated 5 out of 5">★★★★★</p>
+				<li class="film">
+					<a class="film-link" href="https://letterboxd.com/film/good-will-hunting/">
+						<img class="poster" src="/assets/img/films/good-will-hunting.webp" width="300" height="450" alt="Poster for Good Will Hunting (1997)" />
+						<span class="film-title">Good Will Hunting</span>
+					</a>
+					<p class="film-meta">1997 · <span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span></p>
 				</li>
-				<li class="project">
-					<div>
-						<h3 class="project-title"><a href="https://letterboxd.com/film/the-lord-of-the-rings-the-fellowship-of-the-ring/">The Lord of the Rings: The Fellowship of the Ring</a></h3>
-						<p class="project-subtitle">2001 · “Everyone deserves a friend like Sam.”</p>
-					</div>
-					<p class="project-venue film-rating" aria-label="Rated 5 out of 5">★★★★★</p>
+				<li class="film">
+					<a class="film-link" href="https://letterboxd.com/film/the-lord-of-the-rings-the-fellowship-of-the-ring/">
+						<img class="poster" src="/assets/img/films/the-lord-of-the-rings-the-fellowship-of-the-ring.webp" width="300" height="450" alt="Poster for The Lord of the Rings: The Fellowship of the Ring (2001)" />
+						<span class="film-title">The Lord of the Rings: The Fellowship of the Ring</span>
+					</a>
+					<p class="film-meta">2001 · <span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span></p>
 				</li>
-				<li class="project">
-					<div>
-						<h3 class="project-title"><a href="https://letterboxd.com/film/pulp-fiction/">Pulp Fiction</a></h3>
-						<p class="project-subtitle">1994</p>
-					</div>
-					<p class="project-venue film-rating" aria-label="Rated 5 out of 5">★★★★★</p>
+				<li class="film">
+					<a class="film-link" href="https://letterboxd.com/film/pulp-fiction/">
+						<img class="poster" src="/assets/img/films/pulp-fiction.webp" width="300" height="450" alt="Poster for Pulp Fiction (1994)" />
+						<span class="film-title">Pulp Fiction</span>
+					</a>
+					<p class="film-meta">1994 · <span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span></p>
 				</li>
-				<li class="project">
-					<div>
-						<h3 class="project-title"><a href="https://letterboxd.com/film/django-unchained/">Django Unchained</a></h3>
-						<p class="project-subtitle">2012</p>
-					</div>
-					<p class="project-venue film-rating" aria-label="Rated 5 out of 5">★★★★★</p>
+				<li class="film">
+					<a class="film-link" href="https://letterboxd.com/film/django-unchained/">
+						<img class="poster" src="/assets/img/films/django-unchained.webp" width="300" height="450" alt="Poster for Django Unchained (2012)" />
+						<span class="film-title">Django Unchained</span>
+					</a>
+					<p class="film-meta">2012 · <span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span></p>
 				</li>
-				<li class="project">
-					<div>
-						<h3 class="project-title"><a href="https://letterboxd.com/film/kill-bill-vol-1/">Kill Bill: Vol. 1</a></h3>
-						<p class="project-subtitle">2003</p>
-					</div>
-					<p class="project-venue film-rating" aria-label="Rated 5 out of 5">★★★★★</p>
+				<li class="film">
+					<a class="film-link" href="https://letterboxd.com/film/kill-bill-vol-1/">
+						<img class="poster" src="/assets/img/films/kill-bill-vol-1.webp" width="300" height="450" alt="Poster for Kill Bill: Vol. 1 (2003)" />
+						<span class="film-title">Kill Bill: Vol. 1</span>
+					</a>
+					<p class="film-meta">2003 · <span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span></p>
 				</li>
-				<li class="project">
-					<div>
-						<h3 class="project-title"><a href="https://letterboxd.com/film/whiplash-2014/">Whiplash</a></h3>
-						<p class="project-subtitle">2014</p>
-					</div>
-					<p class="project-venue film-rating" aria-label="Rated 5 out of 5">★★★★★</p>
+				<li class="film">
+					<a class="film-link" href="https://letterboxd.com/film/whiplash-2014/">
+						<img class="poster" src="/assets/img/films/whiplash-2014.webp" width="300" height="450" loading="lazy" alt="Poster for Whiplash (2014)" />
+						<span class="film-title">Whiplash</span>
+					</a>
+					<p class="film-meta">2014 · <span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span></p>
 				</li>
-				<li class="project">
-					<div>
-						<h3 class="project-title"><a href="https://letterboxd.com/film/the-social-network/">The Social Network</a></h3>
-						<p class="project-subtitle">2010 · “This really helped me lock in.”</p>
-					</div>
-					<p class="project-venue film-rating" aria-label="Rated 5 out of 5">★★★★★</p>
+				<li class="film">
+					<a class="film-link" href="https://letterboxd.com/film/the-social-network/">
+						<img class="poster" src="/assets/img/films/the-social-network.webp" width="300" height="450" loading="lazy" alt="Poster for The Social Network (2010)" />
+						<span class="film-title">The Social Network</span>
+					</a>
+					<p class="film-meta">2010 · <span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span></p>
 				</li>
-				<li class="project">
-					<div>
-						<h3 class="project-title"><a href="https://letterboxd.com/film/8-mile/">8 Mile</a></h3>
-						<p class="project-subtitle">2002</p>
-					</div>
-					<p class="project-venue film-rating" aria-label="Rated 5 out of 5">★★★★★</p>
+				<li class="film">
+					<a class="film-link" href="https://letterboxd.com/film/8-mile/">
+						<img class="poster" src="/assets/img/films/8-mile.webp" width="300" height="450" loading="lazy" alt="Poster for 8 Mile (2002)" />
+						<span class="film-title">8 Mile</span>
+					</a>
+					<p class="film-meta">2002 · <span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span></p>
 				</li>
-				<li class="project">
-					<div>
-						<h3 class="project-title"><a href="https://letterboxd.com/film/straight-outta-compton/">Straight Outta Compton</a></h3>
-						<p class="project-subtitle">2015</p>
-					</div>
-					<p class="project-venue film-rating" aria-label="Rated 5 out of 5">★★★★★</p>
+				<li class="film">
+					<a class="film-link" href="https://letterboxd.com/film/straight-outta-compton/">
+						<img class="poster" src="/assets/img/films/straight-outta-compton.webp" width="300" height="450" loading="lazy" alt="Poster for Straight Outta Compton (2015)" />
+						<span class="film-title">Straight Outta Compton</span>
+					</a>
+					<p class="film-meta">2015 · <span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span></p>
 				</li>
-				<li class="project">
-					<div>
-						<h3 class="project-title"><a href="https://letterboxd.com/film/sinners-2025/">Sinners</a></h3>
-						<p class="project-subtitle">2025</p>
-					</div>
-					<p class="project-venue film-rating" aria-label="Rated 5 out of 5">★★★★★</p>
+				<li class="film">
+					<a class="film-link" href="https://letterboxd.com/film/sinners-2025/">
+						<img class="poster" src="/assets/img/films/sinners-2025.webp" width="300" height="450" loading="lazy" alt="Poster for Sinners (2025)" />
+						<span class="film-title">Sinners</span>
+					</a>
+					<p class="film-meta">2025 · <span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span></p>
 				</li>
-				<li class="project">
-					<div>
-						<h3 class="project-title"><a href="https://letterboxd.com/film/anand/">Anand</a></h3>
-						<p class="project-subtitle">1971</p>
-					</div>
-					<p class="project-venue film-rating" aria-label="Rated 5 out of 5">★★★★★</p>
+				<li class="film">
+					<a class="film-link" href="https://letterboxd.com/film/anand/">
+						<img class="poster" src="/assets/img/films/anand.webp" width="300" height="450" loading="lazy" alt="Poster for Anand (1971)" />
+						<span class="film-title">Anand</span>
+					</a>
+					<p class="film-meta">1971 · <span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span></p>
+				</li>
+			</ul>
+		</section>
+
+		<hr class="l-middle home-hr" />
+
+		<!-- ── In my words ── -->
+		<section id="words" class="feature l-page" aria-labelledby="words-title">
+			<h2 class="feature-title" id="words-title">In My <span class="accent">Words</span></h2>
+			<p class="feature-text">A few lines from my reviews.</p>
+			<ul class="quote-grid">
+				<li class="quote-card">
+					<a href="https://letterboxd.com/film/the-shawshank-redemption/" tabindex="-1" aria-hidden="true"><img class="poster poster--mini" src="/assets/img/films/the-shawshank-redemption.webp" width="300" height="450" loading="lazy" alt="Poster for The Shawshank Redemption (1994)" /></a>
+					<figure>
+						<blockquote>“I hope this movie will be the medicine for me. I hope I will never lose hope again.”</blockquote>
+						<figcaption>on <a href="https://letterboxd.com/film/the-shawshank-redemption/">The Shawshank Redemption</a> <span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span></figcaption>
+					</figure>
+				</li>
+				<li class="quote-card">
+					<a href="https://letterboxd.com/film/the-lord-of-the-rings-the-fellowship-of-the-ring/" tabindex="-1" aria-hidden="true"><img class="poster poster--mini" src="/assets/img/films/the-lord-of-the-rings-the-fellowship-of-the-ring.webp" width="300" height="450" loading="lazy" alt="Poster for The Lord of the Rings: The Fellowship of the Ring (2001)" /></a>
+					<figure>
+						<blockquote>“Everyone deserves a friend like Sam.”</blockquote>
+						<figcaption>on <a href="https://letterboxd.com/film/the-lord-of-the-rings-the-fellowship-of-the-ring/">The Lord of the Rings: The Fellowship of the Ring</a> <span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span></figcaption>
+					</figure>
+				</li>
+				<li class="quote-card">
+					<a href="https://letterboxd.com/film/the-social-network/" tabindex="-1" aria-hidden="true"><img class="poster poster--mini" src="/assets/img/films/the-social-network.webp" width="300" height="450" loading="lazy" alt="Poster for The Social Network (2010)" /></a>
+					<figure>
+						<blockquote>“This really helped me lock in.”</blockquote>
+						<figcaption>on <a href="https://letterboxd.com/film/the-social-network/">The Social Network</a> <span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span></figcaption>
+					</figure>
 				</li>
 			</ul>
 		</section>
@@ -145,34 +180,30 @@
 		<section id="themes" class="feature l-page" aria-labelledby="themes-title">
 			<h2 class="feature-title" id="themes-title">What I Keep <span class="accent">Coming Back To</span></h2>
 			<p class="feature-text">Patterns in what I watch and rate highly.</p>
-			<ul class="project-grid film-grid">
-				<li class="project">
-					<div>
-						<h3 class="project-title">People obsessed with their craft</h3>
-						<p class="project-subtitle">Musicians, coders, chess players and founders who give everything to the work.</p>
-					</div>
-					<p class="project-venue"><a href="https://letterboxd.com/film/whiplash-2014/">Whiplash</a> · <a href="https://letterboxd.com/film/the-social-network/">The Social Network</a> · <a href="https://letterboxd.com/film/8-mile/">8 Mile</a> · <a href="https://letterboxd.com/film/straight-outta-compton/">Straight Outta Compton</a> · <a href="https://letterboxd.com/film/marty-supreme/">Marty Supreme</a> · <a href="https://letterboxd.com/film/pawn-sacrifice/">Pawn Sacrifice</a> · <a href="https://letterboxd.com/film/blackberry-2023/">BlackBerry</a> · <a href="https://letterboxd.com/film/air-2023/">Air</a> · <a href="https://letterboxd.com/film/oppenheimer-2023/">Oppenheimer</a></p>
+			<ul class="theme-grid">
+				<li class="theme-card">
+					<div class="poster-stack" aria-hidden="true"><img class="poster poster--stack" src="/assets/img/films/whiplash-2014.webp" width="300" height="450" loading="lazy" alt="Poster for Whiplash (2014)" /><img class="poster poster--stack" src="/assets/img/films/the-social-network.webp" width="300" height="450" loading="lazy" alt="Poster for The Social Network (2010)" /><img class="poster poster--stack" src="/assets/img/films/8-mile.webp" width="300" height="450" loading="lazy" alt="Poster for 8 Mile (2002)" /><img class="poster poster--stack" src="/assets/img/films/marty-supreme.webp" width="300" height="450" loading="lazy" alt="Poster for Marty Supreme (2025)" /><img class="poster poster--stack" src="/assets/img/films/pawn-sacrifice.webp" width="300" height="450" loading="lazy" alt="Poster for Pawn Sacrifice (2014)" /></div>
+					<h3 class="theme-title">People obsessed with their craft</h3>
+					<p class="theme-text">Musicians, coders, chess players and founders who give everything to the work.</p>
+					<p class="theme-films"><a href="https://letterboxd.com/film/whiplash-2014/">Whiplash</a> · <a href="https://letterboxd.com/film/the-social-network/">The Social Network</a> · <a href="https://letterboxd.com/film/8-mile/">8 Mile</a> · <a href="https://letterboxd.com/film/marty-supreme/">Marty Supreme</a> · <a href="https://letterboxd.com/film/pawn-sacrifice/">Pawn Sacrifice</a> · <a href="https://letterboxd.com/film/blackberry-2023/">BlackBerry</a> · <a href="https://letterboxd.com/film/air-2023/">Air</a> · <a href="https://letterboxd.com/film/oppenheimer-2023/">Oppenheimer</a></p>
 				</li>
-				<li class="project">
-					<div>
-						<h3 class="project-title">Tarantino</h3>
-						<p class="project-subtitle">Every Tarantino film I’ve logged gets five stars.</p>
-					</div>
-					<p class="project-venue"><a href="https://letterboxd.com/film/pulp-fiction/">Pulp Fiction</a> · <a href="https://letterboxd.com/film/django-unchained/">Django Unchained</a> · <a href="https://letterboxd.com/film/kill-bill-vol-1/">Kill Bill: Vol. 1</a></p>
+				<li class="theme-card">
+					<div class="poster-stack" aria-hidden="true"><img class="poster poster--stack" src="/assets/img/films/pulp-fiction.webp" width="300" height="450" loading="lazy" alt="Poster for Pulp Fiction (1994)" /><img class="poster poster--stack" src="/assets/img/films/django-unchained.webp" width="300" height="450" loading="lazy" alt="Poster for Django Unchained (2012)" /><img class="poster poster--stack" src="/assets/img/films/kill-bill-vol-1.webp" width="300" height="450" loading="lazy" alt="Poster for Kill Bill: Vol. 1 (2003)" /></div>
+					<h3 class="theme-title">Tarantino</h3>
+					<p class="theme-text">Every Tarantino film I’ve logged gets five stars.</p>
+					<p class="theme-films"><a href="https://letterboxd.com/film/pulp-fiction/">Pulp Fiction</a> · <a href="https://letterboxd.com/film/django-unchained/">Django Unchained</a> · <a href="https://letterboxd.com/film/kill-bill-vol-1/">Kill Bill: Vol. 1</a></p>
 				</li>
-				<li class="project">
-					<div>
-						<h3 class="project-title">Survival in space</h3>
-						<p class="project-subtitle">Problem-solving against the odds, far from home.</p>
-					</div>
-					<p class="project-venue"><a href="https://letterboxd.com/film/the-martian/">The Martian</a> · <a href="https://letterboxd.com/film/project-hail-mary/">Project Hail Mary</a> · <a href="https://letterboxd.com/film/apollo-13/">Apollo 13</a></p>
+				<li class="theme-card">
+					<div class="poster-stack" aria-hidden="true"><img class="poster poster--stack" src="/assets/img/films/the-martian.webp" width="300" height="450" loading="lazy" alt="Poster for The Martian (2015)" /><img class="poster poster--stack" src="/assets/img/films/project-hail-mary.webp" width="300" height="450" loading="lazy" alt="Poster for Project Hail Mary (2026)" /><img class="poster poster--stack" src="/assets/img/films/apollo-13.webp" width="300" height="450" loading="lazy" alt="Poster for Apollo 13 (1995)" /></div>
+					<h3 class="theme-title">Survival in space</h3>
+					<p class="theme-text">Problem-solving against the odds, far from home.</p>
+					<p class="theme-films"><a href="https://letterboxd.com/film/the-martian/">The Martian</a> · <a href="https://letterboxd.com/film/project-hail-mary/">Project Hail Mary</a> · <a href="https://letterboxd.com/film/apollo-13/">Apollo 13</a></p>
 				</li>
-				<li class="project">
-					<div>
-						<h3 class="project-title">Dark crime and thrillers</h3>
-						<p class="project-subtitle">Slow-burn stories with morally grey leads.</p>
-					</div>
-					<p class="project-venue"><a href="https://letterboxd.com/film/oldboy/">Oldboy</a> · <a href="https://letterboxd.com/film/the-batman/">The Batman</a> · <a href="https://letterboxd.com/film/nightcrawler/">Nightcrawler</a> · <a href="https://letterboxd.com/film/the-departed/">The Departed</a></p>
+				<li class="theme-card">
+					<div class="poster-stack" aria-hidden="true"><img class="poster poster--stack" src="/assets/img/films/oldboy.webp" width="300" height="450" loading="lazy" alt="Poster for Oldboy (2003)" /><img class="poster poster--stack" src="/assets/img/films/the-batman.webp" width="300" height="450" loading="lazy" alt="Poster for The Batman (2022)" /><img class="poster poster--stack" src="/assets/img/films/nightcrawler.webp" width="300" height="450" loading="lazy" alt="Poster for Nightcrawler (2014)" /><img class="poster poster--stack" src="/assets/img/films/the-departed.webp" width="300" height="450" loading="lazy" alt="Poster for The Departed (2006)" /></div>
+					<h3 class="theme-title">Dark crime and thrillers</h3>
+					<p class="theme-text">Slow-burn stories with morally grey leads.</p>
+					<p class="theme-films"><a href="https://letterboxd.com/film/oldboy/">Oldboy</a> · <a href="https://letterboxd.com/film/the-batman/">The Batman</a> · <a href="https://letterboxd.com/film/nightcrawler/">Nightcrawler</a> · <a href="https://letterboxd.com/film/the-departed/">The Departed</a></p>
 				</li>
 			</ul>
 		</section>
@@ -180,21 +211,52 @@
 		<hr class="l-middle home-hr" />
 
 		<!-- ── Recently watched ── -->
-		<section id="recent" class="feature l-text" aria-labelledby="recent-title">
+		<section id="recent" class="feature l-page" aria-labelledby="recent-title">
 			<h2 class="feature-title" id="recent-title">Recently <span class="accent">Watched</span></h2>
 			<p class="feature-text">The last ten films in my diary. More on <a href="https://letterboxd.com/shreyanshmodi/">my Letterboxd</a>.</p>
-			<ul class="cv-list">
-				<li><span class="cv-date">10 Oct 2026</span><p><a href="https://letterboxd.com/film/the-lord-of-the-rings-the-fellowship-of-the-ring/">The Lord of the Rings: The Fellowship of the Ring</a> (2001) <span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span></p></li>
-				<li><span class="cv-date">10 Oct 2026</span><p><a href="https://letterboxd.com/film/oldboy/">Oldboy</a> (2003) <span class="film-rating" aria-label="Rated 4 out of 5">★★★★</span></p></li>
-				<li><span class="cv-date">9 Oct 2026</span><p><a href="https://letterboxd.com/film/the-batman/">The Batman</a> (2022) <span class="film-rating" aria-label="Rated 4 out of 5">★★★★</span></p></li>
-				<li><span class="cv-date">8 Oct 2026</span><p><a href="https://letterboxd.com/film/the-departed/">The Departed</a> (2006) <span class="film-rating" aria-label="Rated 3 out of 5">★★★</span></p></li>
-				<li><span class="cv-date">8 Oct 2026</span><p><a href="https://letterboxd.com/film/casino-royale-2006/">Casino Royale</a> (2006) <span class="film-rating" aria-label="Rated 2.5 out of 5">★★½</span></p></li>
-				<li><span class="cv-date">7 Oct 2026</span><p><a href="https://letterboxd.com/film/blackberry-2023/">BlackBerry</a> (2023) <span class="film-rating" aria-label="Rated 3 out of 5">★★★</span></p></li>
-				<li><span class="cv-date">2 Oct 2026</span><p><a href="https://letterboxd.com/film/oceans-eleven-2001/">Ocean&#x27;s Eleven</a> (2001) <span class="film-rating" aria-label="Rated 3 out of 5">★★★</span></p></li>
-				<li><span class="cv-date">30 Sep 2026</span><p><a href="https://letterboxd.com/film/the-shawshank-redemption/">The Shawshank Redemption</a> (1994) <span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span></p></li>
-				<li><span class="cv-date">29 Sep 2026</span><p><a href="https://letterboxd.com/film/good-will-hunting/">Good Will Hunting</a> (1997) <span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span></p></li>
-				<li><span class="cv-date">27 Sep 2026</span><p><a href="https://letterboxd.com/film/pawn-sacrifice/">Pawn Sacrifice</a> (2014) <span class="film-rating" aria-label="Rated 4 out of 5">★★★★</span></p></li>
+			<ul class="film-grid film-grid--recent">
+				<li class="film film--small">
+					<a class="film-link" href="https://letterboxd.com/film/the-lord-of-the-rings-the-fellowship-of-the-ring/"><img class="poster" src="/assets/img/films/the-lord-of-the-rings-the-fellowship-of-the-ring.webp" width="300" height="450" loading="lazy" alt="Poster for The Lord of the Rings: The Fellowship of the Ring (2001)" /><span class="visually-hidden">The Lord of the Rings: The Fellowship of the Ring</span></a>
+					<p class="film-meta"><span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span><br /><span class="film-date">10 Oct</span></p>
+				</li>
+				<li class="film film--small">
+					<a class="film-link" href="https://letterboxd.com/film/oldboy/"><img class="poster" src="/assets/img/films/oldboy.webp" width="300" height="450" loading="lazy" alt="Poster for Oldboy (2003)" /><span class="visually-hidden">Oldboy</span></a>
+					<p class="film-meta"><span class="film-rating" aria-label="Rated 4 out of 5">★★★★</span><br /><span class="film-date">10 Oct</span></p>
+				</li>
+				<li class="film film--small">
+					<a class="film-link" href="https://letterboxd.com/film/the-batman/"><img class="poster" src="/assets/img/films/the-batman.webp" width="300" height="450" loading="lazy" alt="Poster for The Batman (2022)" /><span class="visually-hidden">The Batman</span></a>
+					<p class="film-meta"><span class="film-rating" aria-label="Rated 4 out of 5">★★★★</span><br /><span class="film-date">9 Oct</span></p>
+				</li>
+				<li class="film film--small">
+					<a class="film-link" href="https://letterboxd.com/film/the-departed/"><img class="poster" src="/assets/img/films/the-departed.webp" width="300" height="450" loading="lazy" alt="Poster for The Departed (2006)" /><span class="visually-hidden">The Departed</span></a>
+					<p class="film-meta"><span class="film-rating" aria-label="Rated 3 out of 5">★★★</span><br /><span class="film-date">8 Oct</span></p>
+				</li>
+				<li class="film film--small">
+					<a class="film-link" href="https://letterboxd.com/film/casino-royale-2006/"><img class="poster" src="/assets/img/films/casino-royale-2006.webp" width="300" height="450" loading="lazy" alt="Poster for Casino Royale (2006)" /><span class="visually-hidden">Casino Royale</span></a>
+					<p class="film-meta"><span class="film-rating" aria-label="Rated 2.5 out of 5">★★½</span><br /><span class="film-date">8 Oct</span></p>
+				</li>
+				<li class="film film--small">
+					<a class="film-link" href="https://letterboxd.com/film/blackberry-2023/"><img class="poster" src="/assets/img/films/blackberry-2023.webp" width="300" height="450" loading="lazy" alt="Poster for BlackBerry (2023)" /><span class="visually-hidden">BlackBerry</span></a>
+					<p class="film-meta"><span class="film-rating" aria-label="Rated 3 out of 5">★★★</span><br /><span class="film-date">7 Oct</span></p>
+				</li>
+				<li class="film film--small">
+					<a class="film-link" href="https://letterboxd.com/film/oceans-eleven-2001/"><img class="poster" src="/assets/img/films/oceans-eleven-2001.webp" width="300" height="450" loading="lazy" alt="Poster for Ocean&#x27;s Eleven (2001)" /><span class="visually-hidden">Ocean&#x27;s Eleven</span></a>
+					<p class="film-meta"><span class="film-rating" aria-label="Rated 3 out of 5">★★★</span><br /><span class="film-date">2 Oct</span></p>
+				</li>
+				<li class="film film--small">
+					<a class="film-link" href="https://letterboxd.com/film/the-shawshank-redemption/"><img class="poster" src="/assets/img/films/the-shawshank-redemption.webp" width="300" height="450" loading="lazy" alt="Poster for The Shawshank Redemption (1994)" /><span class="visually-hidden">The Shawshank Redemption</span></a>
+					<p class="film-meta"><span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span><br /><span class="film-date">30 Sep</span></p>
+				</li>
+				<li class="film film--small">
+					<a class="film-link" href="https://letterboxd.com/film/good-will-hunting/"><img class="poster" src="/assets/img/films/good-will-hunting.webp" width="300" height="450" loading="lazy" alt="Poster for Good Will Hunting (1997)" /><span class="visually-hidden">Good Will Hunting</span></a>
+					<p class="film-meta"><span class="film-rating" aria-label="Rated 5 out of 5">★★★★★</span><br /><span class="film-date">29 Sep</span></p>
+				</li>
+				<li class="film film--small">
+					<a class="film-link" href="https://letterboxd.com/film/pawn-sacrifice/"><img class="poster" src="/assets/img/films/pawn-sacrifice.webp" width="300" height="450" loading="lazy" alt="Poster for Pawn Sacrifice (2014)" /><span class="visually-hidden">Pawn Sacrifice</span></a>
+					<p class="film-meta"><span class="film-rating" aria-label="Rated 4 out of 5">★★★★</span><br /><span class="film-date">27 Sep</span></p>
+				</li>
 			</ul>
+			<p class="film-credit">Posters via Letterboxd and TMDB. Ratings and reviews are my own.</p>
 		</section>
 
 	</main>
