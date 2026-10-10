@@ -80,9 +80,10 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 /* Portrait card to the right of the name block. */
 #intro-image {
 	flex: 0 0 auto;
-	width: 9rem;
+	width: 10.5rem;
 	height: 11.25rem;
-	border-radius: 1rem;
+	margin-right: 2rem;
+	border-radius: 0.5rem;
 	object-fit: cover;
 	box-shadow: 0 4px 18px rgba(17, 24, 39, 0.18), 0 0 0 1px rgba(17, 24, 39, 0.06);
 }
@@ -391,7 +392,7 @@ footer.page {
 }
 
 @media (max-width: 768px) {
-	#intro-image { width: 6rem; height: 7.5rem; }
+	#intro-image { width: 6rem; height: 7.5rem; margin-right: 0; }
 	#intro-title-text { margin-right: 1rem; }
 	#intro-title { font-size: 2rem; }
 	#intro-subtitle { font-size: 1.35rem; }
