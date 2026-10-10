@@ -374,6 +374,16 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 	color: #a04a08;
 }
 
+/* ── Cinema page ── */
+.film-rating { color: #855900; letter-spacing: 0.05em; }
+.project-venue.film-rating { font-size: 0.95rem; }
+.film-stats { margin-top: -0.5rem; color: #666666; }
+.film-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.film-grid .project { min-height: 0; gap: 0.75rem; }
+@media (max-width: 768px) {
+	.film-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 /* ── CV-style lists: dates hang to the left of the text column ── */
 .cv-list li {
 	position: relative;
