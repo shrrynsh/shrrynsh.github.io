@@ -74,20 +74,23 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 #intro-title-wrapper {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	margin-bottom: 1rem;
 }
+/* Portrait card to the right of the name block. */
 #intro-image {
 	flex: 0 0 auto;
-	width: 8rem;
-	height: 8rem;
-	border-radius: 50%;
+	width: 9rem;
+	height: 11.25rem;
+	border-radius: 1rem;
 	object-fit: cover;
+	box-shadow: 0 4px 18px rgba(17, 24, 39, 0.18), 0 0 0 1px rgba(17, 24, 39, 0.06);
 }
 #intro-title-text {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin-left: 1rem;
+	margin-right: 1.5rem;
 }
 #intro-title {
 	margin: 0;
@@ -388,7 +391,8 @@ footer.page {
 }
 
 @media (max-width: 768px) {
-	#intro-image { width: 5rem; height: 5rem; }
+	#intro-image { width: 6rem; height: 7.5rem; }
+	#intro-title-text { margin-right: 1rem; }
 	#intro-title { font-size: 2rem; }
 	#intro-subtitle { font-size: 1.35rem; }
 	#quick-links { display: flex; flex-wrap: wrap; }
