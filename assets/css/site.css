@@ -71,37 +71,41 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 	padding: 0.5rem 0;
 	border-bottom: 1px solid #dddddd;
 }
-#masthead > h1 {
-	grid-column: text-start / 7; /* one track wider than Hohman's so the longer name fits on one line */
+.masthead-inner {
+	grid-column: text;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	column-gap: 0.5rem;
+}
+#masthead h1 {
 	margin: 0;
 	font-size: 1.25rem;
 	white-space: nowrap;
 }
-#masthead > h1 > a { color: #414141; }
-#masthead > h1 > a:hover { color: #414141; text-decoration: none; }
-#masthead > nav {
-	grid-column: 7 / text-end;
+#masthead h1 > a { color: #414141; }
+#masthead h1 > a:hover { color: #414141; text-decoration: none; }
+#masthead nav {
 	display: flex;
-	flex-direction: row;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: flex-end;
 	font-size: 0.9rem;
 }
-#masthead > nav > a {
-	margin: 0.25rem;
-	padding: 0.5rem 0.75rem;
+#masthead nav > a {
+	margin: 0.15rem;
+	padding: 0.5rem 0.55rem;
 	border-radius: 5rem;
 	background: rgba(0, 0, 0, 0.025);
 	color: #414141;
 	font-weight: 500;
 	text-align: center;
+	white-space: nowrap;
 	transition: all 0.2s ease-in-out;
 }
-#masthead > nav > a .fa-icon { margin-right: 0.5rem; }
-#masthead > nav > a:hover, #masthead > nav > a:focus {
+#masthead nav > a .fa-icon { margin-right: 0.5rem; }
+#masthead nav > a:hover, #masthead nav > a:focus {
 	background: rgba(0, 0, 0, 0.05);
 	color: #414141;
 	text-decoration: none;
@@ -179,13 +183,15 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 .social-link--orcid { color: #a6ce39; }
 
 #quick-links {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	display: flex;
+	flex-wrap: wrap;
 	margin-bottom: 1.5rem;
 }
 #quick-links a {
+	flex: 1 1 auto;
 	margin: 0.25rem;
-	padding: 0.75rem;
+	padding: 0.75rem 0.9rem;
+	white-space: nowrap;
 	border-radius: 5rem;
 	background: rgba(0, 0, 0, 0.025);
 	color: #414141;
@@ -445,11 +451,12 @@ footer.page {
 	.cover { height: auto; }
 	.project { min-height: 0; }
 	#footer-left { grid-column: page; }
-	#masthead > h1 { grid-column: page; margin: 0.5rem 0; }
-	#masthead > nav { grid-column: page; justify-content: flex-start; }
+	.masthead-inner { grid-column: page; }
+	#masthead h1 { margin: 0.5rem 0; }
+	#masthead nav { justify-content: flex-start; }
 }
 
 @media (prefers-reduced-motion: reduce) {
 	*, *::before, *::after { transition: none !important; }
-	.cover:hover, .project:hover, #quick-links a:hover, #masthead > nav > a:hover { transform: none; }
+	.cover:hover, .project:hover, #quick-links a:hover, #masthead nav > a:hover { transform: none; }
 }
