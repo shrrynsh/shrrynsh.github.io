@@ -10,7 +10,7 @@ html, body { margin: 0; padding: 0; }
 html {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
 		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	font-size: 16px;
+	font-size: 15px;
 	line-height: 1.5;
 	-webkit-text-size-adjust: 100%;
 }
@@ -39,7 +39,7 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 
 /* ── Page grid: a centred text column inside a wider page column ── */
 .page {
-	--track: 3.5rem;
+	--track: 56px;
 	display: grid;
 	grid-template-columns:
 		[screen-start] 1fr
