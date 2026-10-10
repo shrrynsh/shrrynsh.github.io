@@ -10,7 +10,7 @@ html, body { margin: 0; padding: 0; }
 html {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
 		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 1.5;
 	-webkit-text-size-adjust: 100%;
 }
@@ -38,14 +38,15 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 
 /* ── Page grid: a centred text column inside a wider page column ── */
 .page {
+	--track: 3.5rem;
 	display: grid;
 	grid-template-columns:
 		[screen-start] 1fr
-		[page-start kicker-start] minmax(0, 3.5rem)
-		[middle-start] minmax(0, 3.5rem)
-		[text-start kicker-end] repeat(8, minmax(0, 3.5rem))
-		[text-end gutter-start] minmax(0, 3.5rem)
-		[middle-end] minmax(0, 3.5rem)
+		[page-start kicker-start] minmax(0, var(--track))
+		[middle-start] minmax(0, var(--track))
+		[text-start kicker-end] repeat(8, minmax(0, var(--track)))
+		[text-end gutter-start] minmax(0, var(--track))
+		[middle-end] minmax(0, var(--track))
 		[page-end gutter-end] 1fr [screen-end];
 	column-gap: 1.5rem;
 }
@@ -76,8 +77,8 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 }
 #intro-image {
 	flex: 0 0 auto;
-	width: 8rem;
-	height: 8rem;
+	width: 9rem;
+	height: 9rem;
 	border-radius: 50%;
 	object-fit: cover;
 }
@@ -85,7 +86,7 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin-left: 1rem;
+	margin-left: 1.5rem;
 }
 #intro-title {
 	margin: 0;
@@ -98,6 +99,7 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 	font-size: 1.57rem;
 	line-height: 1.3;
 	color: #767676;
+	text-wrap: balance;
 }
 
 .socials {
@@ -197,7 +199,7 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 .cover {
 	display: flex;
 	flex-direction: column;
-	min-height: 405px;
+	min-height: 22.5rem;
 	border-radius: 1.5rem;
 	background: rgba(0, 0, 0, 0.025);
 	transition: all 0.2s ease-in-out;
@@ -244,7 +246,7 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.25rem;
-	font-size: 0.75rem;
+	font-size: 0.7rem;
 }
 .pub-misc a {
 	padding: 0.25rem 0.55rem;
@@ -314,7 +316,7 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 	position: absolute;
 	top: 0.75rem;
 	right: 100%;
-	width: 8.5rem;
+	width: calc(2 * var(--track) + 1.5rem);
 	margin-right: 1.5rem;
 	font-size: 0.7rem;
 	line-height: 1.4;
@@ -372,7 +374,9 @@ footer.page {
 }
 
 @media (max-width: 768px) {
-	#intro-image { width: 5rem; height: 5rem; }
+	#intro-image { width: 6rem; height: 6rem; }
+	#intro-title-text { margin-left: 1rem; }
+	.socials { gap: 0.35rem; }
 	#intro-title { font-size: 2rem; }
 	#intro-subtitle { font-size: 1.35rem; }
 	#quick-links { display: flex; flex-wrap: wrap; }
