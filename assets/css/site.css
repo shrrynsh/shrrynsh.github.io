@@ -376,38 +376,11 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 	color: #a04a08;
 }
 
-/* ── Know Me: sub-page navigation ── */
-.sub-nav {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 1rem;
-	margin-top: 0.5rem;
-}
-.sub-card {
-	display: block;
-	padding: 1.1rem 1.25rem;
-	border-radius: 1.5rem;
-	background: rgba(0, 0, 0, 0.025);
-	color: #313131;
-	transition: all 0.2s ease-in-out;
-}
-.sub-card:hover, .sub-card:focus {
-	background: rgba(0, 0, 0, 0.05);
-	color: #313131;
-	text-decoration: none;
-	transform: scale(1.02);
-}
-.sub-title .accent { color: #2b6cc4; }
-.sub-title { display: block; font-size: 1.25rem; font-weight: 600; line-height: 1.3; color: #111111; }
-.sub-text { display: block; margin-top: 0.3rem; font-size: 0.9rem; color: rgba(0, 0, 0, 0.6); }
-.sub-arrow { display: inline-block; color: #2b6cc4; transition: transform 0.2s ease-in-out; }
-.sub-card:hover .sub-arrow { transform: translateX(4px); }
+/* ── Know Me: sub-page links reuse the homepage pill buttons (#quick-links) ── */
+.know-links { margin-top: 0.5rem; }
 .breadcrumb { margin-bottom: 1rem; font-size: 0.85rem; color: #6b6b6b; }
 .breadcrumb a { color: #6b6b6b; }
 .breadcrumb a:hover { color: #2b6cc4; }
-@media (max-width: 768px) {
-	.sub-nav { grid-template-columns: minmax(0, 1fr); }
-}
 
 /* ── Cinema page ── */
 .visually-hidden {
