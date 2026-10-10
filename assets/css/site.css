@@ -17,8 +17,9 @@ html {
 @media (max-width: 768px) {
 	html { font-size: 14px; }
 }
+:root { --bg: #faf8f3; } /* warm off-white, easier on the eyes than pure white */
 body {
-	background: #ffffff;
+	background: var(--bg);
 	color: #414141;
 }
 
@@ -31,7 +32,7 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 :where(a):focus-visible { outline: 2px solid #2b6cc4; outline-offset: 3px; border-radius: 3px; }
 
 .skip { position: absolute; left: -9999px; }
-.skip:focus { left: 1rem; top: 0.5rem; z-index: 10; padding: 0.5rem 0.75rem; background: #ffffff; }
+.skip:focus { left: 1rem; top: 0.5rem; z-index: 10; padding: 0.5rem 0.75rem; background: var(--bg); }
 
 /* Font Awesome icons, inlined as SVG: one em tall, natural width. */
 .fa-icon { display: inline-block; width: auto; height: 1em; vertical-align: -0.125em; }
@@ -317,7 +318,7 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 	padding: 0 0.25rem 0.25rem;
 	font-size: 0.75rem;
 	font-weight: 600;
-	color: #b45309;
+	color: #a04a08;
 }
 
 /* ── CV-style lists: dates hang to the left of the text column ── */
@@ -334,7 +335,7 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 	font-size: 0.7rem;
 	line-height: 1.4;
 	text-align: right;
-	color: #767676;
+	color: #6b6b6b;
 }
 .cv-entry {
 	display: flex;
