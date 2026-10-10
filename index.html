@@ -11,17 +11,11 @@
 	<meta property="og:title" content="Shreyansh Modi" />
 	<meta property="og:description" content="Undergraduate researcher at IIT Roorkee working on vision-language model reliability, hallucination and adversarial machine learning." />
 	<meta property="og:url" content="https://shrrynsh.github.io/" />
-	<meta name="color-scheme" content="light dark" />
+	<meta name="color-scheme" content="light" />
 	<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32" />
 	<link rel="icon" href="favicon.png" type="image/png" sizes="512x512" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
-	<script>
-		try {
-			var t = localStorage.getItem('theme');
-			if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
-		} catch (e) {}
-	</script>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&display=swap" />
@@ -41,10 +35,6 @@
 				<a href="#experience">Experience</a>
 				<a href="shreyansh_modi_resume.pdf">CV</a>
 			</nav>
-			<button class="theme-toggle" type="button" aria-label="Switch to dark theme">
-				<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
-				<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5" /><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" /></svg>
-			</button>
 		</div>
 	</header>
 
@@ -52,50 +42,55 @@
 
 		<!-- ── Opening statement and introduction ── -->
 		<section class="hero grid" aria-labelledby="statement">
-			<h1 class="lede" id="statement">I test whether vision-language models are as reliable as they look.</h1>
+			<div class="hero-inner">
+				<h1 class="lede" id="statement">I test whether vision-language models are as reliable as they look.</h1>
 
-			<div class="identity">
-				<img class="portrait" src="assets/img/portrait.webp" srcset="assets/img/portrait.webp 320w, assets/img/portrait@2x.webp 640w" sizes="8rem" width="320" height="320" alt="Portrait of Shreyansh Modi, smiling, wearing glasses and a grey zip-up sweater outdoors." />
-				<div>
-					<p class="identity-name">Shreyansh Modi</p>
-					<p class="identity-role">Computer vision &amp; ML security researcher · IIT Roorkee · India</p>
-					<ul class="socials" aria-label="Profiles and contact">
-						<li><a class="social-link" href="mailto:shreyansh_m@ee.iitr.ac.in" aria-label="Email" title="Email">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
-						</a></li>
-						<li><a class="social-link" href="https://scholar.google.com/citations?user=EaR5WZQAAAAJ" aria-label="Google Scholar" title="Google Scholar">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" /></svg>
-						</a></li>
-						<li><a class="social-link" href="https://www.semanticscholar.org/author/Shreyansh-Modi/2290091251" aria-label="Semantic Scholar" title="Semantic Scholar">
-							<svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16.5" text-anchor="middle" font-family="ui-sans-serif, Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="currentColor">S2</text></svg>
-						</a></li>
-						<li><a class="social-link" href="https://openreview.net/profile?id=~Shreyansh_Modi1" aria-label="OpenReview" title="OpenReview">
-							<svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16.5" text-anchor="middle" font-family="ui-sans-serif, Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="currentColor">OR</text></svg>
-						</a></li>
-						<li><a class="social-link" href="https://orcid.org/0009-0000-0264-6153" aria-label="ORCID" title="ORCID">
-							<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" /><text x="12" y="16" text-anchor="middle" font-family="ui-sans-serif, Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="700" fill="currentColor">iD</text></svg>
-						</a></li>
-						<li><a class="social-link" href="https://github.com/shrrynsh" aria-label="GitHub" title="GitHub">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" /></svg>
-						</a></li>
-						<li><a class="social-link" href="https://twitter.com/shrrynsh" aria-label="X (Twitter)" title="X (Twitter)">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20" /></svg>
-						</a></li>
-						<li><a class="social-link" href="https://linkedin.com/in/shreyanshmodi" aria-label="LinkedIn" title="LinkedIn">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg>
-						</a></li>
-					</ul>
+				<figure class="portrait-wrap">
+					<img class="portrait" src="assets/img/portrait@2x.webp" srcset="assets/img/portrait.webp 320w, assets/img/portrait@2x.webp 640w" sizes="(max-width: 480px) 10rem, (max-width: 900px) 12rem, 17rem" width="640" height="640" fetchpriority="high" alt="Portrait of Shreyansh Modi, smiling, wearing glasses and a grey zip-up sweater outdoors." />
+				</figure>
+
+				<div class="identity">
+					<div>
+						<p class="identity-name">Shreyansh Modi</p>
+						<p class="identity-role">Computer vision &amp; ML security researcher · IIT Roorkee · India</p>
+						<ul class="socials" aria-label="Profiles and contact">
+							<li><a class="social-link" href="mailto:shreyansh_m@ee.iitr.ac.in" aria-label="Email" title="Email">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+							</a></li>
+							<li><a class="social-link" href="https://scholar.google.com/citations?user=EaR5WZQAAAAJ" aria-label="Google Scholar" title="Google Scholar">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" /></svg>
+							</a></li>
+							<li><a class="social-link" href="https://www.semanticscholar.org/author/Shreyansh-Modi/2290091251" aria-label="Semantic Scholar" title="Semantic Scholar">
+								<svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16.5" text-anchor="middle" font-family="ui-sans-serif, Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="currentColor">S2</text></svg>
+							</a></li>
+							<li><a class="social-link" href="https://openreview.net/profile?id=~Shreyansh_Modi1" aria-label="OpenReview" title="OpenReview">
+								<svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16.5" text-anchor="middle" font-family="ui-sans-serif, Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="currentColor">OR</text></svg>
+							</a></li>
+							<li><a class="social-link" href="https://orcid.org/0009-0000-0264-6153" aria-label="ORCID" title="ORCID">
+								<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" /><text x="12" y="16" text-anchor="middle" font-family="ui-sans-serif, Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="700" fill="currentColor">iD</text></svg>
+							</a></li>
+							<li><a class="social-link" href="https://github.com/shrrynsh" aria-label="GitHub" title="GitHub">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" /></svg>
+							</a></li>
+							<li><a class="social-link" href="https://twitter.com/shrrynsh" aria-label="X (Twitter)" title="X (Twitter)">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20" /></svg>
+							</a></li>
+							<li><a class="social-link" href="https://linkedin.com/in/shreyanshmodi" aria-label="LinkedIn" title="LinkedIn">
+								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg>
+							</a></li>
+						</ul>
+					</div>
 				</div>
-			</div>
 
-			<div class="prose">
-				<p>I’m an undergraduate in Electrical Engineering at <strong>IIT Roorkee</strong> (B.Tech, expected 2028). My research spans computer vision, generative AI and multimodal learning, with a focus on adversarial machine learning and the security of vision-language models.</p>
-				<p>Recently I co-authored work showing that the gains of contrastive decoding come from a shift in decoding behaviour rather than from mitigating hallucinations (NeurIPS 2026 Workshop, VLM4RWD). I have also steered unconditional diffusion models with concept vectors for training-free image editing (CVPR 2026 Workshop, GCV), and contributed to work localising hallucination-sensitive attention heads in VLMs with activation patching.</p>
-				<p>I’m a reviewer for NeurIPS 2026 and a core member of the Data Science Group at IIT Roorkee. Previously I was a Machine Learning Engineer intern at Infigro.ai and a research intern in IIT Roorkee’s Electrical Engineering department, and my team placed 4th at Inter IIT Tech Meet 14.0.</p>
-				<p>Off the clock, I enjoy watching movies, exploring new ideas in AI and diving into interesting research papers.</p>
-			</div>
+				<div class="prose">
+					<p>I’m an undergraduate in Electrical Engineering at <strong>IIT Roorkee</strong> (B.Tech, expected 2028). My research spans computer vision, generative AI and multimodal learning, with a focus on adversarial machine learning and the security of vision-language models.</p>
+					<p>Recently I co-authored work showing that the gains of contrastive decoding come from a shift in decoding behaviour rather than from mitigating hallucinations (NeurIPS 2026 Workshop, VLM4RWD). I have also steered unconditional diffusion models with concept vectors for training-free image editing (CVPR 2026 Workshop, GCV), and contributed to work localising hallucination-sensitive attention heads in VLMs with activation patching.</p>
+					<p>I’m a reviewer for NeurIPS 2026 and a core member of the Data Science Group at IIT Roorkee. Previously I was a Machine Learning Engineer intern at Infigro.ai and a research intern in IIT Roorkee’s Electrical Engineering department, and my team placed 4th at Inter IIT Tech Meet 14.0.</p>
+					<p>Off the clock, I enjoy watching movies, exploring new ideas in AI and diving into interesting research papers.</p>
+				</div>
 
-			<p class="callout">My CV has the full list of papers, projects and experience: <a href="shreyansh_modi_resume.pdf">CV (PDF)</a> · <a href="#projects">Projects</a></p>
+				<p class="callout">My CV has the full list of papers, projects and experience: <a href="shreyansh_modi_resume.pdf">CV (PDF)</a> · <a href="#projects">Projects</a></p>
+			</div>
 		</section>
 
 		<!-- ── Featured publications ── -->
@@ -120,9 +115,8 @@
 				</li>
 
 				<li class="card">
-					<!-- Replace with: <img src="assets/img/papers/guidance-perceptual-editing.webp" width="1200" height="675" loading="lazy" alt="…"> -->
-					<div class="thumb thumb--placeholder" aria-hidden="true">
-						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" /></svg>
+					<div class="thumb">
+						<img src="assets/img/papers/guidance-perceptual-editing.webp" width="635" height="357" loading="lazy" alt="Three faces generated by an unconditional diffusion model, shown with the baseline output above and the edited output from the proposed guidance below." />
 					</div>
 					<div class="card-body">
 						<h3 class="card-title"><a href="https://arxiv.org/abs/2605.31162">Guidance for Low-Level Perceptual Editing in Unconditional Diffusion Models</a></h3>
@@ -270,11 +264,12 @@
 
 		<!-- ── Experience ── -->
 		<section class="section grid" id="experience" aria-labelledby="experience-title">
-			<h2 class="section-title" id="experience-title">Experience</h2>
-			<p class="section-intro">Internships, research and service.</p>
+			<h2 class="section-title" id="experience-title">Experience &amp; Education</h2>
+			<p class="section-intro">Internships, research, service and my degree.</p>
 			<ul class="xp">
 				<li>
 					<span class="label">2026</span>
+					<img class="xp-logo" src="assets/img/logos/neurips.webp" width="128" height="128" loading="lazy" alt="" />
 					<div>
 						<p class="xp-role">Reviewer</p>
 						<p class="xp-org">NeurIPS 2026</p>
@@ -282,6 +277,7 @@
 				</li>
 				<li>
 					<span class="label">Aug – Oct 2025</span>
+					<img class="xp-logo" src="assets/img/logos/infigro.webp" width="128" height="128" loading="lazy" alt="" />
 					<div>
 						<p class="xp-role">Machine Learning Engineer Intern</p>
 						<p class="xp-org">Infigro.ai</p>
@@ -290,6 +286,7 @@
 				</li>
 				<li>
 					<span class="label">Feb 2025 – now</span>
+					<img class="xp-logo" src="assets/img/logos/dsg.webp" width="128" height="128" loading="lazy" alt="" />
 					<div>
 						<p class="xp-role">Core Member</p>
 						<p class="xp-org">Data Science Group, IIT Roorkee</p>
@@ -298,10 +295,19 @@
 				</li>
 				<li>
 					<span class="label">Nov – Dec 2024</span>
+					<img class="xp-logo" src="assets/img/logos/iitr.webp" width="128" height="128" loading="lazy" alt="" />
 					<div>
 						<p class="xp-role">Research Intern</p>
 						<p class="xp-org">Electrical Engineering Department, IIT Roorkee</p>
 						<p class="xp-desc">Implemented and tuned PID controllers for a DC motor to study cyber-physical attacks on closed-loop control, and simulated signal-injection and spoofing attacks in MATLAB and Arduino.</p>
+					</div>
+				</li>
+				<li>
+					<span class="label">2024 – 2028</span>
+					<img class="xp-logo" src="assets/img/logos/iitr.webp" width="128" height="128" loading="lazy" alt="" />
+					<div>
+						<p class="xp-role">B.Tech in Electrical Engineering</p>
+						<p class="xp-org">Indian Institute of Technology Roorkee · expected 2028</p>
 					</div>
 				</li>
 			</ul>
@@ -329,30 +335,6 @@
 		</div>
 	</footer>
 
-	<script>
-		(function () {
-			var root = document.documentElement;
-			var btn = document.querySelector('.theme-toggle');
-			var mq = window.matchMedia('(prefers-color-scheme: dark)');
-
-			function effective() {
-				return root.getAttribute('data-theme') || (mq.matches ? 'dark' : 'light');
-			}
-			function sync() {
-				var t = effective();
-				root.setAttribute('data-theme-effective', t);
-				btn.setAttribute('aria-label', t === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
-			}
-			btn.addEventListener('click', function () {
-				var next = effective() === 'dark' ? 'light' : 'dark';
-				root.setAttribute('data-theme', next);
-				try { localStorage.setItem('theme', next); } catch (e) {}
-				sync();
-			});
-			mq.addEventListener('change', sync);
-			sync();
-		})();
-	</script>
 </body>
 
 </html>
