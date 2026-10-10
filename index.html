@@ -1,563 +1,358 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Shreyansh Modi</title>
-	<meta name="description" content="Shreyansh Modi — Computer Vision, ML Security Researcher and Undergrad at IIT Roorkee." />
+	<meta name="description" content="Shreyansh Modi — undergraduate researcher at IIT Roorkee working on vision-language model reliability, hallucination and adversarial machine learning." />
+	<link rel="canonical" href="https://shrrynsh.github.io/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Shreyansh Modi" />
+	<meta property="og:description" content="Undergraduate researcher at IIT Roorkee working on vision-language model reliability, hallucination and adversarial machine learning." />
+	<meta property="og:url" content="https://shrrynsh.github.io/" />
+	<meta name="color-scheme" content="light dark" />
 	<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32" />
 	<link rel="icon" href="favicon.png" type="image/png" sizes="512x512" />
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
+	<script>
+		try {
+			var t = localStorage.getItem('theme');
+			if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+		} catch (e) {}
+	</script>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
-	<style>
-		*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-		:root {
-			--ink: #18181b;
-			--body: #2e2e33;
-			--muted: #6b7280;
-			--faint: #9ca3af;
-			--border: #e4e4e7;
-			--bg: #fafaf9;
-			--surface: #f4f4f5;
-			--card: #ffffff;
-			--accent: #2563eb;
-			--accent-l: #dbeafe;
-			--mono: 'DM Mono', monospace;
-			--serif: 'EB Garamond', Georgia, serif;
-		}
-
-		[data-theme="dark"] {
-			--ink: #e4e4e4;
-			--body: #b8b8b8;
-			--muted: #888888;
-			--faint: #606060;
-			--border: #333333;
-			--bg: #1a1a1a;
-			--surface: #242424;
-			--card: #242424;
-			--accent: #60a5fa;
-			--accent-l: #1e3a5f;
-		}
-
-		html, body { overflow-x: hidden; }
-		html { font-size: 26px; }
-
-		body {
-			background: var(--bg);
-			color: var(--body);
-			font-family: var(--serif);
-			font-size: 1rem;
-			line-height: 1.8;
-			margin: 0;
-			padding: 2rem 5vw;
-			transition: background 0.25s, color 0.25s;
-		}
-
-		a { color: var(--accent); text-decoration: none; }
-		a:hover { text-decoration: underline; }
-		strong { color: var(--ink); font-weight: 500; }
-
-		/* ── NAV ── */
-		nav {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			margin-bottom: 4.5rem;
-		}
-
-		.nav-left {
-			display: flex;
-			align-items: center;
-			gap: 2rem;
-		}
-
-		.nav-name {
-			font-family: var(--mono);
-			font-size: 0.82rem;
-			font-weight: 500;
-			color: var(--ink);
-			letter-spacing: 0.01em;
-		}
-
-		.nav-links {
-			display: flex;
-			gap: 2rem;
-			list-style: none;
-			flex-wrap: wrap;
-		}
-
-		.nav-links a {
-			font-family: var(--mono);
-			font-size: 0.72rem;
-			color: var(--muted);
-			letter-spacing: 0.05em;
-		}
-		.nav-links a:hover { color: var(--ink); text-decoration: none; }
-
-		/* ── THEME TOGGLE ── */
-		.theme-toggle {
-			background: none;
-			border: 1px solid var(--border);
-			border-radius: 99px;
-			cursor: pointer;
-			display: flex;
-			align-items: center;
-			gap: 0.35rem;
-			padding: 0.3rem 0.65rem;
-			font-family: var(--mono);
-			font-size: 0.62rem;
-			color: var(--muted);
-			transition: border-color 0.15s, color 0.15s, background 0.25s;
-			background: var(--card);
-			white-space: nowrap;
-		}
-		.theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
-		.theme-toggle svg { width: 13px; height: 13px; flex-shrink: 0; }
-
-		.icon-sun  { display: none; }
-		.icon-moon { display: block; }
-		[data-theme="dark"] .icon-sun  { display: block; }
-		[data-theme="dark"] .icon-moon { display: none; }
-
-		/* ── INTRO ── */
-		.intro {
-			display: grid;
-			grid-template-columns: minmax(0, 1fr) minmax(0, 420px);
-			gap: 1.5rem;
-			align-items: stretch;
-			margin-bottom: 5rem;
-			padding-bottom: 3rem;
-			border-bottom: 1px solid var(--border);
-		}
-
-		h1 {
-			font-family: var(--serif);
-			font-size: 2.6rem;
-			font-weight: 400;
-			font-style: normal;
-			letter-spacing: -0.01em;
-			line-height: 1.1;
-			color: var(--ink);
-			margin-bottom: 0.3rem;
-			word-wrap: break-word;
-		}
-
-		.subtitle {
-			font-family: var(--mono);
-			font-size: 0.7rem;
-			color: var(--faint);
-			letter-spacing: 0.1em;
-			text-transform: uppercase;
-			margin-bottom: 1.6rem;
-		}
-
-		.bio {
-			font-size: 1.05rem;
-			color: var(--body);
-			line-height: 1.85;
-		}
-		.bio p + p { margin-top: 0.9rem; }
-
-		.resume-line {
-			margin-top: 1.25rem;
-			font-family: var(--mono);
-			font-size: 0.72rem;
-			color: var(--muted);
-		}
-		.resume-line a {
-			display: inline-flex;
-			align-items: center;
-			gap: 0.4rem;
-			color: var(--accent);
-			border-bottom: 1px solid var(--accent-l);
-			padding-bottom: 0.05rem;
-			transition: border-color 0.15s;
-		}
-		.resume-line a:hover { border-color: var(--accent); text-decoration: none; }
-
-		.headshot {
-			width: min(420px, 100%);
-			max-width: 100%;
-			border-radius: 5px;
-			overflow: hidden;
-			background: var(--surface);
-			border: 1px solid var(--border);
-			justify-self: end;
-		}
-		.headshot img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			object-position: center center;
-			display: block;
-		}
-
-		/* ── SECTIONS ── */
-		section { margin-bottom: 3.5rem; }
-
-		.section-head {
-			display: flex;
-			align-items: center;
-			gap: 1rem;
-			margin-bottom: 1.75rem;
-		}
-
-		h2 {
-			font-family: var(--mono);
-			font-size: 0.65rem;
-			font-weight: 500;
-			letter-spacing: 0.2em;
-			text-transform: uppercase;
-			color: var(--faint);
-			white-space: nowrap;
-		}
-
-		.section-rule { flex: 1; height: 1px; background: var(--border); }
-
-		/* ── PROJECTS ── */
-		.proj-list { display: flex; flex-direction: column; }
-
-		.proj-item {
-			display: grid;
-			grid-template-columns: minmax(0, 160px) minmax(0, 1fr) auto;
-			gap: 1.25rem;
-			align-items: baseline;
-			padding: 0.85rem 0;
-			border-bottom: 1px solid var(--border);
-		}
-		.proj-item:first-child { border-top: 1px solid var(--border); }
-
-		.proj-name {
-			font-family: var(--mono);
-			font-size: 0.78rem;
-			font-weight: 500;
-			min-width: 0;
-			overflow-wrap: anywhere;
-		}
-		.proj-name a { color: var(--accent); }
-		.proj-desc {
-			font-size: 0.92rem;
-			color: var(--muted);
-			line-height: 1.55;
-			min-width: 0;
-		}
-		.proj-tag {
-			font-family: var(--mono);
-			font-size: 0.65rem;
-			color: var(--faint);
-			white-space: nowrap;
-		}
-
-		#publications .proj-item {
-			grid-template-columns: minmax(0, 280px) minmax(0, 1fr) auto;
-		}
-		
-		/* ── CONTACT ── */
-		.contact-icons {
-			display: flex;
-			gap: 1.5rem;
-			align-items: center;
-			flex-wrap: wrap;
-		}
-
-		.contact-icon {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 3.25rem;
-			height: 3.25rem;
-			border-radius: 50%;
-			border: 1px solid var(--border);
-			background: var(--card);
-			color: var(--faint);
-			transition: all 0.2s;
-			text-decoration: none;
-		}
-		.contact-icon svg { width: 24px; height: 24px; }
-		.contact-icon:hover {
-			border-color: var(--accent);
-			color: var(--accent);
-			box-shadow: 0 4px 16px rgba(37,99,235,0.1);
-		}
-
-		/* ── FOOTER ── */
-		footer {
-			margin-top: 4rem;
-			padding-top: 1.25rem;
-			border-top: 1px solid var(--border);
-			font-family: var(--mono);
-			font-size: 0.6rem;
-			color: var(--faint);
-			letter-spacing: 0.04em;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
-
-		/* ── RESPONSIVE ── */
-		@media (max-width: 900px) {
-			.intro {
-				grid-template-columns: 1fr;
-				gap: 1.75rem;
-			}
-			.headshot {
-				width: min(280px, 100%);
-				justify-self: center;
-			}
-			#publications .proj-item,
-			.proj-item {
-				grid-template-columns: 1fr;
-				gap: 0.5rem;
-				align-items: start;
-			}
-			.proj-tag {
-				white-space: normal;
-			}
-		}
-
-		@media (max-width: 620px) {
-			html { font-size: 18px; }
-			body { padding: 1.25rem 1rem 3rem; }
-			nav {
-				flex-wrap: wrap;
-				align-items: center;
-				gap: 0.75rem;
-				margin-bottom: 2.5rem;
-			}
-			.nav-links {
-				gap: 0.5rem 0.85rem;
-				flex: 1 1 auto;
-				min-width: 0;
-			}
-			.nav-name { display: none; }
-			.theme-toggle { flex-shrink: 0; }
-			h1 { font-size: 2rem; }
-			.subtitle {
-				font-size: 0.62rem;
-				line-height: 1.6;
-				letter-spacing: 0.06em;
-			}
-			.headshot {
-				width: min(220px, 80vw);
-				aspect-ratio: 1;
-			}
-			.headshot img { height: 100%; }
-			#projects .proj-tag { display: none; }
-			#publications .proj-tag {
-				display: block;
-				margin-top: 0.25rem;
-			}
-			footer {
-				flex-direction: column;
-				align-items: flex-start;
-				gap: 0.35rem;
-			}
-		}
-	</style>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&display=swap" />
+	<link rel="stylesheet" href="assets/css/site.css" />
 </head>
 
 <body>
+	<a class="skip" href="#main">Skip to content</a>
 
-	<nav>
-		<ul class="nav-links">
-			<span class="nav-name">Shreyansh Modi</span>
-			<li><a href="#about">about</a></li>
-			<li><a href="#projects">projects</a></li>
-			<li><a href="#publications">research and publications</a></li>
-			<li><a href="#contact">contact</a></li>
-		</ul>
-		<button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-			<!-- sun icon (shown in dark mode) -->
-			<svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-				<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-			</svg>
-			<!-- moon icon (shown in light mode) -->
-			<svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-				<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-			</svg>
-			<span class="theme-label">dark</span>
-		</button>
-	</nav>
-
-	<!-- ── INTRO ── -->
-	<header class="header-titles">
-		<h1>Shreyansh Modi</h1>
-		<div class="subtitle">COMPUTER VISION, ML SECURITY RESEARCHER &nbsp;·&nbsp; IIT Roorkee &nbsp;·&nbsp; India</div>
+	<header class="masthead grid">
+		<div class="masthead-inner">
+			<a class="wordmark" href="./">Shreyansh Modi</a>
+			<nav class="nav" aria-label="Primary">
+				<a href="#publications">Publications</a>
+				<a href="#news">News</a>
+				<a href="#projects">Projects</a>
+				<a href="#experience">Experience</a>
+				<a href="shreyansh_modi_resume.pdf">CV</a>
+			</nav>
+			<button class="theme-toggle" type="button" aria-label="Switch to dark theme">
+				<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
+				<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5" /><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" /></svg>
+			</button>
+		</div>
 	</header>
-	<div class="intro" id="about">
-		<div class="bio">
-			<p>I am an undergraduate student in Electrical Engineering at IIT Roorkee interested in Artificial Intelligence.</p>
-			<p>My research interests include Computer Vision, Adversarial Machine Learning, and Diffusion Models.I have worked on projects spanning medical image analysis, visual reasoning agents, and cybersecurity in networked control systems.</p>
-			<p>Recently, I interned as a Machine Learning Engineer at Infigro.ai, where I developed an AI agent for chart and visual-data understanding. Previously, I was a Research Intern at IIT Roorkee, exploring cybersecurity in control systems. I also represented IIT Roorkee at Inter IIT Tech Meet 14.0, where my team secured 4th place.</p>
-			<p>Off the clock , I enjoy watching movies, exploring new ideas in AI, and diving into interesting research papers.</p>
-			<div class="resume-line">
-				You can download my resume <a href="shreyansh_modi_resume.pdf" download="Shreyansh_Modi_Resume.pdf" type="application/pdf">here ↓</a>.
+
+	<main id="main">
+
+		<!-- ── Opening statement and introduction ── -->
+		<section class="hero grid" aria-labelledby="statement">
+			<h1 class="lede" id="statement">I test whether vision-language models are as reliable as they look.</h1>
+
+			<div class="identity">
+				<img class="portrait" src="assets/img/portrait.webp" srcset="assets/img/portrait.webp 320w, assets/img/portrait@2x.webp 640w" sizes="8rem" width="320" height="320" alt="Portrait of Shreyansh Modi, smiling, wearing glasses and a grey zip-up sweater outdoors." />
+				<div>
+					<p class="identity-name">Shreyansh Modi</p>
+					<p class="identity-role">Computer vision &amp; ML security researcher · IIT Roorkee · India</p>
+					<ul class="socials" aria-label="Profiles and contact">
+						<li><a class="social-link" href="mailto:shreyansh_m@ee.iitr.ac.in" aria-label="Email" title="Email">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+						</a></li>
+						<li><a class="social-link" href="https://scholar.google.com/citations?user=EaR5WZQAAAAJ" aria-label="Google Scholar" title="Google Scholar">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z" /><path d="M6 12v5c3 3 9 3 12 0v-5" /></svg>
+						</a></li>
+						<li><a class="social-link" href="https://www.semanticscholar.org/author/Shreyansh-Modi/2290091251" aria-label="Semantic Scholar" title="Semantic Scholar">
+							<svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16.5" text-anchor="middle" font-family="ui-sans-serif, Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" fill="currentColor">S2</text></svg>
+						</a></li>
+						<li><a class="social-link" href="https://openreview.net/profile?id=~Shreyansh_Modi1" aria-label="OpenReview" title="OpenReview">
+							<svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16.5" text-anchor="middle" font-family="ui-sans-serif, Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="currentColor">OR</text></svg>
+						</a></li>
+						<li><a class="social-link" href="https://orcid.org/0009-0000-0264-6153" aria-label="ORCID" title="ORCID">
+							<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" /><text x="12" y="16" text-anchor="middle" font-family="ui-sans-serif, Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="700" fill="currentColor">iD</text></svg>
+						</a></li>
+						<li><a class="social-link" href="https://github.com/shrrynsh" aria-label="GitHub" title="GitHub">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" /></svg>
+						</a></li>
+						<li><a class="social-link" href="https://twitter.com/shrrynsh" aria-label="X (Twitter)" title="X (Twitter)">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20" /></svg>
+						</a></li>
+						<li><a class="social-link" href="https://linkedin.com/in/shreyanshmodi" aria-label="LinkedIn" title="LinkedIn">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg>
+						</a></li>
+					</ul>
+				</div>
 			</div>
+
+			<div class="prose">
+				<p>I’m an undergraduate in Electrical Engineering at <strong>IIT Roorkee</strong> (B.Tech, expected 2028). My research spans computer vision, generative AI and multimodal learning, with a focus on adversarial machine learning and the security of vision-language models.</p>
+				<p>Recently I co-authored work showing that the gains of contrastive decoding come from a shift in decoding behaviour rather than from mitigating hallucinations (NeurIPS 2026 Workshop, VLM4RWD). I have also steered unconditional diffusion models with concept vectors for training-free image editing (CVPR 2026 Workshop, GCV), and contributed to work localising hallucination-sensitive attention heads in VLMs with activation patching.</p>
+				<p>I’m a reviewer for NeurIPS 2026 and a core member of the Data Science Group at IIT Roorkee. Previously I was a Machine Learning Engineer intern at Infigro.ai and a research intern in IIT Roorkee’s Electrical Engineering department, and my team placed 4th at Inter IIT Tech Meet 14.0.</p>
+				<p>Off the clock, I enjoy watching movies, exploring new ideas in AI and diving into interesting research papers.</p>
+			</div>
+
+			<p class="callout">My CV has the full list of papers, projects and experience: <a href="shreyansh_modi_resume.pdf">CV (PDF)</a> · <a href="#projects">Projects</a></p>
+		</section>
+
+		<!-- ── Featured publications ── -->
+		<section class="section grid" id="publications" aria-labelledby="publications-title">
+			<h2 class="section-title" id="publications-title">Featured <a href="https://scholar.google.com/citations?user=EaR5WZQAAAAJ">Publications</a></h2>
+			<p class="section-intro">Papers on why vision-language models hallucinate and how to steer diffusion models.</p>
+
+			<ul class="cards l-page">
+				<li class="card">
+					<!-- Replace with: <img src="assets/img/papers/rethinking-cd.webp" width="1200" height="675" loading="lazy" alt="…"> -->
+					<div class="thumb thumb--placeholder" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" /></svg>
+					</div>
+					<div class="card-body">
+						<h3 class="card-title">Rethinking the Effectiveness of Contrastive Decoding in Mitigating Hallucinations in MLLMs</h3>
+						<p class="card-tagline">On LLaVA-1.5, contrastive decoding is 94% greedy-equivalent; its gains trace to a shift in decoding behaviour, not hallucination mitigation.</p>
+						<p class="card-authors">A. Bendre, <strong>S. Modi</strong>, G. Gupta, K. Grover, C. Aggarwal</p>
+						<div class="card-foot">
+							<p class="card-venue">NeurIPS 2026 Workshop (VLM4RWD)</p>
+						</div>
+					</div>
+				</li>
+
+				<li class="card">
+					<!-- Replace with: <img src="assets/img/papers/guidance-perceptual-editing.webp" width="1200" height="675" loading="lazy" alt="…"> -->
+					<div class="thumb thumb--placeholder" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" /></svg>
+					</div>
+					<div class="card-body">
+						<h3 class="card-title"><a href="https://arxiv.org/abs/2605.31162">Guidance for Low-Level Perceptual Editing in Unconditional Diffusion Models</a></h3>
+						<p class="card-tagline">Training-free contrast, saturation and sharpness edits from concept vectors in a DDPM’s U-Net bottleneck.</p>
+						<p class="card-authors"><strong>S. Modi</strong>, A. Tomar, A. Aggarwal</p>
+						<div class="card-foot">
+							<p class="card-venue"><a href="https://generative-vision.github.io/workshop-CVPR-26/">CVPR 2026 Workshop (GCV)</a></p>
+							<ul class="buttons" aria-label="Links for Guidance for Low-Level Perceptual Editing">
+								<li><a class="btn" href="https://arxiv.org/abs/2605.31162">Paper</a></li>
+								<li><a class="btn" href="https://github.com/dsgiitr/uncond-diffusion-enhancement">Code</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+
+				<li class="card">
+					<!-- Replace with: <img src="assets/img/papers/counterfactuals.webp" width="1200" height="675" loading="lazy" alt="…"> -->
+					<div class="thumb thumb--placeholder" aria-hidden="true">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" /></svg>
+					</div>
+					<div class="card-body">
+						<h3 class="card-title"><a href="https://arxiv.org/abs/2606.08777">How Many Counterfactuals Does It Take? Probing VLM Hallucinations Through Circuits and Causal Effects</a></h3>
+						<p class="card-tagline">Activation patching and causal influence scores localise the attention heads and MLP layers behind VLM hallucinations.</p>
+						<p class="card-authors">A. Gupta, S. Singh, A. Sinha, <strong>S. Modi</strong>, A. Tomar</p>
+						<div class="card-foot">
+							<p class="card-venue">arXiv preprint, 2026</p>
+							<ul class="buttons" aria-label="Links for How Many Counterfactuals Does It Take?">
+								<li><a class="btn" href="https://arxiv.org/abs/2606.08777">Paper</a></li>
+								<li><a class="btn" href="https://github.com/dsgiitr/mechanistic-counterfactual-grounding">Code</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</section>
+
+		<!-- ── Updates ── -->
+		<section class="section grid" id="news" aria-labelledby="news-title">
+			<h2 class="section-title" id="news-title">Updates</h2>
+			<p class="section-intro">Recent papers, roles and results.</p>
+			<ul class="news">
+				<li><span class="label">2026</span><p>Serving as a reviewer for NeurIPS 2026.</p></li>
+				<li><span class="label">2026</span><p><em>Rethinking the Effectiveness of Contrastive Decoding in Mitigating Hallucinations in MLLMs</em> at the NeurIPS 2026 Workshop (VLM4RWD).</p></li>
+				<li><span class="label">2026</span><p><a href="https://arxiv.org/abs/2605.31162"><em>Guidance for Low-Level Perceptual Editing in Unconditional Diffusion Models</em></a> at the CVPR 2026 Workshop (GCV).</p></li>
+				<li><span class="label">2026</span><p><a href="https://arxiv.org/abs/2606.08777"><em>How Many Counterfactuals Does It Take?</em></a> released as an arXiv preprint.</p></li>
+				<li><span class="label">2025</span><p>Placed 4th at Inter IIT Tech Meet 14.0 with our team’s Adobe Photo Editor.</p></li>
+				<li><span class="label">2025</span><p>Machine Learning Engineer intern at Infigro.ai (August–October).</p></li>
+				<li><span class="label">2025</span><p>Joined the Data Science Group, IIT Roorkee, as a core member.</p></li>
+			</ul>
+		</section>
+
+		<!-- ── Projects ── -->
+		<section class="section grid" id="projects" aria-labelledby="projects-title">
+			<h2 class="section-title" id="projects-title">Selected <a href="https://github.com/shrrynsh">Projects</a></h2>
+			<p class="section-intro">Reproducibility studies, research prototypes and things I’ve built.</p>
+
+			<ul class="cards cards--projects l-page">
+				<li class="card">
+					<div class="card-body">
+						<h3 class="card-title">RE-UltraBreak: Universal Jailbreak Attacks on VLMs</h3>
+						<p class="card-tagline">A reproducibility study of UltraBreak: universal, cross-model image jailbreaks against black-box VLMs, using randomised image transformations and loss relaxations to maximise transferability.</p>
+						<div class="card-foot">
+							<p class="card-venue">Jun 2026 – Aug 2026 · Adversarial ML, VLM security</p>
+						</div>
+					</div>
+				</li>
+
+				<li class="card">
+					<div class="card-body">
+						<h3 class="card-title">VLM Hallucination Mitigation via Self-Verification Decoding</h3>
+						<p class="card-tagline">A decoding-time framework that enforces strict textual grounding to reduce visual hallucinations, validated on the POPE and CHAIR benchmarks.</p>
+						<div class="card-foot">
+							<p class="card-venue">Jun 2025 – Sep 2025 · VLMs, decoding</p>
+						</div>
+					</div>
+				</li>
+
+				<li class="card">
+					<div class="card-body">
+						<h3 class="card-title"><a href="https://github.com/shrrynsh/Diffusion_beats_gans_reproducibility">Reproducibility Study: Diffusion Models Beat GANs</a></h3>
+						<p class="card-tagline">Replicated OpenAI’s unconditional U-Net and noise-robust classifier to implement classifier guidance, and validated that scaling classifier gradients trades sample diversity for visual fidelity.</p>
+						<div class="card-foot">
+							<p class="card-venue">Aug 2025 – Sep 2025 · Diffusion models</p>
+							<ul class="buttons" aria-label="Links for Diffusion Models Beat GANs reproducibility study">
+								<li><a class="btn" href="https://github.com/shrrynsh/Diffusion_beats_gans_reproducibility">Code</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+
+				<li class="card">
+					<div class="card-body">
+						<h3 class="card-title"><a href="https://github.com/shrrynsh/Adobe-Photo-Editor">Adobe Photo Editor</a></h3>
+						<p class="card-tagline">Context-aware background removal, style transfer and typographic editing, with MobileSAM optimised through ONNX Runtime and INT8 quantisation for real-time edge deployment.</p>
+						<div class="card-foot">
+							<span class="chip">4th place · Inter IIT Tech Meet 14.0</span>
+							<p class="card-venue">Nov 2025 – Dec 2025 · Computer vision</p>
+							<ul class="buttons" aria-label="Links for Adobe Photo Editor">
+								<li><a class="btn" href="https://github.com/shrrynsh/Adobe-Photo-Editor">Code</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+
+				<li class="card">
+					<div class="card-body">
+						<h3 class="card-title"><a href="https://github.com/shrrynsh/InVisionDX">InVisionDX: CNN-Based Disease Detection</a></h3>
+						<p class="card-tagline">A web app that detects COVID-19, pneumonia, tuberculosis, lung cancer and Alzheimer’s disease from medical images with ResNet and VGG16, at over 95% classification accuracy.</p>
+						<div class="card-foot">
+							<p class="card-venue">Mar 2025 – Apr 2025 · PyTorch, Flask</p>
+							<ul class="buttons" aria-label="Links for InVisionDX">
+								<li><a class="btn" href="https://github.com/shrrynsh/InVisionDX">Code</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+
+				<li class="card">
+					<div class="card-body">
+						<h3 class="card-title"><a href="https://github.com/shrrynsh/BYOP-25-HireSense">HireSense</a></h3>
+						<p class="card-tagline">An open-source NLP tool that uses fine-tuned named-entity recognition to parse resumes and match candidates to job descriptions.</p>
+						<div class="card-foot">
+							<p class="card-venue">Python, NER, NLP</p>
+							<ul class="buttons" aria-label="Links for HireSense">
+								<li><a class="btn" href="https://github.com/shrrynsh/BYOP-25-HireSense">Code</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+
+				<li class="card">
+					<div class="card-body">
+						<h3 class="card-title"><a href="https://github.com/shrrynsh/ERP-API-Framework">ERP API Framework</a></h3>
+						<p class="card-tagline">A backend architecture for ERP management, with data-analysis modules that pull insights from raw ERP datasets.</p>
+						<div class="card-foot">
+							<p class="card-venue">Python, Flask, JavaScript</p>
+							<ul class="buttons" aria-label="Links for ERP API Framework">
+								<li><a class="btn" href="https://github.com/shrrynsh/ERP-API-Framework">Code</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</section>
+
+		<!-- ── Experience ── -->
+		<section class="section grid" id="experience" aria-labelledby="experience-title">
+			<h2 class="section-title" id="experience-title">Experience</h2>
+			<p class="section-intro">Internships, research and service.</p>
+			<ul class="xp">
+				<li>
+					<span class="label">2026</span>
+					<div>
+						<p class="xp-role">Reviewer</p>
+						<p class="xp-org">NeurIPS 2026</p>
+					</div>
+				</li>
+				<li>
+					<span class="label">Aug – Oct 2025</span>
+					<div>
+						<p class="xp-role">Machine Learning Engineer Intern</p>
+						<p class="xp-org">Infigro.ai</p>
+						<p class="xp-desc">Built a data-analysis agent that interprets bar charts and trendlines, an LSTM forecasting system for betting trends and user behaviour, and LLM calls that turn chart data and model predictions into written insights.</p>
+					</div>
+				</li>
+				<li>
+					<span class="label">Feb 2025 – now</span>
+					<div>
+						<p class="xp-role">Core Member</p>
+						<p class="xp-org">Data Science Group, IIT Roorkee</p>
+						<p class="xp-desc">Mentored students for Build Your Own Project (BYOP) 2026 on project design and implementation, and organised a hands-on technical workshop.</p>
+					</div>
+				</li>
+				<li>
+					<span class="label">Nov – Dec 2024</span>
+					<div>
+						<p class="xp-role">Research Intern</p>
+						<p class="xp-org">Electrical Engineering Department, IIT Roorkee</p>
+						<p class="xp-desc">Implemented and tuned PID controllers for a DC motor to study cyber-physical attacks on closed-loop control, and simulated signal-injection and spoofing attacks in MATLAB and Arduino.</p>
+					</div>
+				</li>
+			</ul>
+		</section>
+
+	</main>
+
+	<footer class="site-footer grid">
+		<div class="footer-inner">
+			<div>
+				<p class="footer-name">Shreyansh Modi</p>
+				<p class="footer-meta">IIT Roorkee · Last updated October 2026</p>
+			</div>
+			<ul class="footer-links" aria-label="Contact and profiles">
+				<li><a href="mailto:shreyansh_m@ee.iitr.ac.in">Email</a></li>
+				<li><a href="https://scholar.google.com/citations?user=EaR5WZQAAAAJ">Google Scholar</a></li>
+				<li><a href="https://www.semanticscholar.org/author/Shreyansh-Modi/2290091251">Semantic Scholar</a></li>
+				<li><a href="https://openreview.net/profile?id=~Shreyansh_Modi1">OpenReview</a></li>
+				<li><a href="https://orcid.org/0009-0000-0264-6153">ORCID</a></li>
+				<li><a href="https://github.com/shrrynsh">GitHub</a></li>
+				<li><a href="https://twitter.com/shrrynsh">X (Twitter)</a></li>
+				<li><a href="https://linkedin.com/in/shreyanshmodi">LinkedIn</a></li>
+				<li><a href="shreyansh_modi_resume.pdf">CV (PDF)</a></li>
+			</ul>
 		</div>
-		<div class="headshot">
-			<img src="https://shrrynsh.github.io/img/me.jpeg" alt="Shreyansh Modi" />
-		</div>
-	</div>
-
-	<!-- ── PUBLICATIONS ── -->
-	<section id="publications">
-		<div class="section-head">
-			<h2>Research and Publications</h2>
-			<div class="section-rule"></div>
-		</div>
-		<div class="proj-list">
-			<div class="proj-item">
-				<span class="proj-name"><a href="https://arxiv.org/abs/2605.31162">Guidance for Low-Level Perceptual Editing in Unconditional Diffusion Models</a></span>
-				<span class="proj-desc">S. Modi, A. Tomar, and A. Aggarwal.<br><em><a href="https://generative-vision.github.io/workshop-CVPR-26/">Generative Models for Computer Vision Workshop, CVPR</a></em>, 2026.<br><br>A method that enables semantic control over unconditional diffusion models (DDPMs) by extracting concept-specific direction vectors from the model's internal h-space (the bottleneck activation of the U-Net architecture) and applying them as targeted perturbations during the reverse generative process.</span>
-				<span class="proj-tag"><a href="https://arxiv.org/pdf/2605.31162">arXiv</a> · <a href="https://github.com/dsgiitr/uncond-diffusion-enhancement">Code</a></span>
-			</div>
-			<div class="proj-item">
-				<span class="proj-name"><a href="https://arxiv.org/abs/2606.08777">How Many Counterfactuals Does It Take? Probing VLM Hallucinations Through Circuits and Causal Effects</a></span>
-				<span class="proj-desc">A. Gupta, S. Singh, A. Sinha, S. Modi, and A. Tomar.<br><em>arXiv preprint</em>, 2026.<br><br>A study of the sample complexity of counterfactual robustness for hallucinated outputs in Visual Language Models, introducing a causal influence metric and using circuit discovery to derive empirical bounds on the counterfactual samples needed to reliably detect instability in hallucinated predictions.</span>
-				<span class="proj-tag"><a href="https://arxiv.org/pdf/2606.08777">arXiv</a> · <a href="https://github.com/dsgiitr/mechanistic-counterfactual-grounding">Code</a></span>
-			</div>
-		</div>
-	</section>
-
-	<!-- ── PROJECTS ── -->
-	<section id="projects">
-		<div class="section-head">
-			<h2>Projects</h2>
-			<div class="section-rule"></div>
-		</div>
-		<div class="proj-list">
-
-			<div class="proj-item">
-				<span class="proj-name">VLM Hallucination Mitigation via Self-Verification Decoding</span>
-				<span class="proj-desc">An optimization framework I built to mitigate visual hallucinations in multimodal Vision-Language Models, using decoding-time interventions to keep generated text strictly grounded to image inputs. Evaluated on the POPE and CHAIR benchmarks.</span>
-				<span class="proj-tag">VLMs · Decoding · POPE</span>
-			</div>
-
-			<div class="proj-item">
-				<span class="proj-name">Rethinking-CD</span>
-				<span class="proj-desc">A reproducibility study I conducted critiquing contrastive decoding methods for object hallucinations in multimodal LLMs, showing on LLaVA-1.5 (POPE) that the gains come from distribution shifts and plausibility constraints rather than better visual grounding.</span>
-				<span class="proj-tag">VLMs · LLaVA · POPE</span>
-			</div>
-
-			<div class="proj-item">
-				<span class="proj-name">RE-UltraBreak</span>
-				<span class="proj-desc">A reproducibility study auditing safety vulnerabilities in Vision-Language Models, replicating the optimization pipeline to generate universal, transferable adversarial image jailbreaks from a single surrogate model.</span>
-				<span class="proj-tag">Adversarial · VLM Security</span>
-			</div>
-
-			<div class="proj-item">
-				<span class="proj-name"><a href="https://github.com/shrrynsh/InVisionDX">InVisionDX</a></span>
-				<span class="proj-desc">A deep learning project I developed for medical imaging, capable of identifying diseases like COVID-19, Pneumonia, Tuberculosis, Lung Cancer, and Alzheimer's from scans with over 95% accuracy.</span>
-				<span class="proj-tag">PyTorch · CV · Flask</span>
-			</div>
-
-			<div class="proj-item">
-				<span class="proj-name"><a href="https://github.com/shrrynsh/BYOP-25-HireSense">HireSense</a></span>
-				<span class="proj-desc">An open-source NLP tool I built that uses fine-tuned Named Entity Recognition to parse resumes and perfectly match candidates to job descriptions.</span>
-				<span class="proj-tag">Python · NER · NLP</span>
-			</div>
-
-			<div class="proj-item">
-				<span class="proj-name"><a href="https://github.com/shrrynsh/ERP-API-Framework">ERP API Framework</a></span>
-				<span class="proj-desc">A high-performance backend architecture I designed for ERP management, complete with data analysis modules that pull actionable insights from raw ERP datasets.</span>
-				<span class="proj-tag">Python · Flask · JS</span>
-			</div>
-
-			<div class="proj-item">
-				<span class="proj-name"><a href="https://github.com/shrrynsh/Adobe-Photo-Editor">Adobe Photo Editor</a></span>
-				<span class="proj-desc">A smart photo editing application our team built for the InterIIT Tech Meet. It uses computer vision to enable context-aware enhancements completely automatically.</span>
-				<span class="proj-tag">4th / all IITs</span>
-			</div>
-
-			<div class="proj-item">
-				<span class="proj-name">Reproducibility Study of Diffusion Beats GANs</span>
-				<span class="proj-desc">A reproducibility study on OpenAI's foundational paper, where I replicated the unconditional U-Net and noise-robust classifier to implement classifier guidance, trading diversity for high image fidelity to outperform traditional GANs.</span>
-				<span class="proj-tag">Diffusion · GANs · U-Net</span>
-			</div>
-
-		</div>
-	</section>
-
-	<!-- ── CONTACT ── -->
-	<section id="contact">
-		<div class="section-head">
-			<h2>Contact</h2>
-			<div class="section-rule"></div>
-		</div>
-		<div class="contact-icons">
-			<a class="contact-icon" href="mailto:shreyansh_m@ee.iitr.ac.in" aria-label="Email" title="Email">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-					<polyline points="22,6 12,13 2,6"></polyline>
-				</svg>
-			</a>
-			<a class="contact-icon" href="https://github.com/shrrynsh" aria-label="GitHub" title="GitHub">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-				</svg>
-			</a>
-			<a class="contact-icon" href="https://twitter.com/shrrynsh" aria-label="X/Twitter" title="X/Twitter">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					<path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
-				</svg>
-			</a>
-			<a class="contact-icon" href="https://www.linkedin.com/in/shreyanshmodi" aria-label="LinkedIn" title="LinkedIn">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-					<rect x="2" y="9" width="4" height="12"></rect>
-					<circle cx="4" cy="4" r="2"></circle>
-				</svg>
-			</a>
-			<a class="contact-icon" href="https://scholar.google.com/citations?user=EaR5WZQAAAAJ&hl=en&authuser=2" aria-label="Google Scholar" title="Google Scholar" rel="noopener noreferrer">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-					<path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-					<path d="M6 12v5c3 3 9 3 12 0v-5"/>
-				</svg>
-			</a>
-			<a class="contact-icon" href="tel:+918287512050" aria-label="Phone" title="Phone">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-				</svg>
-			</a>
-			<a class="contact-icon" href="shreyansh_modi_resume.pdf" download="Shreyansh_Modi_Resume.pdf" type="application/pdf" aria-label="Resume" title="Download Resume">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-					<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-					<polyline points="14 2 14 8 20 8"></polyline>
-					<line x1="16" y1="13" x2="8" y2="13"></line>
-					<line x1="16" y1="17" x2="8" y2="17"></line>
-					<polyline points="10 9 9 9 8 9"></polyline>
-				</svg>
-			</a>
-		</div>
-	</section>
-
-	<footer>
-		<span>© 2024 – Shreyansh Modi</span>
-		<span>last updated May 2026</span>
 	</footer>
 
 	<script>
-		const html = document.documentElement;
-		const label = document.querySelector('.theme-label');
+		(function () {
+			var root = document.documentElement;
+			var btn = document.querySelector('.theme-toggle');
+			var mq = window.matchMedia('(prefers-color-scheme: dark)');
 
-		// Restore saved preference
-		const saved = localStorage.getItem('theme');
-		if (saved) {
-			html.setAttribute('data-theme', saved);
-			label.textContent = saved === 'dark' ? 'light' : 'dark';
-		}
-
-		function toggleTheme() {
-			const isDark = html.getAttribute('data-theme') === 'dark';
-			const next = isDark ? 'light' : 'dark';
-			html.setAttribute('data-theme', next);
-			label.textContent = isDark ? 'dark' : 'light';
-			localStorage.setItem('theme', next);
-		}
+			function effective() {
+				return root.getAttribute('data-theme') || (mq.matches ? 'dark' : 'light');
+			}
+			function sync() {
+				var t = effective();
+				root.setAttribute('data-theme-effective', t);
+				btn.setAttribute('aria-label', t === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+			}
+			btn.addEventListener('click', function () {
+				var next = effective() === 'dark' ? 'light' : 'dark';
+				root.setAttribute('data-theme', next);
+				try { localStorage.setItem('theme', next); } catch (e) {}
+				sync();
+			});
+			mq.addEventListener('change', sync);
+			sync();
+		})();
 	</script>
-
 </body>
+
 </html>

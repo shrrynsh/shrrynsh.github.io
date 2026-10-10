@@ -1,0 +1,9 @@
+# Most of the site is the hand-written index.html; this file only sets site
+# metadata (used by atom.xml) and keeps working notes out of the build.
+title: Shreyansh Modi
+url: https://shrrynsh.github.io
+author:
+  name: Shreyansh Modi
+  url: https://shrrynsh.github.io
+exclude:
+  - design-notes.md
