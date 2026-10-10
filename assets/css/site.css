@@ -18,11 +18,11 @@
 	--font-prose: "Newsreader", "Newsreader Fallback", Georgia, "Times New Roman", serif;
 	--font-ui: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
-	--text-body: 1.1rem;
-	--text-small: 0.875rem;
-	--text-label: 0.72rem;
-	--text-lede: clamp(1.75rem, 1.2rem + 2vw, 2.75rem);
-	--text-section: clamp(1.6rem, 1.25rem + 1.3vw, 2.25rem);
+	--text-body: 1.2rem;
+	--text-small: 0.95rem;
+	--text-label: 0.78rem;
+	--text-lede: clamp(1.9rem, 1.3rem + 2.1vw, 3rem);
+	--text-section: clamp(1.75rem, 1.3rem + 1.4vw, 2.5rem);
 	--leading-body: 1.62;
 	--leading-snug: 1.25;
 	--leading-tight: 1.16;
@@ -204,7 +204,7 @@ strong { color: var(--ink); font-weight: 600; }
 }
 .hero-inner {
 	display: grid;
-	grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr) minmax(0, 18rem);
+	grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr) minmax(0, 17rem);
 	grid-template-areas:
 		"lede lede photo"
 		"id   bio  photo"
@@ -227,13 +227,13 @@ strong { color: var(--ink); font-weight: 600; }
 	align-self: start;
 	justify-self: end;
 	width: 100%;
-	max-width: 18rem;
+	max-width: 17rem;
 }
 .portrait {
 	width: 100%;
 	height: auto;
-	aspect-ratio: 1;
-	border-radius: 50%;
+	aspect-ratio: 4 / 5;
+	border-radius: var(--radius-card);
 	object-fit: cover;
 	box-shadow: 0 14px 36px rgba(11, 18, 32, 0.18);
 	background: var(--card);
@@ -244,7 +244,7 @@ strong { color: var(--ink); font-weight: 600; }
 	margin-top: var(--space-lg);
 }
 .identity-name {
-	font-size: 1.75rem;
+	font-size: 2rem;
 	font-weight: 600;
 	line-height: var(--leading-tight);
 	letter-spacing: var(--tracking-title);
@@ -253,7 +253,7 @@ strong { color: var(--ink); font-weight: 600; }
 .identity-role {
 	margin-top: 0.3rem;
 	font-family: var(--font-ui);
-	font-size: 0.95rem;
+	font-size: 1.05rem;
 	font-weight: 500;
 	line-height: 1.4;
 	color: var(--blue);
@@ -287,7 +287,10 @@ strong { color: var(--ink); font-weight: 600; }
 
 .prose { max-width: var(--measure); }
 .prose > * + * { margin-top: var(--space-sm); }
-.hero .prose { grid-area: bio; margin-top: var(--space-lg); font-size: 1.15rem; }
+.hero .prose { grid-area: bio; margin-top: var(--space-lg); font-size: 1.25rem; }
+/* The bio reads as plain text: links keep the text colour and show a faint underline. */
+.hero .prose a { color: inherit; font-weight: inherit; }
+.hero .prose a:hover { color: var(--ink); }
 
 .callout {
 	grid-area: cv;
@@ -298,7 +301,7 @@ strong { color: var(--ink); font-weight: 600; }
 	border-radius: 0.5rem;
 	background: var(--callout);
 	font-family: var(--font-ui);
-	font-size: 0.95rem;
+	font-size: 1.02rem;
 	line-height: 1.5;
 	color: var(--ink);
 }
@@ -359,7 +362,7 @@ strong { color: var(--ink); font-weight: 600; }
 
 .thumb {
 	margin: 0.5rem 0.5rem 0;
-	aspect-ratio: 16 / 9;
+	aspect-ratio: 3 / 1;
 	border-radius: var(--radius-img);
 	overflow: hidden;
 	background: #ffffff;
@@ -382,7 +385,7 @@ strong { color: var(--ink); font-weight: 600; }
 	padding: 0.85rem 1.1rem 1.1rem;
 }
 .card-title {
-	font-size: 1.3rem;
+	font-size: 1.4rem;
 	font-weight: 600;
 	line-height: 1.28;
 	letter-spacing: -0.01em;
@@ -399,7 +402,7 @@ strong { color: var(--ink); font-weight: 600; }
 }
 .card-authors {
 	font-family: var(--font-ui);
-	font-size: 0.8rem;
+	font-size: 0.875rem;
 	line-height: 1.45;
 	color: var(--muted);
 }
@@ -413,7 +416,7 @@ strong { color: var(--ink); font-weight: 600; }
 }
 .card-venue {
 	font-family: var(--font-ui);
-	font-size: 0.8rem;
+	font-size: 0.875rem;
 	font-weight: 600;
 	line-height: 1.4;
 	color: var(--blue);
@@ -429,7 +432,7 @@ strong { color: var(--ink); font-weight: 600; }
 	background: var(--award-bg);
 	color: var(--award-fg);
 	font-family: var(--font-ui);
-	font-size: 0.75rem;
+	font-size: 0.8rem;
 	font-weight: 600;
 	line-height: 1.4;
 }
@@ -450,7 +453,7 @@ strong { color: var(--ink); font-weight: 600; }
 	background: #ffffff;
 	color: var(--blue);
 	font-family: var(--font-ui);
-	font-size: 0.78rem;
+	font-size: 0.85rem;
 	font-weight: 600;
 	white-space: nowrap;
 }
@@ -478,9 +481,9 @@ strong { color: var(--ink); font-weight: 600; }
 	border-top: 1px solid var(--rule);
 }
 .news .label, .xp .label { padding-top: 0.35rem; }
-.xp li { grid-template-columns: 7.5rem 3.25rem minmax(0, 1fr); column-gap: var(--space-sm); }
+.xp li { grid-template-columns: 7.5rem 6.5rem minmax(0, 1fr); column-gap: var(--space-md); }
 .xp-logo {
-	width: 3.25rem;
+	width: 6.5rem;
 	height: 3.25rem;
 	border-radius: 0.65rem;
 	background: #ffffff;
@@ -564,13 +567,13 @@ strong { color: var(--ink); font-weight: 600; }
 	:root { --space-xl: 2.75rem; --space-lg: 2rem; }
 	.news li, .xp li { grid-template-columns: minmax(0, 1fr); gap: 0.15rem; }
 	.news .label, .xp .label { padding-top: 0; }
-	.xp li { grid-template-columns: 3.25rem minmax(0, 1fr); row-gap: 0.4rem; column-gap: var(--space-sm); }
-	.xp .label { grid-column: 1 / -1; }
+	.xp li { grid-template-columns: minmax(0, 1fr); row-gap: 0.4rem; }
+	.xp-logo { object-position: left center; }
 	.hero-inner {
 		grid-template-columns: minmax(0, 1fr);
 		grid-template-areas: "lede" "photo" "id" "bio" "cv";
 	}
-	.portrait-wrap { justify-self: start; max-width: 12rem; margin-top: var(--space-lg); }
+	.portrait-wrap { justify-self: start; max-width: 13rem; margin-top: var(--space-lg); }
 }
 
 @media (max-width: 600px) {
@@ -579,7 +582,7 @@ strong { color: var(--ink); font-weight: 600; }
 
 @media (max-width: 480px) {
 	body { font-size: 1.05rem; }
-	.portrait-wrap { max-width: 10rem; }
+	.portrait-wrap { max-width: 11rem; }
 	.identity-name { font-size: 1.4rem; }
 	.nav { font-size: 0.8rem; }
 	.nav a { padding: 0.35rem 0.6rem; }
