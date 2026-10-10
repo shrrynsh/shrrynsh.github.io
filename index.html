@@ -28,7 +28,7 @@
 		<!-- ── Introduction ── -->
 		<section id="intro" class="l-text" aria-labelledby="intro-title">
 			<div id="intro-title-wrapper">
-				<img id="intro-image" src="assets/img/portrait.webp" srcset="assets/img/portrait.webp 320w, assets/img/portrait@2x.webp 480w" sizes="(max-width: 768px) 6rem, 9rem" width="320" height="320" alt="Portrait of Shreyansh Modi, smiling, wearing glasses and a grey zip-up sweater outdoors." />
+				<img id="intro-image" src="assets/img/portrait.webp" srcset="assets/img/portrait.webp 320w, assets/img/portrait@2x.webp 480w" sizes="(max-width: 768px) 5rem, 8rem" width="320" height="320" alt="Portrait of Shreyansh Modi, smiling, wearing glasses and a grey zip-up sweater outdoors." />
 				<div id="intro-title-text">
 					<h1 id="intro-title">Shreyansh Modi</h1>
 					<p id="intro-subtitle">Computer vision &amp; ML security researcher at IIT&nbsp;Roorkee</p>
@@ -69,12 +69,10 @@
 				<li class="cover">
 					<div class="cover-image"><img src="assets/img/papers/rethinking-cd.webp" width="1320" height="440" loading="lazy" alt="Diagram of visual contrastive decoding: logits from the original image and from a distorted image are contrasted, removing the hallucinated object 'surfboards' from the model's predictions." /></div>
 					<div class="cover-inner">
-						<div>
+						<div class="cover-top">
 							<h3 class="cover-title" title="Rethinking the Effectiveness of Contrastive Decoding in Mitigating Hallucinations in MLLMs">Rethinking Contrastive Decoding</h3>
 							<p class="cover-subtitle">Its gains in MLLMs come from decoding behaviour, not hallucination mitigation</p>
 							<p class="cover-authors">A. Bendre, <b>S. Modi</b>, G. Gupta, K. Grover, C. Aggarwal</p>
-						</div>
-						<div>
 							<p class="cover-venue">NeurIPS 2026 Workshop (VLM4RWD)</p>
 						</div>
 					</div>
@@ -83,13 +81,13 @@
 				<li class="cover">
 					<div class="cover-image"><a href="https://arxiv.org/abs/2605.31162"><img src="assets/img/papers/guidance-perceptual-editing.webp" width="988" height="329" loading="lazy" alt="Method diagram: a noisy latent goes through a normal U-Net forward pass and a patched pass that adds a scaled concept vector at the bottleneck; the two predictions are combined with classifier-free guidance before each sampler step." /></a></div>
 					<div class="cover-inner">
-						<div>
+						<div class="cover-top">
 							<h3 class="cover-title"><a href="https://arxiv.org/abs/2605.31162" title="Guidance for Low-Level Perceptual Editing in Unconditional Diffusion Models">Perceptual Editing Guidance</a></h3>
 							<p class="cover-subtitle">Training-free contrast, saturation and sharpness edits in unconditional diffusion</p>
 							<p class="cover-authors"><b>S. Modi</b>, A. Tomar, A. Aggarwal</p>
-						</div>
-						<div>
 							<p class="cover-venue"><a href="https://generative-vision.github.io/workshop-CVPR-26/">CVPR 2026 Workshop (GCV)</a></p>
+						</div>
+						<div class="cover-links">
 							<p class="pub-misc">
 								<a href="https://arxiv.org/abs/2605.31162"><svg class="fa-icon" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z" /></svg> Paper</a>
 								<a href="https://github.com/dsgiitr/uncond-diffusion-enhancement"><svg class="fa-icon" viewBox="0 0 640 512" aria-hidden="true"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z" /></svg> Code</a>
@@ -101,13 +99,13 @@
 				<li class="cover">
 					<div class="cover-image"><a href="https://arxiv.org/abs/2606.08777"><img src="assets/img/papers/counterfactuals.webp" width="1116" height="372" loading="lazy" alt="Method diagram: a factual image is encoded by a vision encoder; Gaussian latent interventions perturb the embedding, and a counterfactual generator turns each perturbed embedding into a counterfactual input for the LLM." /></a></div>
 					<div class="cover-inner">
-						<div>
+						<div class="cover-top">
 							<h3 class="cover-title"><a href="https://arxiv.org/abs/2606.08777" title="How Many Counterfactuals Does It Take? Probing VLM Hallucinations Through Circuits and Causal Effects">How Many Counterfactuals?</a></h3>
 							<p class="cover-subtitle">Probing VLM hallucinations through circuits and causal effects</p>
 							<p class="cover-authors">A. Gupta, S. Singh, A. Sinha, <b>S. Modi</b>, A. Tomar</p>
-						</div>
-						<div>
 							<p class="cover-venue">arXiv preprint, 2026</p>
+						</div>
+						<div class="cover-links">
 							<p class="pub-misc">
 								<a href="https://arxiv.org/abs/2606.08777"><svg class="fa-icon" viewBox="0 0 384 512" aria-hidden="true"><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z" /></svg> Paper</a>
 								<a href="https://github.com/dsgiitr/mechanistic-counterfactual-grounding"><svg class="fa-icon" viewBox="0 0 640 512" aria-hidden="true"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z" /></svg> Code</a>
