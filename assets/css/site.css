@@ -232,7 +232,7 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 }
 .feature.l-page > * { grid-column: text; }
 .feature.l-page > .cover-wrapper, .feature.l-page > .project-grid,
-.feature.l-page > .film-grid, .feature.l-page > .quote-grid, .feature.l-page > .theme-grid,
+.feature.l-page > .film-grid, .feature.l-page > .quote-grid,
 .feature.l-page > .film-credit { grid-column: page; }
 .feature-title {
 	font-size: 2rem;
@@ -506,32 +506,30 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 }
 .quote-card figcaption { margin-top: 0.5rem; font-size: 0.8rem; color: rgba(0, 0, 0, 0.6); }
 
-/* Theme cards with a fanned stack of posters */
-.theme-grid {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
-	gap: 1rem;
-}
-.theme-card {
-	padding: 1.25rem 1.25rem 1.1rem;
+/* Themes: one quiet panel, a row per theme with a small poster strip */
+.theme-list {
+	padding: 0.25rem 1.5rem;
 	border-radius: 1.5rem;
 	background: rgba(0, 0, 0, 0.025);
-	transition: all 0.2s ease-in-out;
 }
-.theme-card:hover { background: rgba(0, 0, 0, 0.05); }
-.poster-stack { display: flex; margin-bottom: 0.9rem; padding-left: 0.25rem; }
-.poster--stack {
-	width: 4.5rem;
-	margin-left: -1.1rem;
-	border: 2px solid #f6f7f9;
-	box-shadow: 0 3px 10px rgba(17, 24, 39, 0.18);
+.theme-row {
+	display: flex;
+	align-items: center;
+	gap: 1.25rem;
+	padding: 1.1rem 0;
 }
-.poster--stack:first-child { margin-left: -0.25rem; }
-.poster--stack:nth-child(odd) { transform: rotate(-3deg); }
-.poster--stack:nth-child(even) { transform: rotate(3deg) translateY(4px); }
-.theme-title { font-size: 1.2rem; font-weight: 600; line-height: 1.3; color: #313131; }
-.theme-text { margin-top: 0.25rem; font-size: 0.9rem; color: rgba(0, 0, 0, 0.6); }
-.theme-films { margin-top: 0.6rem; font-size: 0.8rem; font-weight: 500; line-height: 1.6; }
+.theme-row + .theme-row { border-top: 1px solid #e3e5e9; }
+.poster-strip { flex: 0 0 auto; display: flex; width: 8.5rem; }
+.poster--tiny {
+	width: 2.6rem;
+	margin-left: -0.55rem;
+	border-radius: 0.3rem;
+	box-shadow: 0 1px 4px rgba(17, 24, 39, 0.16);
+}
+.poster--tiny:first-child { margin-left: 0; }
+.theme-title { font-size: 1.1rem; font-weight: 600; line-height: 1.3; color: #111111; }
+.theme-text { margin-top: 0.15rem; font-size: 0.9rem; color: rgba(0, 0, 0, 0.6); }
+.theme-films { margin-top: 0.35rem; font-size: 0.8rem; line-height: 1.6; }
 
 .film-credit { margin-top: 1.5rem; font-size: 0.75rem; color: #6b6b6b; }
 
@@ -543,8 +541,7 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 @media (max-width: 768px) {
 	.film-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem 0.75rem; }
 	.film-grid--recent { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0.75rem 0.5rem; }
-	.theme-grid { grid-template-columns: minmax(0, 1fr); }
-	.poster--stack { width: 3.75rem; }
+	.theme-row { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
 }
 @media (prefers-reduced-motion: reduce) {
 	.film-link:hover .poster, .film-link:focus .poster { transform: none; }
