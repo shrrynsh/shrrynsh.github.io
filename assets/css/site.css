@@ -182,8 +182,10 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 	font-size: 2rem;
 	font-weight: 600;
 	line-height: 1.25;
+	color: #111111;
 }
-.feature-title a { font-weight: 600; }
+.feature-title a, .feature-title .accent { color: #2b6cc4; font-weight: 600; }
+.feature-title a:hover { color: #00449e; }
 .feature-text {
 	margin: 0.75rem 0;
 	padding-bottom: 1rem;
