@@ -283,7 +283,7 @@ strong { color: var(--ink); font-weight: 600; }
 	color: #ffffff;
 	transform: scale(1.06);
 }
-.social-link svg { width: 1.15rem; height: 1.15rem; }
+.social-link .fa-icon { width: auto; height: 1.15rem; }
 
 .prose { max-width: var(--measure); }
 .prose > * + * { margin-top: var(--space-sm); }
@@ -507,37 +507,27 @@ strong { color: var(--ink); font-weight: 600; }
 }
 .xp-desc { margin-top: 0.3rem; }
 
-/* ── Footer: a row of icons and a copyright line ── */
+/* ── Footer: icon row and copyright, in the format of fredhohman.com ── */
 .site-footer {
 	margin-top: var(--space-xl);
-	padding-block: 4rem;
+	padding-block: 3rem;
 	background: var(--black);
-	color: var(--footer-fg);
+	color: #e6e6e6;
 	font-family: var(--font-ui);
+	font-size: 1rem;
+	line-height: 1.5;
 }
-.footer-icons {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.5rem 1.6rem;
-	padding: 0;
-	list-style: none;
-}
+.footer-icons { margin: 0; }
 .footer-icon {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 2.25rem;
-	height: 2.25rem;
+	display: inline-block;
+	margin-right: 0.75rem;
+	vertical-align: middle;
 	color: #e6e6e6;
-	transition: color var(--duration) var(--ease), transform var(--duration) var(--ease);
+	transition: color var(--duration) var(--ease);
 }
-.footer-icon svg { width: 1.75rem; height: 1.75rem; }
-.footer-icon:hover { color: var(--footer-link-hover); transform: scale(1.08); }
-.footer-copy {
-	margin-top: var(--space-md);
-	font-size: 1.15rem;
-	color: #e6e6e6;
-}
+.footer-icon .fa-icon { width: auto; height: 1.333em; }
+.footer-icon:hover { color: var(--footer-link-hover); }
+.footer-copy { margin-top: 1.5em; }
 .site-footer a:focus-visible { outline-color: var(--footer-link-hover); }
 
 /* ── Responsive ── */
