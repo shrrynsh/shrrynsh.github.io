@@ -376,8 +376,40 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 	color: #a04a08;
 }
 
-/* ── Know Me: sub-page links reuse the homepage pill buttons (#quick-links) ── */
-.know-links { margin-top: 0.5rem; }
+/* ── Know Me: subsections listed inside one panel ── */
+.know-panel {
+	margin-top: 0.25rem;
+	padding: 0.25rem 1.5rem;
+	border-radius: 1.5rem;
+	background: rgba(0, 0, 0, 0.025);
+}
+.know-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 1.1rem 0;
+	color: #414141;
+}
+.know-row + .know-row { border-top: 1px solid #e3e5e9; }
+.know-row:hover, .know-row:focus { text-decoration: none; color: #414141; }
+.know-title {
+	display: block;
+	font-size: 1.4rem;
+	font-weight: 600;
+	line-height: 1.3;
+	color: #111111;
+}
+.know-title .accent { color: #2b6cc4; }
+.know-line { display: block; margin-top: 0.2rem; font-size: 1rem; color: rgba(0, 0, 0, 0.6); }
+.know-arrow {
+	flex: 0 0 auto;
+	font-size: 1.3rem;
+	color: #2b6cc4;
+	transition: transform 0.2s ease-in-out;
+}
+.know-row:hover .know-arrow, .know-row:focus .know-arrow { transform: translateX(5px); }
+.know-row:hover .know-title { color: #2b6cc4; }
 .breadcrumb { margin-bottom: 1rem; font-size: 0.85rem; color: #6b6b6b; }
 .breadcrumb a { color: #6b6b6b; }
 .breadcrumb a:hover { color: #2b6cc4; }
