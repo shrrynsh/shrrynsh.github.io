@@ -1,6 +1,6 @@
 /* shrrynsh.github.io
    Layout after fredhohman.com, typography after timothybrooks.com,
-   black-and-blue text on white. See design-notes.md for the measurements. */
+   black bars and black-and-blue text on white. See design-notes.md for the measurements. */
 
 @font-face {
 	font-family: "Newsreader Fallback";
@@ -37,8 +37,8 @@
 	--space-xl: 4rem;
 
 	--measure: 40rem;
-	--page-max: 84rem;
-	--pad: clamp(1rem, 0.4rem + 3vw, 3rem);
+	--page-max: 110rem;
+	--pad: clamp(1rem, 0.2rem + 3.5vw, 4rem);
 
 	--radius-card: 1.5rem;
 	--radius-img: 1rem;
@@ -151,9 +151,9 @@ strong { color: var(--ink); font-weight: 600; }
 }
 .grid > * { grid-column: page; }
 
-/* ── Masthead ── */
+/* ── Masthead (black bar) ── */
 .masthead {
-	border-bottom: 1px solid var(--rule);
+	background: var(--black);
 	padding-block: var(--space-xs);
 }
 .masthead-inner {
@@ -169,9 +169,9 @@ strong { color: var(--ink); font-weight: 600; }
 	letter-spacing: var(--tracking-label);
 	text-transform: uppercase;
 	font-weight: 700;
-	color: var(--ink);
+	color: #ffffff;
 }
-.wordmark:hover { color: var(--blue); }
+.wordmark:hover { color: var(--footer-link-hover); }
 
 .nav {
 	display: flex;
@@ -187,28 +187,28 @@ strong { color: var(--ink); font-weight: 600; }
 	min-height: 2.25rem;
 	padding: 0.4rem 0.8rem;
 	border-radius: 5rem;
-	background: var(--card);
-	color: var(--ink);
+	color: var(--footer-link);
 	font-weight: 500;
 	line-height: 1.2;
 }
 .nav a:hover {
-	background: var(--card-hover);
-	color: var(--blue);
+	background: color-mix(in srgb, var(--blue) 35%, transparent);
+	color: #ffffff;
 }
+.masthead a:focus-visible { outline-color: var(--footer-link-hover); }
 
-/* ── Hero: statement across the top, identity left, bio right ── */
+/* ── Hero: identity and bio on the left, large portrait on the right ── */
 .hero {
 	padding-top: var(--space-xl);
 	padding-bottom: var(--space-lg);
 }
 .hero-inner {
 	display: grid;
-	grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+	grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr) minmax(0, 18rem);
 	grid-template-areas:
-		"lede lede"
-		"id   bio"
-		"cv   bio";
+		"lede lede photo"
+		"id   bio  photo"
+		"cv   bio  photo";
 	grid-template-rows: auto auto 1fr;
 	column-gap: var(--space-xl);
 }
@@ -222,21 +222,26 @@ strong { color: var(--ink); font-weight: 600; }
 	color: var(--ink);
 	text-wrap: balance;
 }
+.portrait-wrap {
+	grid-area: photo;
+	align-self: start;
+	justify-self: end;
+	width: 100%;
+	max-width: 18rem;
+}
+.portrait {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	object-fit: cover;
+	box-shadow: 0 14px 36px rgba(11, 18, 32, 0.18);
+	background: var(--card);
+}
 
 .identity {
 	grid-area: id;
-	display: flex;
-	align-items: center;
-	gap: var(--space-md);
 	margin-top: var(--space-lg);
-}
-.portrait {
-	flex: 0 0 auto;
-	width: 10rem;
-	height: 10rem;
-	border-radius: 50%;
-	object-fit: cover;
-	background: var(--card);
 }
 .identity-name {
 	font-size: 1.75rem;
@@ -269,14 +274,13 @@ strong { color: var(--ink); font-weight: 600; }
 	width: 2.5rem;
 	height: 2.5rem;
 	border-radius: 50%;
-	background: var(--card);
-	color: var(--ink);
-	transition: background-color var(--duration) var(--ease), color var(--duration) var(--ease),
-		transform var(--duration) var(--ease);
+	background: var(--black);
+	color: #ffffff;
+	transition: background-color var(--duration) var(--ease), transform var(--duration) var(--ease);
 }
 .social-link:hover {
-	background: var(--card-hover);
-	color: var(--blue);
+	background: var(--blue);
+	color: #ffffff;
 	transform: scale(1.06);
 }
 .social-link svg { width: 1.15rem; height: 1.15rem; }
@@ -340,7 +344,7 @@ strong { color: var(--ink); font-weight: 600; }
 	padding: 0;
 	list-style: none;
 }
-.cards--projects { grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); }
+.cards--projects { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .card {
 	display: flex;
 	flex-direction: column;
@@ -537,15 +541,22 @@ strong { color: var(--ink); font-weight: 600; }
 /* ── Responsive ── */
 @media (max-width: 1100px) {
 	.cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-	.cards--projects { grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); }
+	.cards--projects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 1200px) {
+	.hero-inner {
+		grid-template-columns: minmax(0, 1fr) minmax(0, 15rem);
+		grid-template-areas:
+			"lede photo"
+			"id   photo"
+			"bio  bio"
+			"cv   cv";
+		grid-template-rows: none;
+	}
 }
 
 @media (max-width: 960px) {
-	.hero-inner {
-		grid-template-columns: minmax(0, 1fr);
-		grid-template-areas: "lede" "id" "bio" "cv";
-		grid-template-rows: none;
-	}
 	.news, .xp { grid-template-columns: minmax(0, 1fr); }
 }
 
@@ -555,6 +566,11 @@ strong { color: var(--ink); font-weight: 600; }
 	.news .label, .xp .label { padding-top: 0; }
 	.xp li { grid-template-columns: 3.25rem minmax(0, 1fr); row-gap: 0.4rem; column-gap: var(--space-sm); }
 	.xp .label { grid-column: 1 / -1; }
+	.hero-inner {
+		grid-template-columns: minmax(0, 1fr);
+		grid-template-areas: "lede" "photo" "id" "bio" "cv";
+	}
+	.portrait-wrap { justify-self: start; max-width: 12rem; margin-top: var(--space-lg); }
 }
 
 @media (max-width: 600px) {
@@ -563,8 +579,7 @@ strong { color: var(--ink); font-weight: 600; }
 
 @media (max-width: 480px) {
 	body { font-size: 1.05rem; }
-	.identity { align-items: flex-start; gap: var(--space-sm); }
-	.portrait { width: 6.5rem; height: 6.5rem; }
+	.portrait-wrap { max-width: 10rem; }
 	.identity-name { font-size: 1.4rem; }
 	.nav { font-size: 0.8rem; }
 	.nav a { padding: 0.35rem 0.6rem; }
