@@ -17,7 +17,7 @@ html {
 @media (max-width: 768px) {
 	html { font-size: 14px; }
 }
-:root { --bg: #f5f1e8; } /* warm paper off-white, easier on the eyes than pure white */
+:root { --bg: #f6f7f9; } /* cool off-white: softer than pure white, suits the black and blue */
 body {
 	background: var(--bg);
 	color: #414141;
