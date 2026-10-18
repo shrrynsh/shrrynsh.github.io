@@ -399,6 +399,8 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 .reading-notes dt { flex: 0 0 9rem; font-weight: 600; color: #313131; }
 .reading-notes dd { margin: 0; color: #666666; font-style: italic; }
 .reading-item .pub-misc a { background: rgba(0, 0, 0, 0.04); }
+/* Same blue hover as the publication and project buttons. */
+.reading-item .pub-misc a:hover, .reading-item .pub-misc a:focus { background: #2b6cc4; color: #ffffff; }
 
 /* ── Know Me: subsections listed inside one panel ── */
 .know-panel {
