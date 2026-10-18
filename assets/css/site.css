@@ -680,6 +680,8 @@ footer.page {
 	.project { min-height: 0; }
 	#footer-left { grid-column: page; }
 	.feature-more { font-size: 1rem; }
+	/* Heading and link differ a lot in size on phones: line up their text baselines. */
+	.feature-head { align-items: baseline; }
 	.masthead-inner { grid-column: page; }
 	#masthead h1 { margin: 0.5rem 0; }
 	#masthead nav { justify-content: flex-start; }
