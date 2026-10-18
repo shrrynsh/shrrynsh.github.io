@@ -95,7 +95,7 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 }
 #masthead nav > a {
 	margin: 0.15rem;
-	padding: 0.5rem 0.55rem;
+	padding: 0.5rem 0.48rem;
 	border-radius: 5rem;
 	background: rgba(0, 0, 0, 0.025);
 	color: #414141;
