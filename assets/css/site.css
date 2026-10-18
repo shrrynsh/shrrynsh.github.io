@@ -234,6 +234,25 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 .feature.l-page > .cover-wrapper, .feature.l-page > .project-grid,
 .feature.l-page > .film-grid, .feature.l-page > .quote-grid,
 .feature.l-page > .film-credit { grid-column: page; }
+/* "More projects" link under a homepage card grid, styled like the pill buttons. */
+.feature.l-page > .feature-more { grid-column: page; justify-self: start; }
+.feature-more {
+	display: inline-block;
+	margin-top: 1.25rem;
+	padding: 0.6rem 1.1rem;
+	border-radius: 5rem;
+	background: rgba(0, 0, 0, 0.035);
+	color: #414141;
+	font-size: 0.95rem;
+	font-weight: 500;
+	transition: all 0.2s ease-in-out;
+}
+.feature-more:hover, .feature-more:focus {
+	background: rgba(0, 0, 0, 0.06);
+	color: #2b6cc4;
+	text-decoration: none;
+	transform: scale(1.03);
+}
 .feature-title {
 	font-size: 2rem;
 	font-weight: 600;
