@@ -376,29 +376,37 @@ a:hover, a:focus { color: #00449e; text-decoration: underline; text-decoration-c
 	color: #a04a08;
 }
 
-/* ── Blogs: reading list (reuses the publication-card text styles and pill buttons) ── */
+/* ── Blogs: reading list (project-card panels, publication text styles, pill buttons) ── */
 .reading-topic {
-	margin-bottom: 0.25rem;
+	margin: 0.25rem 0 0.75rem;
 	font-size: 0.75rem;
 	font-weight: 600;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
 	color: #2b6cc4;
 }
-.reading-item { padding: 1.25rem 0; }
-.reading-item + .reading-item { border-top: 1px solid #e3e5e9; }
-.reading-title { margin: 0 0 0.3rem; font-size: 1.25rem; font-weight: 600; line-height: 1.3; }
-.reading-item:first-child { padding-top: 0.6rem; }
-.reading-item .cover-authors { padding-bottom: 0.1rem; font-size: 0.8rem; }
+.reading-count { color: #6b6b6b; font-weight: 500; }
+.reading-list { display: grid; gap: 1rem; }
+.reading-item {
+	padding: 1.1rem 1.25rem 1.2rem;
+	border-radius: 1rem;
+	background: rgba(0, 0, 0, 0.025);
+	transition: background-color 0.2s ease-in-out;
+}
+.reading-item:hover { background: rgba(0, 0, 0, 0.045); }
+.reading-item .cover-venue { padding: 0 0 0.3rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.reading-title { margin: 0 0 0.3rem; font-size: 1.2rem; font-weight: 600; line-height: 1.3; }
 .reading-title a { color: #313131; }
 .reading-title a:hover { color: #2b6cc4; }
-.reading-item .cover-venue { padding: 0.15rem 0 0; }
-.reading-note { margin-top: 0.35rem; font-size: 0.875rem; color: #555555; }
-.reading-notes { margin: 0.75rem 0; }
-.reading-notes > div { display: flex; gap: 0.75rem; margin-top: 0.3rem; font-size: 0.95rem; }
-.reading-notes dt { flex: 0 0 5.5rem; font-weight: 600; color: #313131; }
-.reading-notes dd { margin: 0; color: #666666; font-style: italic; }
-.reading-item .pub-misc a { background: rgba(0, 0, 0, 0.04); }
+.reading-item .cover-authors { padding-bottom: 0; font-size: 0.8rem; }
+.reading-understanding {
+	margin: 0.9rem 0;
+	padding-left: 0.85rem;
+	border-left: 2px solid #d6dbe3;
+}
+.reading-label { font-size: 0.8rem; font-weight: 600; color: #313131; }
+.reading-pending { margin-top: 0.15rem; font-size: 0.95rem; color: #6b6b6b; }
+.reading-item .pub-misc a { background: #ffffff; }
 
 /* ── Know Me: subsections listed inside one panel ── */
 .know-panel {
